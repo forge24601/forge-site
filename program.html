@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Program — FORGE</title>
+    <link rel="stylesheet" href="/forge/css/style.css">
+    <style>
+        /* Program-specific styles */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .overview-stat {
+            text-align: center;
+            padding: 30px 16px;
+            background: var(--white);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 12px var(--shadow);
+        }
+        .overview-stat .stat-number {
+            color: var(--maroon);
+        }
+        .overview-stat .stat-label {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+        .week-label {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold-dark);
+            margin-bottom: 4px;
+        }
+        .phase-detail {
+            margin-bottom: 30px;
+        }
+        .phase-detail h3 {
+            margin-bottom: 8px;
+        }
+        .phase-detail p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .gate-card {
+            background: var(--cream);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 12px 12px 0;
+            padding: 30px 36px;
+            margin-bottom: 20px;
+        }
+        .gate-card h3 {
+            color: var(--gold-dark);
+            margin-bottom: 10px;
+        }
+        .gate-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .gate-card li {
+            padding: 6px 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            padding-left: 20px;
+            position: relative;
+        }
+        .gate-card li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: var(--gold-dark);
+            font-weight: 700;
+        }
+        .rubric-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px var(--shadow);
+        }
+        .rubric-table thead th {
+            background: var(--maroon);
+            color: var(--white);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 14px 18px;
+            text-align: left;
+        }
+        .rubric-table tbody td {
+            padding: 12px 18px;
+            border-bottom: 1px solid var(--cream-dark);
+            color: var(--text-secondary);
+        }
+        .rubric-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .rubric-table tbody tr:nth-child(even) {
+            background: var(--cream);
+        }
+        .pipeline-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        .pipeline-stage {
+            text-align: center;
+            padding: 24px 20px;
+            min-width: 160px;
+            flex: 1;
+        }
+        .pipeline-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin: 0 auto 12px;
+            color: var(--white);
+        }
+        .pipeline-icon-maroon { background: var(--maroon); }
+        .pipeline-icon-blue { background: var(--blue); }
+        .pipeline-icon-gold { background: var(--gold-dark); }
+        .pipeline-label {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+        .pipeline-name {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        .pipeline-desc {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+        .pipeline-arrow {
+            font-size: 2rem;
+            color: var(--gold);
+            flex-shrink: 0;
+            padding: 0 4px;
+        }
+        .pipeline-return {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 16px;
+            padding: 14px 24px;
+            background: var(--cream);
+            border-radius: 8px;
+            border: 1px dashed var(--gold);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .pipeline-return span {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.82rem;
+            color: var(--gold-dark);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .diff-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .diff-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 36px 30px;
+            box-shadow: 0 2px 12px var(--shadow);
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--maroon);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .diff-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px var(--shadow-lg);
+        }
+        .diff-card:nth-child(2) { border-top-color: var(--blue); }
+        .diff-card:nth-child(3) { border-top-color: var(--gold); }
+        .diff-card:nth-child(4) { border-top-color: var(--maroon-light); }
+        .diff-card h3 { margin-bottom: 10px; }
+        .diff-card p { color: var(--text-secondary); font-size: 0.95rem; }
+        .schedule-bar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .schedule-day {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px 28px;
+            text-align: center;
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+        .schedule-day-name {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--maroon);
+            font-weight: 700;
+        }
+        .schedule-day-time {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+        @media (max-width: 900px) {
+            .overview-grid { grid-template-columns: 1fr 1fr; }
+            .diff-grid { grid-template-columns: 1fr; }
+            .pipeline-container { flex-direction: column; }
+            .pipeline-arrow { transform: rotate(90deg); }
+        }
+        @media (max-width: 600px) {
+            .overview-grid { grid-template-columns: 1fr; }
+            .rubric-table { font-size: 0.8rem; }
+            .rubric-table thead th, .rubric-table tbody td { padding: 10px 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+    <div class="container nav-inner">
+        <a href="/forge/" class="nav-brand">
+            <img src="/forge/images/forge-logo.png" alt="FORGE" class="nav-logo">
+            <span class="nav-title">FORGE</span>
+        </a>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="/forge/">Home</a></li>
+            <li><a href="/forge/program.html" class="active">The Program</a></li>
+            <li><a href="/forge/research.html">Research</a></li>
+            <li><a href="/forge/curriculum.html">Curriculum</a></li>
+            <li><a href="/forge/sponsors.html">Sponsors</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero hero-small">
+    <div class="hero-content container">
+        <h1>The Program</h1>
+        <p class="hero-subtitle">A 9-month, three-phase journey from participant to certified peer mentor</p>
+        <div class="divider"></div>
+        <p class="hero-tagline">"You can't give what you don't have. First transform yourself &mdash; then build others."</p>
+    </div>
+</section>
+
+<!-- Program Overview -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-label">Program Overview</p>
+            <h2>9 Months. 3 Phases. 108 Sessions.</h2>
+            <div class="divider"></div>
+            <p class="section-desc">FORGE is a structured, phased mentorship development program that transforms participants into certified peer mentors through progressive skill-building, practice, and supervised application.</p>
+        </div>
+
+        <div class="overview-grid">
+            <div class="overview-stat">
+                <div class="stat-number">9</div>
+                <div class="stat-label">Months Total<br>Duration</div>
+            </div>
+            <div class="overview-stat">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Sessions per Week<br>Tue &bull; Wed &bull; Thu</div>
+            </div>
+            <div class="overview-stat">
+                <div class="stat-number">2 hrs</div>
+                <div class="stat-label">Per Session<br>Length</div>
+            </div>
+            <div class="overview-stat">
+                <div class="stat-number">12&ndash;15</div>
+                <div class="stat-label">Participants<br>Per Cohort</div>
+            </div>
+        </div>
+
+        <div class="schedule-bar">
+            <div class="schedule-day">
+                <div class="schedule-day-name">Tuesday</div>
+                <div class="schedule-day-time">2-Hour Session</div>
+            </div>
+            <div class="schedule-day">
+                <div class="schedule-day-name">Wednesday</div>
+                <div class="schedule-day-time">2-Hour Session</div>
+            </div>
+            <div class="schedule-day">
+                <div class="schedule-day-name">Thursday</div>
+                <div class="schedule-day-time">2-Hour Session</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Phase 1: Foundation -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-label">Phase 1 &mdash; Weeks 1&ndash;12</p>
+            <h2>Foundation: "Know Yourself"</h2>
+            <div class="divider"></div>
+            <p class="section-desc">Before you can mentor anyone else, you must do your own inner work. Phase 1 builds the cognitive, emotional, and behavioral foundation every mentor needs.</p>
+        </div>
+
+        <div class="grid-2">
+            <div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot timeline-dot-maroon"></div>
+                        <div class="week-label">Weeks 1&ndash;2</div>
+                        <div class="timeline-title">Cognitive Behavioral Skills</div>
+                        <div class="timeline-text">Identifying thinking errors, understanding the connection between thoughts, feelings, and behavior. Building self-awareness as the foundation for all change.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot timeline-dot-maroon"></div>
+                        <div class="week-label">Weeks 3&ndash;4</div>
+                        <div class="timeline-title">Emotional Literacy</div>
+                        <div class="timeline-text">Naming and managing emotions, recognizing emotional triggers, developing healthy coping strategies, and building emotional vocabulary.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot timeline-dot-maroon"></div>
+                        <div class="week-label">Week 5</div>
+                        <div class="timeline-title">Trauma Awareness</div>
+                        <div class="timeline-text">Understanding how trauma shapes behavior and responses. Learning trauma-informed approaches without requiring personal disclosure.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot timeline-dot-maroon"></div>
+                        <div class="week-label">Weeks 6&ndash;7</div>
+                        <div class="timeline-title">Conflict Resolution</div>
+                        <div class="timeline-text">De-escalation techniques, managing confrontation without violence, practicing measured responses to provocation and pressure.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot timeline-dot-maroon"></div>
+                        <div class="week-label">Week 8</div>
+                        <div class="timeline-title">Communication Skills</div>
+                        <div class="timeline-text">Active listening, assertive (not aggressive) communication, giving and receiving feedback, building rapport across differences.</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot timeline-dot-maroon"></div>
+                        <div class="week-label">Weeks 9&ndash;10</div>
+                        <div class="timeline-title">Accountability &amp; Responsibility</div>
+                        <div class="timeline-text">Owning past harm, understanding impact versus intent, developing a personal accountability framework. Moving beyond blame to genuine ownership.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot timeline-dot-maroon"></div>
+                        <div class="week-label">Week 11</div>
+                        <div class="timeline-title">Problem Solving &amp; Growth Mindset</div>
+                        <div class="timeline-text">Structured problem-solving approaches, shifting from a fixed to a growth mindset, reframing challenges as opportunities for development.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot timeline-dot-maroon"></div>
+                        <div class="week-label">Week 12</div>
+                        <div class="timeline-title">Phase 1 Assessment &amp; Review</div>
+                        <div class="timeline-text">Comprehensive skills assessment, portfolio review, self-evaluation, peer feedback, and readiness determination for advancement to Phase 2.</div>
+                    </div>
+                </div>
+
+                <div class="quote-block" style="padding: 30px; margin-top: 20px;">
+                    <p class="quote-text" style="font-size: 1.1rem;">"Phase 1 is about honesty. If you can't be honest with yourself, you can't help anyone else get there."</p>
+                    <p class="quote-attribution">&mdash; FORGE Founding Document</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Phase 2: Development -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-label">Phase 2 &mdash; Weeks 13&ndash;24</p>
+            <h2>Development: "Build Others"</h2>
+            <div class="divider"></div>
+            <p class="section-desc">Phase 2 transforms personal growth into the ability to help others grow. Participants learn the tools and techniques of effective peer mentorship.</p>
+        </div>
+
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-icon card-icon-blue">&#9998;</div>
+                <h3>Mentor Training &amp; Facilitation</h3>
+                <p>Learning to lead group sessions, manage difficult dynamics, create safe spaces for honest conversation, and adapt to different learning styles. Participants practice facilitating discussions with structured feedback.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon card-icon-blue">&#9881;</div>
+                <h3>Simulation-Based Training</h3>
+                <p>Realistic scenario practice that mirrors actual situations inside the facility &mdash; dorm conflicts, mental health crises, peer pressure, resistance to change. Mentors rehearse responses before facing them for real.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon card-icon-blue">&#9825;</div>
+                <h3>Motivational Interviewing (MI)</h3>
+                <p>Evidence-based conversational techniques that help people find their own motivation to change. Learning to ask open-ended questions, affirm strengths, reflect meaning, and summarize &mdash; the OARS framework.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon card-icon-blue">&#9878;</div>
+                <h3>Restorative Practices</h3>
+                <p>Facilitating restorative circles, addressing harm through dialogue rather than punishment, building community accountability, and supporting repair between individuals and the wider dorm community.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon card-icon-blue">&#128218;</div>
+                <h3>Teaching Practicum</h3>
+                <p>Preparing and delivering Phase 1 curriculum content under supervision. Learning to teach from experience while following structured lesson plans. Developing the ability to connect with diverse participants.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon card-icon-blue">&#9878;</div>
+                <h3>Ethics &amp; Boundaries</h3>
+                <p>Understanding the limits of the mentor role. When to refer to staff. How to maintain appropriate relationships. Navigating confidentiality, safety reporting, and the line between support and authority.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Phase 3: Practicum -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-label">Phase 3 &mdash; Weeks 25&ndash;36</p>
+            <h2>Practicum: "Lead and Serve"</h2>
+            <div class="divider"></div>
+            <p class="section-desc">Phase 3 is where training becomes reality. Mentors apply everything they have learned under graduated supervision, moving toward full independence and certification.</p>
+        </div>
+
+        <div class="grid-2">
+            <div>
+                <div class="phase-detail">
+                    <h3>Supervised Mentoring (Weeks 25&ndash;28)</h3>
+                    <p>New mentors are paired with a certified mentor or program facilitator. They co-lead Phase 1 sessions for the incoming cohort, receiving real-time feedback and guidance after each session.</p>
+                </div>
+                <div class="phase-detail">
+                    <h3>Increasing Independence (Weeks 29&ndash;32)</h3>
+                    <p>Mentors begin leading sessions with decreasing oversight. They handle more complex situations independently, including one-on-one mentoring relationships and informal dorm interventions.</p>
+                </div>
+                <div class="phase-detail">
+                    <h3>Community Circles &amp; Service (Weeks 33&ndash;34)</h3>
+                    <p>Mentors independently facilitate community circles, mediate peer conflicts, and serve as positive culture carriers within the dorm. They model normative behavior and proactive engagement.</p>
+                </div>
+                <div class="phase-detail">
+                    <h3>Portfolio &amp; Certification (Weeks 35&ndash;36)</h3>
+                    <p>Completion of the mentor portfolio documenting growth, skills demonstrated, sessions led, and community impact. Final review by a certification board composed of program leadership and peers.</p>
+                </div>
+            </div>
+            <div>
+                <div class="phase-card">
+                    <div class="phase-header phase-header-3">
+                        <div class="phase-number">Phase 3 Progression</div>
+                        <div class="phase-name">From Observer to Leader</div>
+                        <div class="phase-motto">"Increasing responsibility, increasing impact"</div>
+                    </div>
+                    <div class="phase-body phase-3">
+                        <ul>
+                            <li>Shadow certified mentors in live sessions</li>
+                            <li>Co-facilitate Phase 1 groups with feedback</li>
+                            <li>Lead sessions under distant supervision</li>
+                            <li>Conduct independent one-on-one mentoring</li>
+                            <li>Facilitate community circles solo</li>
+                            <li>Mediate peer conflicts in real time</li>
+                            <li>Complete mentor portfolio documentation</li>
+                            <li>Present before the certification review board</li>
+                        </ul>
+                        <div class="phase-duration">12 Weeks &bull; 36 Sessions &bull; Certification</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Phase Gates -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-label">Quality Assurance</p>
+            <h2>Phase Gate Requirements</h2>
+            <div class="divider"></div>
+            <p class="section-desc">Advancement between phases is earned, not automatic. Each gate ensures participants are genuinely ready for the next level of responsibility.</p>
+        </div>
+
+        <div style="max-width: 760px; margin: 0 auto;">
+            <div class="gate-card">
+                <h3>Gate 1: Foundation &rarr; Development</h3>
+                <ul>
+                    <li>Minimum 80% session attendance throughout Phase 1</li>
+                    <li>Passing score on cognitive and emotional skills assessments</li>
+                    <li>Completion of personal accountability statement</li>
+                    <li>Positive peer evaluation from cohort members</li>
+                    <li>No disciplinary infractions during the phase</li>
+                    <li>Demonstrated ability to manage conflict without escalation</li>
+                    <li>Facilitator recommendation for advancement</li>
+                </ul>
+            </div>
+            <div class="gate-card">
+                <h3>Gate 2: Development &rarr; Practicum</h3>
+                <ul>
+                    <li>Minimum 80% session attendance throughout Phase 2</li>
+                    <li>Successful facilitation of at least 3 practice sessions</li>
+                    <li>Demonstrated proficiency in motivational interviewing techniques</li>
+                    <li>Completion of simulation-based training scenarios with passing evaluations</li>
+                    <li>Understanding of ethics, boundaries, and referral protocols</li>
+                    <li>Positive peer and facilitator evaluations</li>
+                    <li>No disciplinary infractions during the phase</li>
+                </ul>
+            </div>
+            <div class="gate-card">
+                <h3>Gate 3: Practicum &rarr; Certification</h3>
+                <ul>
+                    <li>Minimum 80% session attendance throughout Phase 3</li>
+                    <li>Successful independent facilitation of Phase 1 sessions</li>
+                    <li>Completed mentor portfolio with documented outcomes</li>
+                    <li>Positive evaluations from mentees and program leadership</li>
+                    <li>Demonstration of restorative practices in real situations</li>
+                    <li>Approval by the certification review board</li>
+                    <li>Commitment to ongoing mentoring and cohort training responsibilities</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Assessment Overview -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-label">Assessment Framework</p>
+            <h2>How We Measure Growth</h2>
+            <div class="divider"></div>
+            <p class="section-desc">FORGE uses a multi-dimensional scoring rubric to assess participant development across key competency areas at each phase gate.</p>
+        </div>
+
+        <div style="overflow-x: auto;">
+            <table class="rubric-table">
+                <thead>
+                    <tr>
+                        <th>Competency Area</th>
+                        <th>1 &mdash; Emerging</th>
+                        <th>2 &mdash; Developing</th>
+                        <th>3 &mdash; Proficient</th>
+                        <th>4 &mdash; Exemplary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Self-Awareness</strong></td>
+                        <td>Limited recognition of thinking errors and emotional triggers</td>
+                        <td>Identifies patterns with prompting; inconsistent self-reflection</td>
+                        <td>Consistently identifies and corrects thinking errors independently</td>
+                        <td>Models self-awareness; helps others identify their own patterns</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Emotional Regulation</strong></td>
+                        <td>Frequent reactive responses; difficulty managing frustration</td>
+                        <td>Uses coping strategies with reminders; occasional setbacks</td>
+                        <td>Manages emotions effectively under normal stress</td>
+                        <td>Remains composed under high pressure; supports peers in crisis</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Conflict Resolution</strong></td>
+                        <td>Avoids or escalates conflict</td>
+                        <td>Attempts de-escalation with mixed results</td>
+                        <td>Successfully de-escalates situations; uses restorative language</td>
+                        <td>Mediates complex disputes; recognized as a trusted neutral party</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Communication</strong></td>
+                        <td>Difficulty expressing needs; passive or aggressive defaults</td>
+                        <td>Practices assertive communication; still developing active listening</td>
+                        <td>Communicates clearly and listens actively in most contexts</td>
+                        <td>Skilled facilitator; adapts communication style to audience</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Accountability</strong></td>
+                        <td>Deflects responsibility; externalizes blame</td>
+                        <td>Acknowledges responsibility when prompted</td>
+                        <td>Owns mistakes proactively; follows through on commitments</td>
+                        <td>Models accountability; creates culture of ownership within groups</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mentoring Readiness</strong></td>
+                        <td>Not yet ready to support others</td>
+                        <td>Shows interest; building foundational skills</td>
+                        <td>Effectively supports peers; facilitates with guidance</td>
+                        <td>Independently facilitates and mentors; trains incoming participants</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p style="text-align: center; margin-top: 20px; font-size: 0.85rem; color: var(--text-light);">Participants must score Proficient (3) or higher in all areas to advance through each phase gate. Exemplary (4) ratings are expected for certification.</p>
+
+        <div class="btn-group">
+            <a href="/forge/documents/FORGE-Program-Design.pdf" class="btn btn-outline">Download Full Assessment Framework (PDF)</a>
+        </div>
+    </div>
+</section>
+
+<!-- Mentor Pipeline -->
+<section class="section section-blue">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-label" style="color: var(--gold-light);">The Pipeline</p>
+            <h2>How Each Cohort Trains the Next</h2>
+            <div class="divider"></div>
+            <p class="section-desc" style="color: rgba(255,255,255,0.8);">FORGE is self-sustaining by design. Certified mentors from each cohort become the facilitators for the next, creating a continuous pipeline of trained leaders.</p>
+        </div>
+
+        <div class="pipeline-container">
+            <div class="pipeline-stage">
+                <div class="pipeline-icon pipeline-icon-maroon">&#9679;</div>
+                <div class="pipeline-label" style="color: rgba(255,255,255,0.5);">Step 1</div>
+                <div class="pipeline-name" style="color: var(--white);">New Cohort Enters</div>
+                <div class="pipeline-desc" style="color: rgba(255,255,255,0.7);">12&ndash;15 participants begin Phase 1</div>
+            </div>
+            <div class="pipeline-arrow">&rarr;</div>
+            <div class="pipeline-stage">
+                <div class="pipeline-icon pipeline-icon-blue">&#9670;</div>
+                <div class="pipeline-label" style="color: rgba(255,255,255,0.5);">Step 2</div>
+                <div class="pipeline-name" style="color: var(--white);">Current Mentors Facilitate</div>
+                <div class="pipeline-desc" style="color: rgba(255,255,255,0.7);">Phase 3 mentors lead the Phase 1 curriculum</div>
+            </div>
+            <div class="pipeline-arrow">&rarr;</div>
+            <div class="pipeline-stage">
+                <div class="pipeline-icon pipeline-icon-gold">&#9733;</div>
+                <div class="pipeline-label" style="color: rgba(255,255,255,0.5);">Step 3</div>
+                <div class="pipeline-name" style="color: var(--white);">Graduates Certify</div>
+                <div class="pipeline-desc" style="color: rgba(255,255,255,0.7);">Completers earn certification and mentor status</div>
+            </div>
+        </div>
+
+        <div class="pipeline-return" style="background: rgba(255,255,255,0.08); border-color: rgba(212, 168, 75, 0.4);">
+            <span style="color: var(--gold-light);">&#8635; Certified mentors cycle back to train the next incoming cohort &mdash; the pipeline is self-renewing</span>
+        </div>
+
+        <div class="stats-row" style="margin-top: 40px;">
+            <div class="stat-item">
+                <div class="stat-number">Cohort 1</div>
+                <div class="stat-label">Trained by program<br>founders &amp; facilitators</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">Cohort 2</div>
+                <div class="stat-label">Trained by Cohort 1<br>certified mentors</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">Cohort 3</div>
+                <div class="stat-label">Trained by Cohort 2<br>certified mentors</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">Cohort N</div>
+                <div class="stat-label">Each generation trains<br>the next &mdash; indefinitely</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What Makes FORGE Different -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-label">Our Approach</p>
+            <h2>What Makes FORGE Different</h2>
+            <div class="divider"></div>
+            <p class="section-desc">FORGE is not a lecture series or a workbook program. It is a living system built on four distinctive principles that set it apart from traditional correctional programming.</p>
+        </div>
+
+        <div class="diff-grid">
+            <div class="diff-card">
+                <h3>Simulation-Based Training</h3>
+                <p>Most programs teach theory. FORGE rehearses reality. Mentors practice responding to realistic dorm scenarios &mdash; conflicts, crises, resistance &mdash; before they face them. Simulation-based training bridges the gap between knowing what to do and actually doing it under pressure. This is what builds real competence, not just classroom knowledge.</p>
+            </div>
+            <div class="diff-card">
+                <h3>The Parallel Process</h3>
+                <p>You cannot give what you do not have. Before anyone mentors another person, they must complete their own transformation work in Phase 1. This is the parallel process: the inner work of the mentor directly mirrors the journey they will guide others through. It produces authentic mentors who teach from experience, not just curriculum.</p>
+            </div>
+            <div class="diff-card">
+                <h3>Normative Culture</h3>
+                <p>FORGE does not just train individuals &mdash; it shifts the entire dorm culture. When enough men in a living space operate from shared values of respect, accountability, and service, those norms become self-reinforcing. The goal is not a program that changes individuals in isolation, but a community where positive behavior is the norm, not the exception.</p>
+            </div>
+            <div class="diff-card">
+                <h3>The Stakeholder Model</h3>
+                <p>Traditional correctional models position inmates as passive recipients of programming. FORGE rejects that framing. Participants are stakeholders in the system they live in. They have both the ability and the responsibility to shape dorm culture, reduce violence, and support the wellbeing of everyone around them &mdash; staff included.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+    <div class="container">
+        <div class="quote-block">
+            <p class="quote-text">"Leadership is not granted. It is forged."</p>
+            <div class="divider"></div>
+            <p class="quote-attribution">Download the complete Program Design document for the full curriculum framework, assessment rubrics, and implementation guide.</p>
+            <div class="btn-group">
+                <a href="/forge/documents/FORGE-Program-Design.pdf" class="btn btn-primary">Download Program Design (PDF)</a>
+                <a href="/forge/documents/FORGE_Handbook.pdf" class="btn btn-outline">Participant Handbook (PDF)</a>
+                <a href="/forge/research.html" class="btn btn-outline">View the Research</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h4>About FORGE</h4>
+                <p>FORGE is a peer-led, evidence-based mentorship program designed to build a safer, more stable dorm culture by training men to lead through service, accountability, and conflict reduction.</p>
+                <p class="footer-tagline">"To turn time served into time that serves others."</p>
+            </div>
+            <div>
+                <h4>Program</h4>
+                <ul class="footer-links">
+                    <li><a href="/forge/program.html">The Program</a></li>
+                    <li><a href="/forge/research.html">Research Foundation</a></li>
+                    <li><a href="/forge/curriculum.html">Curriculum</a></li>
+                    <li><a href="/forge/sponsors.html">Sponsors</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Documents</h4>
+                <ul class="footer-links">
+                    <li><a href="/forge/documents/FORGE-Program-Design.pdf">Program Design (PDF)</a></li>
+                    <li><a href="/forge/documents/FORGE_Full_Narrative_Pamphlet.pdf">Narrative Pamphlet</a></li>
+                    <li><a href="/forge/documents/FORGE_Handbook.pdf">Participant Handbook</a></li>
+                    <li><a href="/forge/documents/FORGE_One-Page_Flyer.pdf">One-Page Flyer</a></li>
+                    <li><a href="/forge/documents/FORGE_Trifold_11x17.pdf">Trifold Brochure</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>FORGE &mdash; Facilitating Opportunities for Reentry, Growth &amp; Empowerment</p>
+            <p style="margin-top: 4px;">Dooly State Prison &bull; Georgia</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
