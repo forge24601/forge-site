@@ -196,6 +196,79 @@
   },
   {
    "phase": 1,
+   "week": 3,
+   "title": "Emotional Literacy",
+   "sessions": [
+    {
+     "n": 7,
+     "title": "Understanding Emotions",
+     "insert": "p1-w3-s7-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w3-s7a-emotions",
+       "title": "Understanding Emotions",
+       "length": "2:22",
+       "when": "Plays first, as soon as the men are seated, before the Opening Circle.",
+       "desc": "Last week the head, this week the heart: the week's three steps (recognize, regulate, understand), why this is a life skill and not therapy, and what today holds; it ends on the check-in question (a specific emotion, not just good or fine)."
+      },
+      {
+       "file": "p1-w3-s7b-bodyguard",
+       "title": "Anger Is the Bodyguard",
+       "length": "2:02",
+       "when": "Plays at the start of Part 2 of the Instruction segment (Anger as a Secondary Emotion).",
+       "desc": "Anger as a secondary emotion, the six emotions it covers up one at a time on screen, which emotions are safe to show in here, and the guide's phone-call example; it ends on \"How many of you have lived that exact scenario, or something like it?\""
+      }
+     ],
+     "talks": []
+    },
+    {
+     "n": 8,
+     "title": "Emotional Regulation",
+     "insert": "p1-w3-s8-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w3-s8a-regulation",
+       "title": "Emotional Regulation",
+       "length": "2:43",
+       "when": "Plays first, as soon as the men are seated, before the Opening Circle.",
+       "desc": "A recap of Session 7, then the escalation curve with its five stages lighting up as they are named and Stage 2 marked as the place to intervene, and \"Regulation isn't weakness. Regulation is strategy\"; it ends on the check-in question (a specific emotion from the wheel, and whether they tracked)."
+      },
+      {
+       "file": "p1-w3-s8b-breathing",
+       "title": "Breathe and Ground",
+       "length": "2:31",
+       "when": "Plays at the start of Part 2 of the Instruction segment (the 4-4-4 breathing technique).",
+       "desc": "Teaches 4-4-4 breathing and leads three full cycles with an animated guide and 38 seconds of silence, then leads 5-4-3-2-1 grounding one sense at a time with pauses; it ends on a when-to-use-which card (breathe, ground, STOP)."
+      }
+     ],
+     "talks": []
+    },
+    {
+     "n": 9,
+     "title": "The Anger Beneath the Anger",
+     "insert": "p1-w3-s9-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w3-s9a-beneath",
+       "title": "The Anger Beneath the Anger",
+       "length": "2:19",
+       "when": "Plays first, as soon as the men are seated, before the Opening Circle.",
+       "desc": "The week's techniques belong to the men now; today goes underneath the anger; the guide's three options for pain (process, numb, convert); and no one is forced to share; it ends on the check-in question \"What emotion have you been carrying this week that you haven't told anyone about?\""
+      },
+      {
+       "file": "p1-w3-s9b-covers",
+       "title": "What Anger Covers",
+       "length": "2:00",
+       "when": "Plays at the start of Part 2 of the Instruction segment (The Emotions Anger Covers).",
+       "desc": "Shame, rejection, powerlessness and grief, one card each in the guide's words, then the guide's silence (12 seconds); it ends on \"Naming the real emotion doesn't make you weak. It makes you honest.\""
+      }
+     ],
+     "talks": []
+    }
+   ]
+  },
+  {
+   "phase": 1,
    "week": 4,
    "title": "Trauma Awareness",
    "sessions": [
@@ -477,6 +550,221 @@
        "length": "10:10",
        "youtube": "jUF9sY4HvxY",
        "page": "https://www.ted.com/talks/karleen_savage_a_hostage_negotiator_on_how_to_resolve_conflict"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "phase": 1,
+   "week": 7,
+   "title": "Accountability and Integrity",
+   "sessions": [
+    {
+     "n": 19,
+     "title": "Personal Accountability",
+     "insert": "p1-w7-s19-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w7-s19a-accountability",
+       "title": "Personal Accountability",
+       "length": "2:25",
+       "when": "Plays at the start of the session, before the opening circle.",
+       "desc": "The move from skills to character, what accountability is not and what it is, and why it is liberation; it ends on the 1-to-10 check-in question, held for 20 seconds."
+      },
+      {
+       "file": "p1-w7-s19b-spectrum",
+       "title": "The Accountability Spectrum",
+       "length": "2:22",
+       "when": "Plays at the start of the Accountability Spectrum instruction segment.",
+       "desc": "The five levels from denial to full accountability with the guide's own examples; it ends on the private self-rating in the journal, held for 20 seconds."
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "I was not born a murderer",
+       "speaker": "Quan Huynh",
+       "source": "TEDxSanQuentin",
+       "length": "15:22",
+       "youtube": "yiyzzM-B6oM",
+       "page": "https://www.ted.com/talks/quan_huynh_i_was_not_born_a_murderer_quan_huynh_tedxsanquentin"
+      }
+     ]
+    },
+    {
+     "n": 20,
+     "title": "Integrity Under Pressure",
+     "insert": "p1-w7-s20-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w7-s20a-integrity",
+       "title": "Integrity Under Pressure",
+       "length": "2:07",
+       "when": "Plays at the start of the session, before the opening circle.",
+       "desc": "Integrity as values, words and actions that match, the gap where trust dies, and pressure revealing character; it ends on the check-in about last session's homework, held for 20 seconds."
+      },
+      {
+       "file": "p1-w7-s20b-four-tests",
+       "title": "The Four Tests of Integrity",
+       "length": "1:45",
+       "when": "Plays at the start of The 4 Tests of Integrity instruction segment.",
+       "desc": "The Mirror, Public, Child and Legacy tests, each lit in turn with the guide's questions; it ends on 'All of them are about who you actually are.'"
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "Should you live for your résumé ... or your eulogy?",
+       "speaker": "David Brooks",
+       "source": "TED",
+       "length": "4:47",
+       "youtube": "MlLWTeApqIM",
+       "page": "https://www.ted.com/talks/david_brooks_should_you_live_for_your_resume_or_your_eulogy"
+      },
+      {
+       "role": "Optional",
+       "title": "My daughter, my hero",
+       "speaker": "Sam W. Johnson, Sr.",
+       "source": "TEDxSanQuentin",
+       "length": "7:44",
+       "youtube": "SZSc5UC_ZS0",
+       "page": ""
+      }
+     ]
+    },
+    {
+     "n": 21,
+     "title": "Making Amends and Moving Forward",
+     "insert": "p1-w7-s21-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w7-s21a-restorative",
+       "title": "Making Amends and Moving Forward",
+       "length": "2:14",
+       "when": "Plays at the start of the session, before the opening circle.",
+       "desc": "Why this session is not punishment, guilt vs. shame, and punitive vs. restorative accountability with its three questions; it ends on the one-word check-in, held for 20 seconds."
+      },
+      {
+       "file": "p1-w7-s21b-living-amends",
+       "title": "Living Amends",
+       "length": "1:30",
+       "when": "Plays at the start of the Amends vs. Apology instruction segment.",
+       "desc": "An apology is words, amends are action; when direct amends aren't possible, living amends; it ends on 'the past doesn't get the last word.'"
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "Am I not human? A call for criminal justice reform",
+       "speaker": "Marlon Peterson",
+       "source": "TED",
+       "length": "7:22",
+       "youtube": "D9ZNpt6FVTY",
+       "page": "https://www.ted.com/talks/marlon_peterson_am_i_not_human_a_call_for_criminal_justice_reform"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "phase": 1,
+   "week": 8,
+   "title": "Social Skills and Perspective-Taking",
+   "sessions": [
+    {
+     "n": 22,
+     "title": "Empathy Development",
+     "insert": "p1-w8-s22-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w8-s22a-empathy",
+       "title": "Through Someone Else's Eyes",
+       "length": "1:58",
+       "when": "Plays first, as soon as the men are seated; the opening circle starts on the question it ends on.",
+       "desc": "Week 8 turns the lens outward, the bridge from last week (accountability requires empathy) and the four-viewpoints exercise. Ends on the check-in question."
+      },
+      {
+       "file": "p1-w8-s22b-three-types",
+       "title": "Three Types of Empathy",
+       "length": "2:27",
+       "when": "Plays in the instruction segment, after the men have said what empathy means to them.",
+       "desc": "Cognitive, emotional and compassionate empathy with the guide's examples, and why empathy is a skill. Ends on \"Where has a lack of empathy cost you?\" for the minute of silent reflection."
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "What prosecutors and incarcerated people can learn from each other",
+       "speaker": "Jarrell Daniels",
+       "source": "TED",
+       "length": "11:54",
+       "youtube": "jATCr-gQvPA",
+       "page": "https://www.ted.com/talks/jarrell_daniels_what_prosecutors_and_incarcerated_people_can_learn_from_each_other"
+      }
+     ]
+    },
+    {
+     "n": 23,
+     "title": "Reading the Room",
+     "insert": "p1-w8-s23-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w8-s23a-reading-the-room",
+       "title": "Reading the Room",
+       "length": "1:43",
+       "when": "Plays right after the opening check-in, at the start of Review and Reflection.",
+       "desc": "From empathy to reading the room: every group has structure, a mentor's first job is to read the room, and every man changes a room. Ends on \"how long does it take you to know something is wrong?\""
+      },
+      {
+       "file": "p1-w8-s23b-seven-cues",
+       "title": "Seven Cues",
+       "length": "2:27",
+       "when": "Plays at the start of the nonverbal cues instruction.",
+       "desc": "The guide's seven nonverbal cues, lit one at a time, and \"same skill, different purpose.\" Ends on the discussion question about the last time you read a situation correctly."
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "How to start a movement",
+       "speaker": "Derek Sivers",
+       "source": "TED",
+       "length": "2:52",
+       "youtube": "V74AxCqOTvg",
+       "page": "https://www.ted.com/talks/derek_sivers_how_to_start_a_movement"
+      }
+     ]
+    },
+    {
+     "n": 24,
+     "title": "Building Pro-Social Relationships",
+     "insert": "p1-w8-s24-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w8-s24a-relationships",
+       "title": "Healthy or Toxic?",
+       "length": "2:28",
+       "when": "Plays right after the opening check-in, at the start of Review and Reflection.",
+       "desc": "The week's progression, the hard truth about relationships, and the guide's six marks of a healthy relationship and six of a toxic one. Ends on the warning-signs question."
+      },
+      {
+       "file": "p1-w8-s24b-calling-in",
+       "title": "Calling In",
+       "length": "1:57",
+       "when": "Plays at the start of the FORGE Brotherhood and Accountability instruction.",
+       "desc": "\"No matter what\" loyalty against FORGE brotherhood, the six steps for holding someone accountable without destroying the relationship, and calling in against calling out."
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "A father-daughter dance ... in prison",
+       "speaker": "Angela Patton",
+       "source": "TEDxWomen",
+       "length": "8:31",
+       "youtube": "MNhCvM5pjfs",
+       "page": "https://www.ted.com/talks/angela_patton_a_father_daughter_dance_in_prison"
       }
      ]
     }
