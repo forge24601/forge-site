@@ -784,3 +784,9 @@ h4 { font-size: 1.15rem; color: var(--blue); }
 .talk-card .video-body p a { color: var(--blue); }
 .talk-card h4 a { color: inherit; }
 .talk-card h4 a:hover { text-decoration: underline; }
+.week-jump { background: var(--cream-dark); border-bottom: 1px solid var(--border); padding: 14px 0; }
+.week-jump .container { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.85rem; }
+.week-jump span { color: var(--text-light); margin-right: 4px; }
+.week-chip { background: var(--white); border: 1px solid var(--border); border-radius: 999px; padding: 5px 14px; color: var(--maroon); font-weight: 600; }
+.week-chip:hover { border-color: var(--maroon); }
+[id^="p1-w"] { scroll-margin-top: 80px; }
