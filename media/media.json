@@ -1259,6 +1259,102 @@
      ]
     }
    ]
+  },
+  {
+   "phase": 2,
+   "week": 13,
+   "title": "The Mentor Identity",
+   "sessions": [
+    {
+     "n": 37,
+     "title": "What Makes a Good Mentor",
+     "insert": "p2-w13-s37-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p2-w13-s37a-phase-two",
+       "title": "Phase 2: Build Others",
+       "length": "3:08",
+       "when": "Plays first, before the opening circle.",
+       "desc": "The whole of Phase 2 — from “How do I grow?” to “How do I help someone else grow?”, the road through Weeks 13–24, simulation training and what it takes to reach Phase 3. Ends on the opening-round question."
+      },
+      {
+       "file": "p2-w13-s37b-good-mentor",
+       "title": "What Makes a Good Mentor",
+       "length": "1:58",
+       "when": "Plays at the start of What the Research Says.",
+       "desc": "MENTOR's five Elements of Effective Practice, the credible messenger model, and friend, authority figure and mentor side by side. Ends on “Have you ever had a mentor?”"
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "Attica prisoners and guards",
+       "speaker": "Jemar Kelley, Donovan Jackson, E. Nowak and Peggy Vance",
+       "source": "TEDxAttica",
+       "length": "10:11",
+       "youtube": "e6NJeg-qWDM",
+       "page": "https://www.ted.com/talks/jemar_kelley_donovan_jackson_e_nowak_peggy_vance_attica_prisoners_and_guards"
+      }
+     ]
+    },
+    {
+     "n": 38,
+     "title": "Mentor Boundaries",
+     "insert": "p2-w13-s38-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p2-w13-s38a-boundaries",
+       "title": "Mentor Boundaries",
+       "length": "1:54",
+       "when": "Plays as the Review and Bridge, after the opening circle.",
+       "desc": "Boundaries are not walls; what mentors do and don't do; the drowning man and the rope; the four times a mentor must break confidentiality. Ends on the question for the lists."
+      },
+      {
+       "file": "p2-w13-s38b-scenario",
+       "title": "Scenario 3: The Bunkmate Asks",
+       "length": "1:16",
+       "when": "Plays at the start of the 10 Boundary Scenarios exercise — pause it on the question.",
+       "desc": "The guide's Scenario 3 acted out in a dorm. It stops on the pairs' question, then shows one way a mentor could answer, in the guide's words."
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "Drowning in Empathy: The Cost of Vicarious Trauma",
+       "speaker": "Amy Cunningham",
+       "source": "TEDxSanAntonio",
+       "length": "12:11",
+       "youtube": "ZsaorjIo1Yc",
+       "page": ""
+      }
+     ]
+    },
+    {
+     "n": 39,
+     "title": "The Parallel Process",
+     "insert": "p2-w13-s39-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p2-w13-s39a-parallel",
+       "title": "The Parallel Process",
+       "length": "1:56",
+       "when": "Plays at the start of You Can't Give What You Don't Have.",
+       "desc": "The well that runs dry, why self-work never ends, the signs of secondary traumatic stress and self-care that works inside. Ends on “Does any of this sound familiar?”"
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "All it takes is 10 mindful minutes",
+       "speaker": "Andy Puddicombe",
+       "source": "TED",
+       "length": "9:07",
+       "youtube": "qzR62JJCMBQ",
+       "page": "https://www.ted.com/talks/andy_puddicombe_all_it_takes_is_10_mindful_minutes"
+      }
+     ]
+    }
+   ]
   }
  ]
 }
