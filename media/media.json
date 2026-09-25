@@ -875,6 +875,118 @@
   },
   {
    "phase": 1,
+   "week": 10,
+   "title": "Mindset and Purpose",
+   "sessions": [
+    {
+     "n": 28,
+     "title": "Growth Mindset",
+     "insert": "p1-w10-s28-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w10-s28a-growth-mindset",
+       "title": "Growth Mindset",
+       "length": "1:53",
+       "when": "Plays after the opening circle, at the start of Review and Reflection.",
+       "desc": "Week 10 as the capstone week: ten weeks of foundation, the week's question and what mindset, purpose and the stakeholder identity each give; it ends on \"You have a foundation. Now what? Who do you become with it?\""
+      },
+      {
+       "file": "p1-w10-s28b-fixed-growth",
+       "title": "Fixed Mindset, Growth Mindset",
+       "length": "2:27",
+       "when": "Plays at the start of the Instruction segment on fixed vs. growth mindset.",
+       "desc": "Carol Dweck's two mindsets side by side, fixed beliefs as stories, and the guide's four \"yet\" sentences; it ends on \"What's a fixed-mindset belief you've carried?\""
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "How I learned to read — and trade stocks — in prison",
+       "speaker": "Curtis \"Wall Street\" Carroll",
+       "source": "TEDxSanQuentin",
+       "length": "10:53",
+       "youtube": "F89eycANUrQ",
+       "page": "https://www.ted.com/talks/curtis_wall_street_carroll_how_i_learned_to_read_and_trade_stocks_in_prison"
+      },
+      {
+       "role": "Optional",
+       "title": "The power of believing that you can improve",
+       "speaker": "Carol Dweck",
+       "source": "TEDxNorrkoping",
+       "length": "10:10",
+       "youtube": "_X0mgOOSpLU",
+       "page": "https://www.ted.com/talks/carol_dweck_the_power_of_believing_that_you_can_improve"
+      }
+     ]
+    },
+    {
+     "n": 29,
+     "title": "Finding Purpose",
+     "insert": "p1-w10-s29-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w10-s29a-purpose",
+       "title": "Finding Purpose",
+       "length": "1:39",
+       "when": "Plays after the opening circle, at the start of Review and Reflection.",
+       "desc": "Growth mindset gives the how but not the why; tools and discipline run out, purpose keeps you on the path; it ends on \"When the old way is calling, what keeps you on the new path?\""
+      },
+      {
+       "file": "p1-w10-s29b-future-self",
+       "title": "Letter from My Future Self",
+       "length": "2:18",
+       "when": "Plays at the start of the Letter from My Future Self exercise.",
+       "desc": "One guided breath, the five-years-from-now questions with real pauses, then the six letter prompts on screen; it ends on all six prompts, to leave up during the writing."
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "Why believe in others",
+       "speaker": "Viktor Frankl",
+       "source": "TED (Best of Web, 1972)",
+       "length": "4:22",
+       "youtube": "fD1512_XJEw",
+       "page": "https://www.ted.com/talks/viktor_frankl_why_believe_in_others"
+      }
+     ]
+    },
+    {
+     "n": 30,
+     "title": "The Stakeholder Identity",
+     "insert": "p1-w10-s30-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w10-s30a-stakeholder",
+       "title": "The Stakeholder Identity",
+       "length": "1:36",
+       "when": "Plays after the opening circle, at the start of Review and Reflection.",
+       "desc": "The last session of new content: ten weeks of work, the week's question and its three answers, and the shift from I to we; it ends on the guide's \"Who remembers it?\" about the first thing the men heard in Session 1."
+      },
+      {
+       "file": "p1-w10-s30b-what-changes",
+       "title": "From Passenger to Stakeholder",
+       "length": "2:16",
+       "when": "Plays at the start of the Deep Dive on the Stakeholder Model.",
+       "desc": "Passenger, victim or stakeholder; what you don't control and what you do; the six shifts, step by step; it ends on \"Nobody is coming to fix this place… That's you.\""
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "It takes the hood to save the hood",
+       "speaker": "Rudy Corpuz Jr.",
+       "source": "TEDxSanQuentin",
+       "length": "10:30",
+       "youtube": "V3LUb27mzUs",
+       "page": "https://www.ted.com/talks/rudy_corpuz_jr_it_takes_the_hood_to_save_the_hood"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "phase": 1,
    "week": 11,
    "title": "Integration and Review",
    "sessions": [
