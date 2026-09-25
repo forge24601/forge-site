@@ -782,3 +782,5 @@ h4 { font-size: 1.15rem; color: var(--blue); }
 .talk-play::after { content: ""; position: absolute; left: 26px; top: 12px; border-style: solid;
     border-width: 10px 0 10px 16px; border-color: transparent transparent transparent #fff; }
 .talk-card .video-body p a { color: var(--blue); }
+.talk-card h4 a { color: inherit; }
+.talk-card h4 a:hover { text-decoration: underline; }
