@@ -748,3 +748,27 @@ h4 { font-size: 1.15rem; color: var(--blue); }
     .quote-text { font-size: 1.2rem; }
     .btn-group { flex-direction: column; align-items: center; }
 }
+
+/* ===== SESSION MEDIA (media.html) ===== */
+.media-session { margin-bottom: 56px; }
+.media-session:last-child { margin-bottom: 0; }
+.media-session-head { margin-bottom: 18px; }
+.media-session-head h3 { color: var(--maroon); font-size: 1.5rem; margin-top: 4px; }
+.media-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
+.video-card, .facil-card {
+    background: var(--white); border: 1px solid var(--border); border-radius: 12px;
+    box-shadow: 0 2px 12px var(--shadow); overflow: hidden;
+}
+.video-card video, .explainer video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #111; }
+.video-body, .facil-card { padding: 18px 20px 20px; }
+.video-body h4, .facil-card h4 { color: var(--maroon); font-size: 1.1rem; margin-bottom: 6px; }
+.video-len { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.8rem; color: var(--text-light); font-weight: 400; margin-left: 6px; }
+.video-when { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--blue); margin-bottom: 6px; }
+.video-body p, .facil-card p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 14px; }
+.facil-card { background: var(--cream); }
+.facil-talk { margin-top: 16px; margin-bottom: 0 !important; font-size: 0.9rem !important; }
+.btn-download { padding: 10px 18px; font-size: 0.78rem; }
+.explainer { max-width: 900px; margin: 0 auto; text-align: center; }
+.explainer video { border-radius: 12px; box-shadow: 0 8px 30px var(--shadow-lg); margin-bottom: 22px; }
+@media (max-width: 900px) { .media-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .media-grid { grid-template-columns: 1fr; } }

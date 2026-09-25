@@ -1,0 +1,50 @@
+{
+ "explainer": {
+  "file": "forge-explainer", "title": "What FORGE Is", "length": "4:38",
+  "download_name": "FORGE-Program-Explainer.mp4",
+  "desc": "The whole program in under five minutes: being a stakeholder, the three phases and their gates, and the research FORGE is built on. For staff, visitors, families and new participants."
+ },
+ "weeks": [
+  {
+   "phase": 1, "week": 1, "title": "Orientation and Community Building",
+   "sessions": [
+    {
+     "n": 1, "title": "Welcome to FORGE", "insert": "p1-w1-s1-media-insert.pdf",
+     "videos": [
+      {"file": "p1-w1-s1-welcome-to-forge", "title": "Welcome to FORGE", "length": "4:28",
+       "when": "Plays right after the opening go-around.",
+       "desc": "Why FORGE exists, the stakeholder idea, what a FORGE mentor is, the three phases, and the elevator speech on screen. Ends on the stakeholder question."}
+     ],
+     "talk": {"title": "Why your worst deeds don't define you", "speaker": "Shaka Senghor", "source": "TED, about 15 minutes",
+              "url": "https://www.ted.com/talks/shaka_senghor_why_your_worst_deeds_don_t_define_you"}
+    },
+    {
+     "n": 2, "title": "Building the Container", "insert": "p1-w1-s2-media-insert.pdf",
+     "videos": [
+      {"file": "p1-w1-s2a-the-circle", "title": "The Circle", "length": "1:53",
+       "when": "Plays first, with the talking piece in the center.",
+       "desc": "Where circles come from, the talking piece, and the five rules. Ends on the first round's question."},
+      {"file": "p1-w1-s2b-your-journal", "title": "Your Journal", "length": "1:23",
+       "when": "Plays at the journaling segment.",
+       "desc": "Why FORGE writes, the four kinds of writing, and tonight's prompt."}
+     ],
+     "talk": {"title": "The power of vulnerability", "speaker": "Brené Brown", "source": "TED, about 20 minutes",
+              "url": "https://www.ted.com/talks/brene_brown_the_power_of_vulnerability"}
+    },
+    {
+     "n": 3, "title": "Service Over Self", "insert": "p1-w1-s3-media-insert.pdf",
+     "videos": [
+      {"file": "p1-w1-s3a-service-over-self", "title": "Service Over Self", "length": "1:41",
+       "when": "Plays at \"What Is Service?\"",
+       "desc": "What service is not, what it is, and four examples from the dorm."},
+      {"file": "p1-w1-s3b-three-programs", "title": "Three Programs", "length": "1:37",
+       "when": "Plays at \"Learning from Other Programs.\"",
+       "desc": "PEP, GRIP and RSVP, and the discovery they share."}
+     ],
+     "talk": {"title": "Everyday leadership", "speaker": "Drew Dudley", "source": "TED, about 6 minutes",
+              "url": "https://www.ted.com/talks/drew_dudley_everyday_leadership"}
+    }
+   ]
+  }
+ ]
+}
