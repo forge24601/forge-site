@@ -193,6 +193,221 @@
      "talks": []
     }
    ]
+  },
+  {
+   "phase": 1,
+   "week": 6,
+   "title": "Conflict Resolution Deep Dive",
+   "sessions": [
+    {
+     "n": 16,
+     "title": "The FORGE Conflict Resolution Model",
+     "insert": "p1-w6-s16-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w6-s16a-tools",
+       "title": "Tools, Not Reactions",
+       "length": "2:09",
+       "when": "Plays first, before the opening circle.",
+       "desc": "What Week 6 is for and the bridge from Weeks 2, 3 and 5 (thinking errors, the escalation curve, listening); ends on the check-in question: the last conflict you saw, and how well it went, 1 to 10."
+      },
+      {
+       "file": "p1-w6-s16b-model",
+       "title": "The 5-Step Model and the Heat Scale",
+       "length": "2:26",
+       "when": "Plays at the start of the 5-Step Model deep dive (to 1:37); the rest (the heat scale) plays at the Heat Scale segment.",
+       "desc": "The five steps one at a time with the guide's techniques, then the four heat levels; ends on matching your response to the actual heat level."
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "Finding confidence in conflict",
+       "speaker": "Kwame Christian",
+       "source": "TEDx",
+       "length": "11:27",
+       "youtube": "F6Zg65eK9XU",
+       "page": "https://www.ted.com/talks/kwame_christian_finding_confidence_in_conflict"
+      }
+     ]
+    },
+    {
+     "n": 17,
+     "title": "De-escalation Techniques",
+     "insert": "p1-w6-s17-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w6-s17a-deescalation",
+       "title": "De-escalation",
+       "length": "1:53",
+       "when": "Plays first, before the opening circle.",
+       "desc": "Heat at 7 or 8 on the heat scale, why de-escalation works (logic doesn't reach a flooded brain), and today's pieces; ends on the prompt to recite the five steps, no handbooks."
+      },
+      {
+       "file": "p1-w6-s17b-empathy",
+       "title": "Tactical Empathy",
+       "length": "1:49",
+       "when": "Plays at the start of the Tactical Empathy segment.",
+       "desc": "The cellie example with three responses side by side, what tactical empathy did, the five key phrases and the redirect; ends on 'Validate first. Redirect second.'"
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "How to speak so that people want to listen",
+       "speaker": "Julian Treasure",
+       "source": "TED",
+       "length": "9:44",
+       "youtube": "eIho2S0ZahI",
+       "page": "https://www.ted.com/talks/julian_treasure_how_to_speak_so_that_people_want_to_listen"
+      },
+      {
+       "role": "Optional",
+       "title": "Interrupting Violence & Changing Mindsets",
+       "speaker": "Cobe Williams",
+       "source": "TEDx",
+       "length": "length not confirmed",
+       "youtube": "XYMy28CdLdA",
+       "page": ""
+      }
+     ]
+    },
+    {
+     "n": 18,
+     "title": "Mediation Skills",
+     "insert": "p1-w6-s18-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w6-s18a-neutral",
+       "title": "The Neutral Third Party",
+       "length": "1:50",
+       "when": "Plays first, before the opening circle.",
+       "desc": "What neutral means and does not mean, why taking sides ends a mediation, and 'You're not the judge. You're the mirror.'; ends on the check-in about body language since yesterday."
+      },
+      {
+       "file": "p1-w6-s18b-heated",
+       "title": "When Both Men Are Heated",
+       "length": "1:40",
+       "when": "Plays at the start of the Managing Two Escalated Parties segment.",
+       "desc": "The guide's five steps for two escalated parties, from 'separate first' to 'take a break'; ends on 'Many conflicts are resolved between mediation sessions, not during them.'"
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "A hostage negotiator on how to resolve conflict",
+       "speaker": "Karleen Savage",
+       "source": "TEDx",
+       "length": "10:10",
+       "youtube": "jUF9sY4HvxY",
+       "page": "https://www.ted.com/talks/karleen_savage_a_hostage_negotiator_on_how_to_resolve_conflict"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "phase": 1,
+   "week": 9,
+   "title": "Problem Solving and Decision Making",
+   "sessions": [
+    {
+     "n": 25,
+     "title": "Problem-Solving Framework",
+     "insert": "p1-w9-s25-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w9-s25a-framework",
+       "title": "Problem-Solving Framework",
+       "length": "1:47",
+       "when": "Plays after the opening circle, at the start of Review and Reflection.",
+       "desc": "Why the worst decisions happen in a few seconds and what this week builds instead; it ends on the guide's question about how fast your worst decision happened."
+      },
+      {
+       "file": "p1-w9-s25b-six-steps",
+       "title": "The Six Steps",
+       "length": "2:14",
+       "when": "Plays at the start of the Instruction segment on the 6-step model.",
+       "desc": "The FORGE 6-step problem-solving model on screen, step by step, then the five traps; it ends on \"Practice it slowly before you can do it fast.\""
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "The C.H.O.I.C.E.S Connection",
+       "speaker": "Jon-Adrian Velazquez",
+       "source": "TEDxSingSing",
+       "length": "15:17",
+       "youtube": "xDPN50xIEEE",
+       "page": "https://www.ted.com/talks/jon_adrian_velazquez_the_c_h_o_i_c_e_s_connection"
+      }
+     ]
+    },
+    {
+     "n": 26,
+     "title": "Decision Making Under Pressure",
+     "insert": "p1-w9-s26-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w9-s26a-pressure",
+       "title": "Decision Making Under Pressure",
+       "length": "2:09",
+       "when": "Plays after the opening circle, at the start of Review and Reflection.",
+       "desc": "What stress does to the brain, tunnel vision and the four defaults, and today's tools; it ends on \"When the pressure hits, where does your body take you?\""
+      },
+      {
+       "file": "p1-w9-s26b-ten-ten-ten",
+       "title": "The 10-10-10 Rule",
+       "length": "1:48",
+       "when": "Plays at the start of the 10-10-10 Rule segment.",
+       "desc": "The three 10-10-10 questions and the guide's two examples side by side; it ends on the pairs' quick-practice prompt."
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "How stress affects your brain",
+       "speaker": "Madhumita Murgia",
+       "source": "TED-Ed",
+       "length": "4:00",
+       "youtube": "WuyPuH9ojCE",
+       "page": "https://www.ted.com/talks/madhumita_murgia_how_stress_affects_your_brain"
+      }
+     ]
+    },
+    {
+     "n": 27,
+     "title": "Consequential Thinking",
+     "insert": "p1-w9-s27-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w9-s27a-ripples",
+       "title": "Consequential Thinking",
+       "length": "1:52",
+       "when": "Plays after the opening circle, at the start of Review and Reflection.",
+       "desc": "Every decision sends out ripples to the people on the shoreline; it ends on \"Who is standing on your shoreline?\""
+      },
+      {
+       "file": "p1-w9-s27b-consequences",
+       "title": "Four Kinds of Consequences",
+       "length": "1:50",
+       "when": "Plays at the start of the Short-Term vs. Long-Term Consequences segment.",
+       "desc": "Short-term and long-term, positive and negative, and the guide's worked example (escalate, or pause and walk away); it ends on \"The choice that feels powerful in the moment is usually the one that costs the most over time.\""
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "What comes after tragedy? Forgiveness",
+       "speaker": "Azim Khamisa and Ples Felix",
+       "source": "TED",
+       "length": "12:57",
+       "youtube": "85hbMtegrLc",
+       "page": "https://www.ted.com/talks/azim_khamisa_and_ples_felix_what_comes_after_tragedy_forgiveness"
+      }
+     ]
+    }
+   ]
   }
  ]
 }
