@@ -872,6 +872,85 @@
      ]
     }
    ]
+  },
+  {
+   "phase": 1,
+   "week": 12,
+   "title": "Phase 1 Assessment and Transition",
+   "sessions": [
+    {
+     "n": 34,
+     "title": "Phase 1 Knowledge Check",
+     "insert": "p1-w12-s34-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w12-s34a-knowledge-check",
+       "title": "The Knowledge Check",
+       "length": "2:17",
+       "when": "Plays at the start of the session, in the Opening, before the tests are handed out.",
+       "desc": "The guide's four points: not designed to trick you, 70% (21 of 30) to advance, you can retake it, and the format; it names the six areas covered but shows no questions or answers, and ends on \"Any questions before you start?\""
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "How to practice effectively...for just about anything",
+       "speaker": "Annie Bosler and Don Greene",
+       "source": "TED-Ed",
+       "length": "4:35",
+       "youtube": "f2O6mQkFiiw",
+       "page": "https://www.ted.com/talks/annie_bosler_and_don_greene_how_to_practice_effectively_for_just_about_anything"
+      }
+     ]
+    },
+    {
+     "n": 35,
+     "title": "Portfolio Review",
+     "insert": "p1-w12-s35-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w12-s35a-portfolio",
+       "title": "Portfolio Review",
+       "length": "2:10",
+       "when": "Plays in the Opening, right after the Knowledge Check results are shared.",
+       "desc": "How a portfolio presentation works (contents, highlights, self-assessment in about 8 minutes), that panel questions are a conversation and not an interrogation, and the eight portfolio items; it ends on the completeness check, \"Open your portfolio. Is every piece there?\""
+      }
+     ],
+     "talks": []
+    },
+    {
+     "n": 36,
+     "title": "Phase 1 Celebration and Phase 2 Preview",
+     "insert": "p1-w12-s36-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w12-s36a-twelve-weeks",
+       "title": "Phase 1 Celebration",
+       "length": "1:41",
+       "when": "Plays at the start of the session, once everyone is seated, before the opening circle.",
+       "desc": "The guide's opening words (\"Twelve weeks ago, you walked into this room as strangers\"), the twelve weeks of Phase 1 on screen, and what today holds; it ends on the check-in question, \"What does it feel like to be sitting here, at the end of Phase 1?\""
+      },
+      {
+       "file": "p1-w12-s36b-build-others",
+       "title": "Phase 2: Build Others",
+       "length": "2:28",
+       "when": "Plays at the start of the Phase 2 Preview segment, after the completion ceremony.",
+       "desc": "Why Phase 2 is harder, what a mentor does, the three phases and the six parts of Phase 2, and that real mentees come in Phase 3; it ends on \"What questions do you have about Phase 2?\""
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "Every kid needs a champion",
+       "speaker": "Rita Pierson",
+       "source": "TED",
+       "length": "7:34",
+       "youtube": "SFnMTHhKdkw",
+       "page": "https://www.ted.com/talks/rita_pierson_every_kid_needs_a_champion"
+      }
+     ]
+    }
+   ]
   }
  ]
 }
