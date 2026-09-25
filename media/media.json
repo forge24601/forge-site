@@ -146,7 +146,17 @@
        "desc": "The five columns, the guide's chow-line sample filled in column by column, and how a different thought changes the chain; ends on the exercise prompt held for 20 seconds."
       }
      ],
-     "talks": []
+     "talks": [
+      {
+       "role": "Optional",
+       "title": "How to make stress your friend",
+       "speaker": "Kelly McGonigal",
+       "source": "TED",
+       "length": "14:15",
+       "youtube": "RcGyVTAoXEU",
+       "page": "https://www.ted.com/talks/kelly_mcgonigal_how_to_make_stress_your_friend"
+      }
+     ]
     },
     {
      "n": 5,
@@ -168,7 +178,17 @@
        "desc": "All eight with the guide's one-line summaries and the exercise instructions; ends on \"Which thinking errors were in your thinking?\" held for 20 seconds."
       }
      ],
-     "talks": []
+     "talks": [
+      {
+       "role": "Optional",
+       "title": "Why you think you're right — even if you're wrong",
+       "speaker": "Julia Galef",
+       "source": "TEDxPSU",
+       "length": "11:27",
+       "youtube": "w4RLfVxTGH4",
+       "page": "https://www.ted.com/talks/julia_galef_why_you_think_you_re_right_even_if_you_re_wrong"
+      }
+     ]
     },
     {
      "n": 6,
@@ -190,7 +210,17 @@
        "desc": "Stop, Think, Options, Plan letter by letter, then the guide's shoulder-bump example without and with STOP; ends on \"The difference: four letters.\""
       }
      ],
-     "talks": []
+     "talks": [
+      {
+       "role": "Optional",
+       "title": "Why we all need to practice emotional first aid",
+       "speaker": "Guy Winch",
+       "source": "TEDxLinnaeusUniversity",
+       "length": "17:14",
+       "youtube": "F2hc2FLOdhI",
+       "page": "https://www.ted.com/talks/guy_winch_why_we_all_need_to_practice_emotional_first_aid"
+      }
+     ]
     }
    ]
   },
@@ -219,7 +249,17 @@
        "desc": "Anger as a secondary emotion, the six emotions it covers up one at a time on screen, which emotions are safe to show in here, and the guide's phone-call example; it ends on \"How many of you have lived that exact scenario, or something like it?\""
       }
      ],
-     "talks": []
+     "talks": [
+      {
+       "role": "Optional",
+       "title": "The gift and power of emotional courage",
+       "speaker": "Susan David",
+       "source": "TED",
+       "length": "16:38",
+       "youtube": "NDQ1Mi5I4rg",
+       "page": "https://www.ted.com/talks/susan_david_the_gift_and_power_of_emotional_courage"
+      }
+     ]
     },
     {
      "n": 8,
@@ -241,7 +281,17 @@
        "desc": "Teaches 4-4-4 breathing and leads three full cycles with an animated guide and 38 seconds of silence, then leads 5-4-3-2-1 grounding one sense at a time with pauses; it ends on a when-to-use-which card (breathe, ground, STOP)."
       }
      ],
-     "talks": []
+     "talks": [
+      {
+       "role": "Optional",
+       "title": "How to calm your anxiety, from a neuroscientist",
+       "speaker": "Wendy Suzuki",
+       "source": "TED",
+       "length": "7:18",
+       "youtube": "FpiWSFcL3-c",
+       "page": "https://www.ted.com/talks/wendy_suzuki_how_to_calm_your_anxiety_from_a_neuroscientist"
+      }
+     ]
     },
     {
      "n": 9,
@@ -263,7 +313,17 @@
        "desc": "Shame, rejection, powerlessness and grief, one card each in the guide's words, then the guide's silence (12 seconds); it ends on \"Naming the real emotion doesn't make you weak. It makes you honest.\""
       }
      ],
-     "talks": []
+     "talks": [
+      {
+       "role": "Optional",
+       "title": "Why we get mad — and why it's healthy",
+       "speaker": "Ryan Martin",
+       "source": "TED",
+       "length": "12:56",
+       "youtube": "0rAngiiXBAc",
+       "page": "https://www.ted.com/talks/ryan_martin_why_we_get_mad_and_why_it_s_healthy"
+      }
+     ]
     }
    ]
   },
@@ -292,7 +352,17 @@
        "desc": "SAMHSA's Three E's on screen one at a time, trauma as a normal human response to abnormal circumstances, and survival strategies that outlast the danger; ends on \"It keeps you responding to the past, even when you're living in the present.\""
       }
      ],
-     "talks": []
+     "talks": [
+      {
+       "role": "Optional",
+       "title": "How childhood trauma affects health across a lifetime",
+       "speaker": "Nadine Burke Harris",
+       "source": "TED",
+       "length": "15:49",
+       "youtube": "95ovIJ3dsNk",
+       "page": "https://www.ted.com/talks/nadine_burke_harris_how_childhood_trauma_affects_health_across_a_lifetime"
+      }
+     ]
     },
     {
      "n": 11,
@@ -314,7 +384,17 @@
        "desc": "Fight, flight, freeze and fawn on screen with what each looks like, why none is a weakness, and reacting vs. responding side by side; ends on \"Look past the behavior. Ask: what was triggered?\""
       }
      ],
-     "talks": []
+     "talks": [
+      {
+       "role": "Optional",
+       "title": "The effect of trauma on the brain and how it affects behaviors",
+       "speaker": "John Rigg",
+       "source": "TEDx",
+       "length": "",
+       "youtube": "m9Pg4K1ZKws",
+       "page": ""
+      }
+     ]
     },
     {
      "n": 12,
@@ -336,7 +416,17 @@
        "desc": "Safe and unsafe coping side by side, the unsafe list in words only, then nine safe strategies over calm scenes; ends on \"The question isn't whether you have options. It's whether you'll use them.\""
       }
      ],
-     "talks": []
+     "talks": [
+      {
+       "role": "Optional",
+       "title": "The three secrets of resilient people",
+       "speaker": "Lucy Hone",
+       "source": "TEDx",
+       "length": "15:56",
+       "youtube": "NWH8N-BvhAw",
+       "page": "https://www.ted.com/talks/lucy_hone_3_secrets_of_resilient_people"
+      }
+     ]
     }
    ]
   },
@@ -1067,7 +1157,17 @@
        "desc": "The SBI model with the guide's examples, one strength and one growth area per peer, how the feedback seat works and the four ground rules; it ends on \"One strength. One growth area. Specific, honest, respectful.\""
       }
      ],
-     "talks": []
+     "talks": [
+      {
+       "role": "Optional",
+       "title": "How to use others' feedback to learn and grow",
+       "speaker": "Sheila Heen",
+       "source": "TEDxAmoskeagMillyardWomen",
+       "length": "length not confirmed",
+       "youtube": "FQNbaKkYk_Q",
+       "page": ""
+      }
+     ]
     }
    ]
   },
@@ -1114,7 +1214,17 @@
        "desc": "How a portfolio presentation works (contents, highlights, self-assessment in about 8 minutes), that panel questions are a conversation and not an interrogation, and the eight portfolio items; it ends on the completeness check, \"Open your portfolio. Is every piece there?\""
       }
      ],
-     "talks": []
+     "talks": [
+      {
+       "role": "Optional",
+       "title": "There's more to life than being happy",
+       "speaker": "Emily Esfahani Smith",
+       "source": "TED",
+       "length": "12:08",
+       "youtube": "y9Trdafp83U",
+       "page": "https://www.ted.com/talks/emily_esfahani_smith_there_s_more_to_life_than_being_happy"
+      }
+     ]
     },
     {
      "n": 36,
