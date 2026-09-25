@@ -196,6 +196,182 @@
   },
   {
    "phase": 1,
+   "week": 4,
+   "title": "Trauma Awareness",
+   "sessions": [
+    {
+     "n": 10,
+     "title": "Understanding Trauma",
+     "insert": "p1-w4-s10-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w4-s10a-understanding",
+       "title": "Understanding Trauma",
+       "length": "2:02",
+       "when": "Plays at the start of the session, as the Opening Circle begins; the check-in round starts on its last card.",
+       "desc": "The guide's opening words for the week (two truths, you can step out, no one is forced to share, FORGE helps you understand trauma but does not treat it), today's plan and the week's message; ends on the check-in question held for 20 seconds."
+      },
+      {
+       "file": "p1-w4-s10b-three-es",
+       "title": "Event, Experience, Effect",
+       "length": "1:44",
+       "when": "Plays at the start of Part 1 of the Instruction segment (What Trauma Actually Is), before the Three E's handout.",
+       "desc": "SAMHSA's Three E's on screen one at a time, trauma as a normal human response to abnormal circumstances, and survival strategies that outlast the danger; ends on \"It keeps you responding to the past, even when you're living in the present.\""
+      }
+     ],
+     "talks": []
+    },
+    {
+     "n": 11,
+     "title": "Trauma Responses in the Dorm",
+     "insert": "p1-w4-s11-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w4-s11a-responses",
+       "title": "Trauma Responses in the Dorm",
+       "length": "1:32",
+       "when": "Plays at the start of the session, as the Opening Circle begins; the check-in round starts on its last card.",
+       "desc": "Acknowledges that the last session was heavy, recaps Session 10, names the four survival responses and today's plan; ends on the check-in question held for 20 seconds."
+      },
+      {
+       "file": "p1-w4-s11b-four-responses",
+       "title": "Fight, Flight, Freeze, Fawn",
+       "length": "2:18",
+       "when": "Plays at the start of Part 1 of the Instruction segment (The Four Trauma Responses), before the reference sheet.",
+       "desc": "Fight, flight, freeze and fawn on screen with what each looks like, why none is a weakness, and reacting vs. responding side by side; ends on \"Look past the behavior. Ask: what was triggered?\""
+      }
+     ],
+     "talks": []
+    },
+    {
+     "n": 12,
+     "title": "Coping and Safety",
+     "insert": "p1-w4-s12-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w4-s12a-coping",
+       "title": "Coping and Safety",
+       "length": "1:43",
+       "when": "Plays at the start of the session, as the Opening Circle begins; the check-in round starts on its last card.",
+       "desc": "Recaps the week, asks what you do about it, and lists today's parts (safe and unsafe coping, self-care in here, trauma-aware not therapy, the Personal Safe Coping Card); ends on the gratitude-and-struggle check-in held for 20 seconds."
+      },
+      {
+       "file": "p1-w4-s12b-safe-coping",
+       "title": "Safe Coping",
+       "length": "2:18",
+       "when": "Plays at the start of Part 1 of the Instruction segment (Safe vs. Unsafe Coping), before the coping handout.",
+       "desc": "Safe and unsafe coping side by side, the unsafe list in words only, then nine safe strategies over calm scenes; ends on \"The question isn't whether you have options. It's whether you'll use them.\""
+      }
+     ],
+     "talks": []
+    }
+   ]
+  },
+  {
+   "phase": 1,
+   "week": 5,
+   "title": "Active Listening and Communication",
+   "sessions": [
+    {
+     "n": 13,
+     "title": "Active Listening",
+     "insert": "p1-w5-s13-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w5-s13a-listening",
+       "title": "Active Listening",
+       "length": "2:03",
+       "when": "Plays first, as soon as the men are seated, before the opening circle.",
+       "desc": "Why this week turns outward, hearing versus listening, why survival mode makes listening hard, and today's plan; ends on the check-in questions, held 20 seconds."
+      },
+      {
+       "file": "p1-w5-s13b-components",
+       "title": "The Five Components",
+       "length": "2:25",
+       "when": "Plays at the start of the Instruction segment \"The 5 Components of Active Listening\".",
+       "desc": "Attending, reflecting, clarifying, summarizing and validating, one at a time with the guide's examples; ends on \"Which one do you think will be hardest for you?\""
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "5 ways to listen better",
+       "speaker": "Julian Treasure",
+       "source": "TED",
+       "length": "7:33",
+       "youtube": "cSohjlYQI2A",
+       "page": "https://www.ted.com/talks/julian_treasure_5_ways_to_listen_better"
+      }
+     ]
+    },
+    {
+     "n": 14,
+     "title": "Communication Styles",
+     "insert": "p1-w5-s14-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w5-s14a-styles",
+       "title": "Communication Styles",
+       "length": "2:51",
+       "when": "Plays after the opening circle, at the start of the Instruction segment \"The 4 Communication Styles\".",
+       "desc": "Aggressive, passive, passive-aggressive and assertive, each with what it sounds like, where it comes from and what it gets you; ends on \"Under stress, which style do you default to?\", held 20 seconds."
+      },
+      {
+       "file": "p1-w5-s14b-i-statements",
+       "title": "“I” Statements",
+       "length": "2:09",
+       "when": "Plays at the start of the Instruction segment \"'I' Statements vs. 'You' Statements\".",
+       "desc": "\"You\" statements attack, \"I\" statements own; the formula and the guide's three situations side by side; ends on the formula, I feel ___ when ___ because ___."
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "10 ways to have a better conversation",
+       "speaker": "Celeste Headlee",
+       "source": "TEDx",
+       "length": "11:20",
+       "youtube": "R1vskiVDwl4",
+       "page": "https://www.ted.com/talks/celeste_headlee_10_ways_to_have_a_better_conversation"
+      }
+     ]
+    },
+    {
+     "n": 15,
+     "title": "Giving and Receiving Feedback",
+     "insert": "p1-w5-s15-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w5-s15a-feedback",
+       "title": "Feedback",
+       "length": "2:02",
+       "when": "Plays first, as soon as the men are seated, before the opening circle.",
+       "desc": "Why feedback usually goes wrong, where most men have heard it before, and how FORGE sees it: feedback is a service; ends on the check-in question, held 20 seconds."
+      },
+      {
+       "file": "p1-w5-s15b-sbi",
+       "title": "The SBI Model",
+       "length": "2:07",
+       "when": "Plays at the start of the Instruction segment \"The SBI Model\".",
+       "desc": "Situation, Behavior, Impact, with the guide's Marcus example built up piece by piece and the dorm example set against \"You're lazy\"; ends on \"Three pieces. Every time.\""
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "The secret to giving great feedback",
+       "speaker": "LeeAnn Renninger",
+       "source": "TED",
+       "length": "4:48",
+       "youtube": "wtl5UrrgU8c",
+       "page": "https://www.ted.com/talks/leeann_renninger_the_secret_to_giving_great_feedback"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "phase": 1,
    "week": 6,
    "title": "Conflict Resolution Deep Dive",
    "sessions": [
