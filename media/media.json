@@ -875,6 +875,92 @@
   },
   {
    "phase": 1,
+   "week": 11,
+   "title": "Integration and Review",
+   "sessions": [
+    {
+     "n": 31,
+     "title": "Skills Integration Practice",
+     "insert": "p1-w11-s31-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w11-s31a-integration",
+       "title": "Skills Integration Practice",
+       "length": "1:44",
+       "when": "Plays at the start of the session, before the Opening Circle.",
+       "desc": "Ten weeks of skills learned one at a time, and why real life asks for them all at once; the week ahead; it ends on the check-in question about your strongest skill and the one you're still working on."
+      },
+      {
+       "file": "p1-w11-s31b-scenarios",
+       "title": "Three Scenarios",
+       "length": "1:38",
+       "when": "Plays after the Opening Circle, at the start of Setup and Group Formation.",
+       "desc": "The five skills each scenario layers, the three scenarios by name, and the format step by step (hear it, analyze, role-play, rotate, debrief); it ends on \"No spectators.\""
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "Help for kids the education system ignores",
+       "speaker": "Victor Rios",
+       "source": "TED",
+       "length": "11:43",
+       "youtube": "hHOX3dlhhZ0",
+       "page": "https://www.ted.com/talks/victor_rios_help_for_kids_the_education_system_ignores"
+      }
+     ]
+    },
+    {
+     "n": 32,
+     "title": "Self-Assessment and Reflection",
+     "insert": "p1-w11-s32-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w11-s32a-reflection",
+       "title": "Self-Assessment and Reflection",
+       "length": "2:19",
+       "when": "Plays at the start of the session, inside the Opening Circle.",
+       "desc": "The three parts of the day, what to look for in ten weeks of journal entries, the questionnaire's 1-to-5 scale on screen, and the essay prompt; it ends on the check-in question about bringing your journal and looking back."
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "The psychology of your future self",
+       "speaker": "Dan Gilbert",
+       "source": "TED",
+       "length": "6:35",
+       "youtube": "XNbaR54Gpj4",
+       "page": "https://www.ted.com/talks/dan_gilbert_the_psychology_of_your_future_self"
+      }
+     ]
+    },
+    {
+     "n": 33,
+     "title": "Peer Evaluation and Feedback",
+     "insert": "p1-w11-s33-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p1-w11-s33a-feedback",
+       "title": "Peer Evaluation and Feedback",
+       "length": "1:36",
+       "when": "Plays at the start of the session, inside the Opening Circle.",
+       "desc": "Why honest feedback from men who have walked beside you for ten weeks is rare and valuable, and what today holds; it ends on the check-in question about how it feels to be about to receive it."
+      },
+      {
+       "file": "p1-w11-s33b-feedback-seat",
+       "title": "SBI and the Feedback Seat",
+       "length": "1:59",
+       "when": "Plays at the start of SBI Review and Feedback Setup.",
+       "desc": "The SBI model with the guide's examples, one strength and one growth area per peer, how the feedback seat works and the four ground rules; it ends on \"One strength. One growth area. Specific, honest, respectful.\""
+      }
+     ],
+     "talks": []
+    }
+   ]
+  },
+  {
+   "phase": 1,
    "week": 12,
    "title": "Phase 1 Assessment and Transition",
    "sessions": [
