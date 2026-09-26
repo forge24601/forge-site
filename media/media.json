@@ -1355,6 +1355,392 @@
      ]
     }
    ]
+  },
+  {
+   "phase": 2,
+   "week": 14,
+   "title": "Teaching and Facilitation Skills",
+   "sessions": [
+    {
+     "n": 40,
+     "title": "How Adults Learn",
+     "insert": "p2-w14-s40-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p2-w14-s40a-adult-learning",
+       "title": "How Adults Learn",
+       "length": "1:45",
+       "when": "Plays first, before the opening circle.",
+       "desc": "The bridge from Week 13: the problem isn't the audience, it's the delivery; knowing something and teaching it are two different skills; what today holds. Ends on the check-in question: what was the most effective session in Phase 1, and what made it work?"
+      },
+      {
+       "file": "p2-w14-s40b-four-principles",
+       "title": "Knowles' Four Principles",
+       "length": "1:53",
+       "when": "Plays at the start of Knowles' 4 Principles of Adult Learning.",
+       "desc": "Knowles' four principles of adult learning one at a time: why, experience, problem-solving and immediate application, each with the guide's “what this means for you.” Ends on the four principles."
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "What incarcerated youth can teach teachers",
+       "speaker": "Hilderbrand Pelzer III",
+       "source": "TEDxDeerPark",
+       "length": "18:11",
+       "youtube": "n-PWRcP60lo",
+       "page": "https://www.ted.com/talks/hilderbrand_pelzer_iii_what_incarcerated_youth_can_teach_teachers"
+      }
+     ]
+    },
+    {
+     "n": 41,
+     "title": "Facilitation vs. Lecturing",
+     "insert": "p2-w14-s41-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p2-w14-s41a-facilitation",
+       "title": "Facilitation vs. Lecturing",
+       "length": "2:09",
+       "when": "Plays first, before the opening circle.",
+       "desc": "The biggest mistake new facilitators make, “to make easy,” and the lecturer and the facilitator side by side: if you explain it, they hear your answer; if you guide them, they own it. Ends on the check-in question about the practicum topic and confidence."
+      },
+      {
+       "file": "p2-w14-s41b-four-people",
+       "title": "The Four People in Every Group",
+       "length": "1:58",
+       "when": "Plays at the start of Managing Group Dynamics.",
+       "desc": "The quiet one, the dominator, the disruptor and the skeptic, each shown in a discussion group with the guide's first moves for handling him. Ends on “Stay curious. Stay calm. Stay open.”"
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "Teach teachers how to create magic",
+       "speaker": "Christopher Emdin",
+       "source": "TED",
+       "length": "6:40",
+       "youtube": "H3ddtbeduoo",
+       "page": "https://www.ted.com/talks/christopher_emdin_teach_teachers_how_to_create_magic"
+      }
+     ]
+    },
+    {
+     "n": 42,
+     "title": "Lesson Planning",
+     "insert": "p2-w14-s42-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p2-w14-s42a-lesson-planning",
+       "title": "Lesson Planning",
+       "length": "1:45",
+       "when": "Plays first, before the opening circle.",
+       "desc": "Next week's practicum and today's job: the four parts of every lesson, starting with the end in mind (the key word is “do”), and “the most important material is you.” Ends on the check-in question about observing as a facilitator."
+      },
+      {
+       "file": "p2-w14-s42b-four-parts",
+       "title": "The 4-Part Lesson",
+       "length": "2:03",
+       "when": "Plays at the start of The 4-Part Lesson Structure.",
+       "desc": "Hook, content, practice and debrief, each with the guide's examples and rules, then the 30-minute breakdown. Ends on “If you have to cut something, cut content. Never practice.”"
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "3 rules to spark learning",
+       "speaker": "Ramsey Musallam",
+       "source": "TED",
+       "length": "6:15",
+       "youtube": "YsYHqfk0X2A",
+       "page": "https://www.ted.com/talks/ramsey_musallam_3_rules_to_spark_learning"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "phase": 2,
+   "week": 15,
+   "title": "Facilitation Practice",
+   "sessions": [
+    {
+     "n": 43,
+     "title": "Teaching Practicum 1",
+     "insert": "p2-w15-s43-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p2-w15-s43a-practicum-one",
+       "title": "Teaching Practicum 1",
+       "length": "2:25",
+       "when": "Plays at the start of the Opening, before the rubrics are handed out.",
+       "desc": "Today is the day: nerves, “you are the group,” training not performance, the 30-minute lesson, the rubric's five criteria and 1–4 scale, and vague against specific feedback. Ends on “One strength. One area for improvement. One question.”"
+      }
+     ],
+     "talks": []
+    },
+    {
+     "n": 44,
+     "title": "Teaching Practicum 2",
+     "insert": "p2-w15-s44-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p2-w15-s44a-practicum-two",
+       "title": "Teaching Practicum 2",
+       "length": "1:31",
+       "when": "Plays at the start of the Opening.",
+       "desc": "Day two of the practicum: the same rules and feedback round, everyone else participating then observing, and a preview of the debrief on common challenges. Ends on the question for the first group of presenters: any advice, any warnings?"
+      }
+     ],
+     "talks": []
+    },
+    {
+     "n": 45,
+     "title": "Group Dynamics and Difficult Moments",
+     "insert": "p2-w15-s45-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p2-w15-s45a-difficult-moments",
+       "title": "Group Dynamics and Difficult Moments",
+       "length": "2:08",
+       "when": "Plays first, before the opening circle.",
+       "desc": "When things go sideways: the five moments that test every facilitator, each a test of composure, judgment and skill, practised today in a safe place. Ends on the check-in about the rubrics and how facilitation feels now."
+      },
+      {
+       "file": "p2-w15-s45b-scenario",
+       "title": "Scenario 4: Someone Challenges You",
+       "length": "1:51",
+       "when": "Plays at the start of the Role-Play Block — pause it on the freeze question.",
+       "desc": "The guide's Scenario 4 acted out in a circle: a man calls thinking errors a way to blame the men. It freezes on “What's your first instinct?”, then shows one way a peer facilitator could handle it, in the guide's coaching points."
+      },
+      {
+       "file": "p2-w15-s45c-silence",
+       "title": "The Power of Silence",
+       "length": "1:32",
+       "when": "Plays at the start of The Power of Silence.",
+       "desc": "The fear of silence, the four silences a facilitator can use, and ten seconds of real silence to count through. Ends on “Use the silence.”"
+      }
+     ],
+     "talks": []
+    }
+   ]
+  },
+  {
+   "phase": 2,
+   "week": 16,
+   "title": "Motivational Interviewing Basics",
+   "sessions": [
+    {
+     "n": 46,
+     "title": "The Spirit of MI",
+     "insert": "p2-w16-s46-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p2-w16-s46a-spirit",
+       "title": "The Spirit of MI",
+       "length": "1:42",
+       "when": "Plays first, before the opening circle.",
+       "desc": "What to do when the person you're trying to help doesn't want help: where MI came from, the one-sentence version (their reasons, not yours) and the week ahead. Ends on “Has anyone ever tried to change your mind by arguing with you?”"
+      },
+      {
+       "file": "p2-w16-s46b-four-principles",
+       "title": "The Four Principles of MI",
+       "length": "2:11",
+       "when": "Plays at the start of The Four Principles of MI.",
+       "desc": "Partnership, acceptance, compassion and evocation, one at a time in the guide's words, with all four on screen. Ends on the check for understanding: MI or advice?"
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "Empathy is not endorsement",
+       "speaker": "Dylan Marron",
+       "source": "TED",
+       "length": "10:42",
+       "youtube": "waVUm5bhLbg",
+       "page": "https://www.ted.com/talks/dylan_marron_empathy_is_not_endorsement"
+      }
+     ]
+    },
+    {
+     "n": 47,
+     "title": "MI Skills for Mentors",
+     "insert": "p2-w16-s47-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p2-w16-s47a-oars",
+       "title": "MI Skills for Mentors",
+       "length": "1:44",
+       "when": "Plays first, before the opening circle.",
+       "desc": "From the why to the how: the rowboat, the four OARS skills one at a time, and why the hardest part is not giving advice. Ends on the rolling-with-resistance check-in."
+      },
+      {
+       "file": "p2-w16-s47b-reflections",
+       "title": "Reflections",
+       "length": "2:12",
+       "when": "Plays at the start of OARS Skill 3: Reflections.",
+       "desc": "Simple and complex reflections side by side on the guide's two examples, and the three common mistakes. Ends on the triad practice."
+      },
+      {
+       "file": "p2-w16-s47c-scenario",
+       "title": "A Full OARS Conversation",
+       "length": "2:17",
+       "when": "Plays at the start of the Integrated Practice — pause it on the question.",
+       "desc": "A mentee three weeks into FORGE says he's quitting. The video stops on the pairs' question, then shows a mentor using an open question, an affirmation, a reflection and a summary."
+      }
+     ],
+     "talks": []
+    },
+    {
+     "n": 48,
+     "title": "MI in FORGE Context",
+     "insert": "p2-w16-s48-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p2-w16-s48a-mi-in-forge",
+       "title": "MI in FORGE",
+       "length": "1:33",
+       "when": "Plays first, before the opening circle.",
+       "desc": "Meeting someone where he is: the week so far, today's three situations, the readiness ruler, and MI as a practice, not a performance. Ends on the OARS homework check-in."
+      },
+      {
+       "file": "p2-w16-s48b-readiness-ruler",
+       "title": "The Readiness Ruler",
+       "length": "1:47",
+       "when": "Plays at the start of The Readiness Ruler.",
+       "desc": "One question on a 1-to-10 scale, “What makes you a 4 and not a 1?”, the step up, and why a 4 is real. Ends on the two follow-ups."
+      },
+      {
+       "file": "p2-w16-s48c-scenario",
+       "title": "Scenario 3: MI During Conflict Resolution",
+       "length": "2:36",
+       "when": "Plays in place of the live run of Scenario 3 in the Scenario Block — pause it on the question.",
+       "desc": "Ray and Deon's cold war over a dayroom seat. The video stops on “What's it really about?”, then shows a mentor using reflections, an open question and the readiness ruler with Ray."
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "I grew up in the Westboro Baptist Church. Here's why I left",
+       "speaker": "Megan Phelps-Roper",
+       "source": "TED",
+       "length": "15:07",
+       "youtube": "bVV2Zk88beY",
+       "page": "https://www.ted.com/talks/megan_phelps_roper_i_grew_up_in_the_westboro_baptist_church_here_s_why_i_left"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "phase": 2,
+   "week": 17,
+   "title": "Simulation Training Block 1a",
+   "sessions": [
+    {
+     "n": 49,
+     "title": "Introduction to Simulations",
+     "insert": "p2-w17-s49-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p2-w17-s49a-simulations",
+       "title": "Introduction to Simulations",
+       "length": "2:15",
+       "when": "Plays first, before the opening circle.",
+       "desc": "Simulation training in the guide's words: FORGE makes you do it, the firefighter who practices, why it's uncomfortable, and why every mistake in a simulation is one you don't make in real life. Ends on the check-in question."
+      },
+      {
+       "file": "p2-w17-s49b-format",
+       "title": "How a Simulation Works",
+       "length": "2:16",
+       "when": "Plays at the start of How Simulations Work.",
+       "desc": "The six steps lighting up one at a time with their minutes, the freeze questions to the mentor and the group, and feedback that is coaching, not a pile-on. Ends on the six steps."
+      },
+      {
+       "file": "p2-w17-s49c-scenario",
+       "title": "Freeze and Coach: A Demonstration",
+       "length": "1:46",
+       "when": "Plays at the start of the Freeze and Coach demonstration — pause it when it freezes on the question.",
+       "desc": "The guide's demonstration scene acted out: a mentor walks up tense, the scene freezes on the group's question, one piece of coaching in the guide's words, and the calmer replay."
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "What I learned from going blind in space",
+       "speaker": "Chris Hadfield",
+       "source": "TED",
+       "length": "18:08",
+       "youtube": "Zo62S0ulqhA",
+       "page": "https://www.ted.com/talks/chris_hadfield_what_i_learned_from_going_blind_in_space"
+      }
+     ]
+    },
+    {
+     "n": 50,
+     "title": "Simulation 1 — Property Dispute Escalating to Threats",
+     "insert": "p2-w17-s50-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p2-w17-s50a-simulation-one",
+       "title": "Simulation 1: Property Dispute",
+       "length": "1:44",
+       "when": "Plays first, before the opening circle.",
+       "desc": "Practice, not a test; what Simulation 1 tests; what the room watches for; the agreements still hold. Ends on the check-in question."
+      },
+      {
+       "file": "p2-w17-s50b-scenario",
+       "title": "Simulation 1: The Radio",
+       "length": "2:12",
+       "when": "Plays at Simulation 1 Setup — stop on the pause card; play the rest after the first run's debrief.",
+       "desc": "Williams and Carter face to face over a missing radio, words and body language only; it stops on the mentor's question, then shows one way a mentor could step in, in the guide's words, and ends on the journal question."
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "The walk from \"no\" to \"yes\"",
+       "speaker": "William Ury",
+       "source": "TEDxMidwest",
+       "length": "18:28",
+       "youtube": "Hc6yi_FtoNo",
+       "page": "https://www.ted.com/talks/william_ury_the_walk_from_no_to_yes"
+      }
+     ]
+    },
+    {
+     "n": 51,
+     "title": "Simulation 2 — Gossip and Reputation Damage",
+     "insert": "p2-w17-s51-media-insert.pdf",
+     "videos": [
+      {
+       "file": "p2-w17-s51a-gossip",
+       "title": "Simulation 2: Gossip and Reputation Damage",
+       "length": "1:38",
+       "when": "Plays first, before the opening circle.",
+       "desc": "Yesterday's dispute and today's scenario side by side; in here, gossip can be dangerous; what a mentor can't control and can't ignore; what this one tests. Ends on the check-in question."
+      },
+      {
+       "file": "p2-w17-s51b-scenario",
+       "title": "Simulation 2: Thomas",
+       "length": "2:39",
+       "when": "Plays at Simulation 2 Setup — stop on the pause card; play the rest after the first run's debrief.",
+       "desc": "Thomas asks the mentor to talk to Jackson; it stops on the danger-level question, then shows validation, an open question and the answer to 'Don't tell staff', what a mentor can and can't do, and the Jackson layer for the second run."
+      }
+     ],
+     "talks": [
+      {
+       "role": "Suggested talk",
+       "title": "How to stay calm when you know you'll be stressed",
+       "speaker": "Daniel Levitin",
+       "source": "TED",
+       "length": "12:10",
+       "youtube": "8jPQjjsBbIc",
+       "page": "https://www.ted.com/talks/daniel_levitin_how_to_stay_calm_when_you_know_you_ll_be_stressed"
+      }
+     ]
+    }
+   ]
   }
  ]
 }
