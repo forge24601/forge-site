@@ -21,7 +21,7 @@ FORGE's motto is **"Service Over Self."** Its founding principle is that lasting
 ### Structure
 
 - **Duration:** 36 weeks (9 months)
-- **Sessions:** 3 per week (Tuesday, Wednesday, Thursday), 2 hours each
+- **Sessions:** 3 per week, 2 hours each
 - **Total program hours:** Approximately 216
 - **Cohort size:** 12-15 participants
 - **Total curriculum pages:** Over 790 pages of facilitator guides plus a 186-page participant workbook
