@@ -53,7 +53,7 @@ Training becomes reality. Participants mentor under graduated supervision, co-le
 
 Each phase has specific gate requirements -- including attendance, written assessments, peer evaluations, staff observations, and demonstrated competency -- that must be met before advancing. The program culminates in a formal certification after completing 60 hours of supervised mentoring and facilitation.
 
-The full curriculum includes over 790 pages of facilitator guides with session-by-session scripts, plus participant workbooks with exercises, reflection prompts, and tracking tools.
+The full curriculum includes over 790 pages of facilitator guides with session-by-session scripts, plus a 186-page participant workbook with every session's key points and homework, exercises, reflection prompts, and tracking tools.
 
 ### Where the Curriculum Comes From
 

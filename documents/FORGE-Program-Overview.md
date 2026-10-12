@@ -24,7 +24,7 @@ FORGE's motto is **"Service Over Self."** Its founding principle is that lasting
 - **Sessions:** 3 per week (Tuesday, Wednesday, Thursday), 2 hours each
 - **Total program hours:** Approximately 216
 - **Cohort size:** 12-15 participants
-- **Total curriculum pages:** Over 790 pages of facilitator guides plus 107 pages of participant workbooks
+- **Total curriculum pages:** Over 790 pages of facilitator guides plus a 186-page participant workbook
 
 The program moves through three distinct phases, each building on the last. Participants cannot advance to the next phase without meeting specific gate requirements evaluated through written assessments, peer evaluations, staff observations, and demonstrated competency.
 
