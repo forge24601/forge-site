@@ -242,9 +242,16 @@
        "desc": "Last week the head, this week the heart: the week's three steps (recognize, regulate, understand), why this is a life skill and not therapy, and what today holds; it ends on the check-in question (a specific emotion, not just good or fine)."
       },
       {
+       "file": "p1-w3-s7c-wheel",
+       "title": "The Emotion Wheel",
+       "length": "3:06",
+       "when": "Plays at the start of Part 1 of the Instruction segment (The Emotion Wheel). Use it when the men don't have printed wheels.",
+       "desc": "The guide's Part 1 with the wheel on screen: the primary emotions in the center, the words around anger, sadness, fear and joy lit one slice at a time, the new vocabulary (resentful, not angry) and \"disrespected and hurt\"; it ends on the full wheel, held 90 seconds for the pick-three exercise."
+      },
+      {
        "file": "p1-w3-s7b-bodyguard",
        "title": "Anger Is the Bodyguard",
-       "length": "2:02",
+       "length": "2:01",
        "when": "Plays at the start of Part 2 of the Instruction segment (Anger as a Secondary Emotion).",
        "desc": "Anger as a secondary emotion, the six emotions it covers up one at a time on screen, which emotions are safe to show in here, and the guide's phone-call example; it ends on \"How many of you have lived that exact scenario, or something like it?\""
       }
@@ -258,6 +265,13 @@
        "length": "16:38",
        "youtube": "NDQ1Mi5I4rg",
        "page": "https://www.ted.com/talks/susan_david_the_gift_and_power_of_emotional_courage"
+      }
+     ],
+     "handouts": [
+      {
+       "file": "FORGE-Emotion-Wheel.pdf",
+       "title": "The Emotion Wheel",
+       "desc": "One printable page: the 7 primary emotions in the center and 75 more exact words around them. One per participant, for Part 1 and to keep."
       }
      ]
     },
