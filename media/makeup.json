@@ -140,6 +140,202 @@
      "desc": "The SBI feedback model, how to receive feedback without getting defensive, and the feedback triad."
     }
    ]
+  },
+  {
+   "phase": 1,
+   "week": 6,
+   "title": "Conflict Resolution Deep Dive",
+   "sessions": [
+    {
+     "n": 16,
+     "title": "The FORGE Conflict Resolution Model",
+     "length": "19:18",
+     "file": "p1-w6-s16-makeup",
+     "desc": "The five-step conflict resolution model step by step, naming the heat, posture, being the third party, and practicing the model on your own."
+    },
+    {
+     "n": 17,
+     "title": "De-escalation Techniques",
+     "length": "18:35",
+     "file": "p1-w6-s17-makeup",
+     "desc": "What to do when the heat is at 7 or 8: changing the environment, body language, distance, tone and pace, and the words that calm a situation down."
+    },
+    {
+     "n": 18,
+     "title": "Mediation Skills",
+     "length": "15:35",
+     "file": "p1-w6-s18-makeup",
+     "desc": "Mediating between two men: staying neutral, refusing to be triangulated, the FORGE mediation ground rules, and the hardest mediations."
+    }
+   ]
+  },
+  {
+   "phase": 1,
+   "week": 7,
+   "title": "Accountability and Integrity",
+   "sessions": [
+    {
+     "n": 19,
+     "title": "Personal Accountability",
+     "length": "17:24",
+     "file": "p1-w7-s19-makeup",
+     "desc": "What accountability is and isn't, putting down the lie, and the five levels of the Accountability Spectrum from denial to full ownership."
+    },
+    {
+     "n": 20,
+     "title": "Integrity Under Pressure",
+     "length": "12:52",
+     "file": "p1-w7-s20-makeup",
+     "desc": "Integrity as words, actions and values that match, the four tests of integrity, and working through ethical dilemmas."
+    },
+    {
+     "n": 21,
+     "title": "Making Amends and Moving Forward",
+     "length": "15:48",
+     "file": "p1-w7-s21-makeup",
+     "desc": "Restorative accountability, the ripple effect of harm, and how to make amends and move forward."
+    }
+   ]
+  },
+  {
+   "phase": 1,
+   "week": 8,
+   "title": "Social Skills and Perspective-Taking",
+   "sessions": [
+    {
+     "n": 22,
+     "title": "Empathy Development",
+     "length": "12:31",
+     "file": "p1-w8-s22-makeup",
+     "desc": "Seeing through someone else's eyes: the three types of empathy and how to practise each one."
+    },
+    {
+     "n": 23,
+     "title": "Reading the Room",
+     "length": "13:55",
+     "file": "p1-w8-s23-makeup",
+     "desc": "Social awareness: seven nonverbal cues to read, and group dynamics and power structures in the dorm."
+    },
+    {
+     "n": 24,
+     "title": "Building Pro-Social Relationships",
+     "length": "17:42",
+     "file": "p1-w8-s24-makeup",
+     "desc": "Healthy and toxic relationships, setting boundaries in here, and building the relationships that support change."
+    }
+   ]
+  },
+  {
+   "phase": 1,
+   "week": 9,
+   "title": "Problem Solving and Decision Making",
+   "sessions": [
+    {
+     "n": 25,
+     "title": "Problem-Solving Framework",
+     "length": "13:03",
+     "file": "p1-w9-s25-makeup",
+     "desc": "The FORGE six-step problem-solving model, from stopping to think through finding the real issue to reviewing how it went."
+    },
+    {
+     "n": 26,
+     "title": "Decision Making Under Pressure",
+     "length": "14:26",
+     "file": "p1-w9-s26-makeup",
+     "desc": "What stress does to your brain, beating tunnel vision, pre-deciding, and writing your own personal rules."
+    },
+    {
+     "n": 27,
+     "title": "Consequential Thinking",
+     "length": "13:40",
+     "file": "p1-w9-s27-makeup",
+     "desc": "The four kinds of consequences, short and long term, and mapping the ripple effects of a decision before you make it."
+    }
+   ]
+  },
+  {
+   "phase": 1,
+   "week": 10,
+   "title": "Mindset and Purpose",
+   "sessions": [
+    {
+     "n": 28,
+     "title": "Growth Mindset",
+     "length": "15:09",
+     "file": "p1-w10-s28-makeup",
+     "desc": "Fixed and growth mindsets, the power of \"yet\", and changing the way you talk to yourself."
+    },
+    {
+     "n": 29,
+     "title": "Finding Purpose",
+     "length": "15:11",
+     "file": "p1-w10-s29-makeup",
+     "desc": "Goals versus purpose, what Viktor Frankl learned about meaning, and a letter from your future self."
+    },
+    {
+     "n": 30,
+     "title": "The Stakeholder Identity",
+     "length": "14:58",
+     "file": "p1-w10-s30-makeup",
+     "desc": "Passenger, victim or stakeholder: what you control, what changes when men take ownership, and your stakeholder commitment."
+    }
+   ]
+  },
+  {
+   "phase": 1,
+   "week": 11,
+   "title": "Integration and Review",
+   "sessions": [
+    {
+     "n": 31,
+     "title": "Skills Integration Practice",
+     "length": "16:00",
+     "file": "p1-w11-s31-makeup",
+     "desc": "Three layered scenarios that use every Phase 1 skill at once, worked through on your own with the debrief from class."
+    },
+    {
+     "n": 32,
+     "title": "Self-Assessment and Reflection",
+     "length": "11:12",
+     "file": "p1-w11-s32-makeup",
+     "desc": "Reading back through your journal, rating yourself across the six skill areas, and writing your reflection for the portfolio."
+    },
+    {
+     "n": 33,
+     "title": "Peer Evaluation and Feedback",
+     "length": "12:17",
+     "file": "p1-w11-s33-makeup",
+     "desc": "Giving and receiving feedback with the SBI model, the feedback seat and its ground rules, and how to prepare for the Knowledge Check."
+    }
+   ]
+  },
+  {
+   "phase": 1,
+   "week": 12,
+   "title": "Phase 1 Assessment and Transition",
+   "sessions": [
+    {
+     "n": 34,
+     "title": "Phase 1 Knowledge Check",
+     "length": "8:33",
+     "file": "p1-w12-s34-makeup",
+     "desc": "How the Knowledge Check works, what it covers, and a week-by-week review of Phase 1. You still take the check in person."
+    },
+    {
+     "n": 35,
+     "title": "Portfolio Review",
+     "length": "7:30",
+     "file": "p1-w12-s35-makeup",
+     "desc": "The portfolio presentation and panel, the eight items in your Phase 1 portfolio, and what comes next."
+    },
+    {
+     "n": 36,
+     "title": "Phase 1 Celebration and Phase 2 Preview",
+     "length": "13:54",
+     "file": "p1-w12-s36-makeup",
+     "desc": "Looking back over twelve weeks, the Phase 1 certificate and recommitment, and what Phase 2 asks of you."
+    }
+   ]
   }
  ]
 }
