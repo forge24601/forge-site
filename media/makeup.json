@@ -1,33 +1,145 @@
 {
  "note": "Make-up videos (BT 2026-10-13): one per session, the whole session for a man who missed it. Files are in the forge-media R2 bucket under makeup/<file>.mp4; posters in media/posters/. Built into makeup.html by ~/video-studio/site/build-makeup-page.py.",
  "weeks": [
-  {"phase": 1, "week": 2, "title": "How Thinking Works", "sessions": [
-   {"n": 4, "title": "Thinking Controls Behavior", "length": "9:32", "file": "p1-w2-s4-makeup",
-    "desc": "The Think-Feel-Act cycle, Man A and Man B, automatic thoughts, and the thinking report."},
-   {"n": 5, "title": "Thinking Errors", "length": "10:33", "file": "p1-w2-s5-makeup",
-    "desc": "All eight thinking errors, what each sounds like and how it shows up in the dorm, then finding them in your own thinking reports."},
-   {"n": 6, "title": "Cognitive Restructuring", "length": "10:06", "file": "p1-w2-s6-makeup",
-    "desc": "The three honest questions, a challenge for every thinking error, the STOP technique, and rewriting a thinking report."}]},
-  {"phase": 1, "week": 3, "title": "Emotional Literacy", "sessions": [
-   {"n": 7, "title": "Understanding Emotions", "length": "12:09", "file": "p1-w3-s7-makeup",
-    "desc": "The emotion wheel, anger as a secondary emotion, where emotions show up in the body, and body mapping."},
-   {"n": 8, "title": "Emotional Regulation", "length": "14:24", "file": "p1-w3-s8-makeup",
-    "desc": "The escalation curve, 4-4-4 breathing and 5-4-3-2-1 grounding done along with the video, and when to use which."},
-   {"n": 9, "title": "The Anger Beneath the Anger", "length": "14:27", "file": "p1-w3-s9-makeup",
-    "desc": "How unprocessed pain becomes aggression, the four emotions anger covers, and the Beneath My Anger writing exercise. A heavy session, at a calm pace."}]},
-  {"phase": 1, "week": 4, "title": "Trauma Awareness", "sessions": [
-   {"n": 10, "title": "Understanding Trauma", "length": "17:07", "file": "p1-w4-s10-makeup",
-    "desc": "The Three E's, adverse childhood experiences and the private ACE activity, and why trauma is an explanation, not an excuse. A heavy session, at a calm pace."},
-   {"n": 11, "title": "Trauma Responses in the Dorm", "length": "14:56", "file": "p1-w4-s11-makeup",
-    "desc": "Fight, flight, freeze and fawn, how they show up in the dorm, and the difference between reacting and responding."},
-   {"n": 12, "title": "Coping and Safety", "length": "18:43", "file": "p1-w4-s12-makeup",
-    "desc": "Safe and unsafe coping, a toolkit for when to use what, and building your Safe Coping Card."}]},
-  {"phase": 1, "week": 5, "title": "Active Listening and Communication", "sessions": [
-   {"n": 13, "title": "Active Listening", "length": "14:19", "file": "p1-w5-s13-makeup",
-    "desc": "The five components of active listening, the barriers that get in the way, and paired listening practice."},
-   {"n": 14, "title": "Communication Styles", "length": "14:00", "file": "p1-w5-s14-makeup",
-    "desc": "The four communication styles, “I” statements, and rewriting five “you” statements."},
-   {"n": 15, "title": "Giving and Receiving Feedback", "length": "14:24", "file": "p1-w5-s15-makeup",
-    "desc": "The SBI feedback model, how to receive feedback without getting defensive, and the feedback triad."}]}
+  {
+   "phase": 1,
+   "week": 1,
+   "title": "Orientation and Community Building",
+   "sessions": [
+    {
+     "n": 1,
+     "title": "Welcome to FORGE",
+     "length": "10:32",
+     "file": "p1-w1-s1-makeup",
+     "desc": "Why FORGE exists, the stakeholder model, the three phases, the elevator speech, the Code of Conduct, and your commitment."
+    },
+    {
+     "n": 2,
+     "title": "Building the Container",
+     "length": "7:50",
+     "file": "p1-w1-s2-makeup",
+     "desc": "The circle and its five rules, the group agreements, confidentiality and its limits, getting to know each other, and starting your journal."
+    },
+    {
+     "n": 3,
+     "title": "Service Over Self",
+     "length": "8:28",
+     "file": "p1-w1-s3-makeup",
+     "desc": "What service is and isn't, three programs where men changed the culture from inside, and your first service challenge."
+    }
+   ]
+  },
+  {
+   "phase": 1,
+   "week": 2,
+   "title": "How Thinking Works",
+   "sessions": [
+    {
+     "n": 4,
+     "title": "Thinking Controls Behavior",
+     "length": "9:32",
+     "file": "p1-w2-s4-makeup",
+     "desc": "The Think-Feel-Act cycle, Man A and Man B, automatic thoughts, and the thinking report."
+    },
+    {
+     "n": 5,
+     "title": "Thinking Errors",
+     "length": "10:33",
+     "file": "p1-w2-s5-makeup",
+     "desc": "All eight thinking errors, what each sounds like and how it shows up in the dorm, then finding them in your own thinking reports."
+    },
+    {
+     "n": 6,
+     "title": "Cognitive Restructuring",
+     "length": "10:06",
+     "file": "p1-w2-s6-makeup",
+     "desc": "The three honest questions, a challenge for every thinking error, the STOP technique, and rewriting a thinking report."
+    }
+   ]
+  },
+  {
+   "phase": 1,
+   "week": 3,
+   "title": "Emotional Literacy",
+   "sessions": [
+    {
+     "n": 7,
+     "title": "Understanding Emotions",
+     "length": "12:09",
+     "file": "p1-w3-s7-makeup",
+     "desc": "The emotion wheel, anger as a secondary emotion, where emotions show up in the body, and body mapping."
+    },
+    {
+     "n": 8,
+     "title": "Emotional Regulation",
+     "length": "14:24",
+     "file": "p1-w3-s8-makeup",
+     "desc": "The escalation curve, 4-4-4 breathing and 5-4-3-2-1 grounding done along with the video, and when to use which."
+    },
+    {
+     "n": 9,
+     "title": "The Anger Beneath the Anger",
+     "length": "14:27",
+     "file": "p1-w3-s9-makeup",
+     "desc": "How unprocessed pain becomes aggression, the four emotions anger covers, and the Beneath My Anger writing exercise. A heavy session, at a calm pace."
+    }
+   ]
+  },
+  {
+   "phase": 1,
+   "week": 4,
+   "title": "Trauma Awareness",
+   "sessions": [
+    {
+     "n": 10,
+     "title": "Understanding Trauma",
+     "length": "17:07",
+     "file": "p1-w4-s10-makeup",
+     "desc": "The Three E's, adverse childhood experiences and the private ACE activity, and why trauma is an explanation, not an excuse. A heavy session, at a calm pace."
+    },
+    {
+     "n": 11,
+     "title": "Trauma Responses in the Dorm",
+     "length": "14:56",
+     "file": "p1-w4-s11-makeup",
+     "desc": "Fight, flight, freeze and fawn, how they show up in the dorm, and the difference between reacting and responding."
+    },
+    {
+     "n": 12,
+     "title": "Coping and Safety",
+     "length": "18:43",
+     "file": "p1-w4-s12-makeup",
+     "desc": "Safe and unsafe coping, a toolkit for when to use what, and building your Safe Coping Card."
+    }
+   ]
+  },
+  {
+   "phase": 1,
+   "week": 5,
+   "title": "Active Listening and Communication",
+   "sessions": [
+    {
+     "n": 13,
+     "title": "Active Listening",
+     "length": "14:19",
+     "file": "p1-w5-s13-makeup",
+     "desc": "The five components of active listening, the barriers that get in the way, and paired listening practice."
+    },
+    {
+     "n": 14,
+     "title": "Communication Styles",
+     "length": "14:00",
+     "file": "p1-w5-s14-makeup",
+     "desc": "The four communication styles, “I” statements, and rewriting five “you” statements."
+    },
+    {
+     "n": 15,
+     "title": "Giving and Receiving Feedback",
+     "length": "14:24",
+     "file": "p1-w5-s15-makeup",
+     "desc": "The SBI feedback model, how to receive feedback without getting defensive, and the feedback triad."
+    }
+   ]
+  }
  ]
 }
