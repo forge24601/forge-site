@@ -1,4 +1,5 @@
 {
+ "media_base": "https://pub-215275db1e494dc48ac1d8f715d8a99d.r2.dev",
  "explainer": {
   "file": "forge-explainer",
   "title": "What FORGE Is",
@@ -286,6 +287,13 @@
        "length": "2:43",
        "when": "Plays first, as soon as the men are seated, before the Opening Circle.",
        "desc": "A recap of Session 7, then the escalation curve with its five stages lighting up as they are named and Stage 2 marked as the place to intervene, and \"Regulation isn't weakness. Regulation is strategy\"; it ends on the check-in question (a specific emotion from the wheel, and whether they tracked)."
+      },
+      {
+       "file": "p1-w3-s8c-curve",
+       "title": "The Escalation Curve",
+       "length": "4:08",
+       "when": "Plays at the start of Part 1 of the Instruction segment.",
+       "desc": "The guide's escalation curve visual: all five stages one at a time, the critical insight and \"intervene at Stage 2\"; ends on the whole curve with Stage 2 marked, held for 90 seconds to teach from."
       },
       {
        "file": "p1-w3-s8b-breathing",
