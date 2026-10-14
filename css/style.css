@@ -784,6 +784,13 @@ h4 { font-size: 1.15rem; color: var(--blue); }
 .talk-card .video-body p a { color: var(--blue); }
 .talk-card h4 a { color: inherit; }
 .talk-card h4 a:hover { text-decoration: underline; }
+/* Make-up Sessions: the session's talk(s), small, right under the make-up video (2026-10-14) */
+.makeup-talks { padding: 10px 20px 11px; background: rgba(212, 168, 75, 0.10); border-bottom: 1px solid rgba(184, 146, 46, 0.25);
+    font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.8rem; line-height: 1.45; color: var(--text-secondary); }
+.makeup-talks-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 3px; }
+.makeup-talks div + div { margin-top: 4px; }
+.makeup-talks a { color: var(--blue); font-weight: 600; }
+.makeup-talks a:hover { text-decoration: underline; }
 .week-jump { background: var(--cream-dark); border-bottom: 1px solid var(--border); padding: 14px 0; }
 .week-jump .container { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.85rem; }
 .week-jump span { color: var(--text-light); margin-right: 4px; }
