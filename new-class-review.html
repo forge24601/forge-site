@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>New Class Plan Review &mdash; FORGE</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+.review { max-width: 860px; margin: 0 auto; padding: 32px 16px 64px; }
+.review h1.sec { font-family: Georgia, serif; color: var(--maroon); font-size: 1.6rem; border-bottom: 2px solid var(--maroon);
+  padding-bottom: 6px; margin: 44px 0 14px; }
+.review h2 { font-size: 1.2rem; margin: 22px 0 8px; } .review h3 { margin: 18px 0 8px; }
+.review h3.part { color: var(--maroon); }
+.review p, .review li { line-height: 1.6; } .review p { margin: 0 0 12px; } .review ul, .review ol { padding-left: 24px; margin: 0 0 12px; }
+.review table { width: 100%; border-collapse: collapse; margin: 10px 0 16px; font-size: 0.95rem; }
+.review th, .review td { border: 1px solid var(--border); padding: 7px 9px; text-align: left; vertical-align: top; }
+.review th { background: var(--cream-dark); }
+.table-wrap { overflow-x: auto; }
+.review .source { font-size: 0.85rem; color: var(--text-light); }
+.review .say { background: var(--cream); border-left: 6px solid var(--maroon); padding: 12px 18px; font-size: 1.1rem; margin: 10px 0 16px; }
+.review .two { display: flex; gap: 16px; flex-wrap: wrap; } .review .two .col { flex: 1 1 260px; border: 1px solid var(--border); padding: 10px 14px; }
+.start, .send { background: var(--cream); border: 2px solid var(--maroon); border-radius: 8px; padding: 18px 20px; margin: 10px 0 20px; }
+.start label.name, .send label.name { display: block; font-weight: bold; margin-bottom: 6px; }
+.start input#rv-name { width: 100%; max-width: 420px; font-size: 1.1rem; padding: 8px 10px; border: 1px solid #999; border-radius: 4px; }
+fieldset.call { border: 1.5px solid var(--maroon); border-left-width: 6px; border-radius: 4px; background: #FBF6F4; padding: 10px 14px 12px; margin: 14px 0 18px; }
+fieldset.call legend { font-weight: bold; padding: 0 6px; }
+.yc { display: inline-block; background: var(--maroon); color: #fff; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 2px 7px; margin-right: 8px; border-radius: 3px; vertical-align: 2px; }
+label.opt { display: flex; align-items: flex-start; gap: 9px; margin: 7px 0; cursor: pointer; line-height: 1.45; flex-wrap: wrap; }
+label.opt input[type=checkbox] { width: 19px; height: 19px; margin-top: 2px; flex: none; accent-color: var(--maroon); }
+label.opt span { flex: 1 1 200px; }
+input.other { flex: 1 1 100%; margin-left: 28px; }
+input.inline { width: 70px; }
+.review input[type=text], .review textarea { font: inherit; font-size: 1rem; padding: 6px 8px; border: 1px solid #aaa; border-radius: 4px; background: #fff; box-sizing: border-box; }
+fieldset.call textarea, figure.sample textarea { width: 100%; margin-top: 8px; }
+label.kcd { white-space: nowrap; margin-right: 10px; cursor: pointer; } label.kcd input { accent-color: var(--maroon); width: 17px; height: 17px; vertical-align: -3px; }
+input.wk-note { width: 100%; margin-top: 6px; font-size: 0.9rem; }
+.samples { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px; }
+figure.sample { margin: 0; border: 1px solid var(--border); border-radius: 6px; padding: 10px; background: #fff; }
+figure.sample .imgs { display: flex; gap: 6px; } figure.sample img { width: 100%; border: 1px solid #ddd; display: block; }
+figure.sample figcaption { margin-top: 8px; font-size: 0.95rem; } .kcds { margin-top: 6px; }
+.send button { background: var(--maroon); color: #fff; border: 0; border-radius: 6px; font-size: 1.1rem; padding: 12px 28px; cursor: pointer; }
+.send button.ghost { background: transparent; color: var(--maroon); border: 1.5px solid var(--maroon); font-size: 0.95rem; padding: 8px 16px; margin-left: 10px; }
+#rv-status { margin-top: 12px; font-weight: bold; } #rv-status.ok { color: #2D6A4F; } #rv-status.err { color: #9B1C1C; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+@media (max-width: 600px) { .review { padding: 20px 16px 48px; } .review h1.sec { font-size: 1.35rem; } }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+    <div class="container nav-inner">
+        <a href="/" class="nav-brand">
+            <img src="/images/forge-logo.png" alt="FORGE" class="nav-logo">
+            <span class="nav-title">FORGE</span>
+        </a>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/program.html">The Program</a></li>
+            <li><a href="/research.html">Research</a></li>
+            <li><a href="/curriculum.html">Curriculum</a></li>
+            <li><a href="/media.html">Session Media</a></li>
+            <li><a href="/makeup.html">Make-up Sessions</a></li>
+            <li><a href="/sponsors.html">Sponsors</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero hero-small">
+    <div class="hero-content container">
+        <h1>New Class Plan: Your Review</h1>
+        <p class="hero-subtitle">FORGE Your Future (working name), a class for men under 30. A draft for the FORGE facilitators. Nothing in it is final.</p>
+    </div>
+</section>
+
+<main class="review" id="rv">
+<div class="start">
+    <label class="name" for="rv-name">Your name</label>
+    <input type="text" id="rv-name" autocomplete="name" placeholder="Type your name">
+    <p style="margin:12px 0 0">Read the plan, tick the boxes that fit, and write what you think in the boxes. Change anything,
+    add what's missing, and say what won't work here. When you're done, press <b>Submit</b> at the bottom. You can come back
+    and send again; your latest answers count. Your answers are saved on this device as you go.</p>
+    <p style="margin:10px 0 0">Prefer paper? <a href="documents/FORGE-Your-Future-Plan-DRAFT.pdf" target="_blank" rel="noopener">The printable plan (PDF)</a> has the same plan and every sample.</p>
+</div>
+<div class="table-wrap-note"></div>
+<h1 class="sec" id="why">1. Why This Class</h1>
+<p>Of the <strong>51,917 people in GDC custody, about 9,700 are under 30</strong>, nearly one in five (GDC's weekly Friday report, October 16, 2026). Many of them are serving sentences longer than they have been alive. A 20-year sentence for a 20-year-old is a lifetime. Almost a fifth of the people in GDC custody are serving life, life without parole or a death sentence (GDC's monthly inmate profile, October 2026).</p>
+<p>When the end is that far away, it's easy to believe nothing you do inside matters. Too many young men decide there's no reason to do good. <strong>This class is built to answer that belief.</strong></p>
+<p>Education is the clearest place to start. Of the men whose school level GDC has on record, <strong>about half never finished 12th grade or earned a GED.</strong> A GED is the first door. College is the next one, and it is offered inside: Ashland University's college program in Georgia prisons began at Dooly State Prison in GDC's 2019 fiscal year, and in fiscal 2023 GDC reported 38 bachelor's and 87 associate degrees earned by men and women in its custody.</p>
+<p>FORGE already trains mentors. This class gives those mentors the men who most need them, and it gives younger men a reason to start growing now instead of waiting.</p>
+<h1 class="sec" id="what">2. What This Class Is, and What It Isn't</h1>
+<p><strong>It is:</strong></p>
+<ul>
+<li>A short class for men under 30: about 12 weeks, one or two hours a week.</li>
+<li>A starting point: thinking about the future, getting a GED, then getting into college or a trade program, and building a record that shows growth.</li>
+<li><strong>On the record.</strong> Completions of this class are entered in a man's GDC record (SCRIBE), the same as FORGE completions.</li>
+<li><strong>Membership, not just a class.</strong> Graduates stay connected through a monthly members' meeting and a FORGE mentor.</li>
+<li>A way to change a dorm from the inside, one man at a time.</li>
+</ul>
+<p><strong>It isn't:</strong></p>
+<ul>
+<li><strong>The FORGE mentor certification program.</strong> It's shorter, lighter and asks less. Graduates who want to go further can apply for mentor training later.</li>
+<li>Therapy, a religious program, or a substitute for school.</li>
+<li><strong>A promise of parole or early release.</strong> See Section 4.</li>
+</ul>
+<fieldset class="call q" data-q="Working name for the class"><legend><span class="yc">Your call</span>Working name for the class</legend><label class="opt"><input type="checkbox" value="FORGE Your Future"><span>FORGE Your Future</span></label><label class="opt"><input type="checkbox" value="FORGE Forward"><span>FORGE Forward</span></label><label class="opt"><input type="checkbox" value="Young FORGE"><span>Young FORGE</span></label><label class="opt"><input type="checkbox" value="FORGE Next"><span>FORGE Next</span></label><label class="opt"><input type="checkbox" value="Other"><span>Other:</span><input type="text" class="other"></label><textarea rows="2" placeholder="Notes"></textarea></fieldset>
+
+<h1 class="sec" id="who">3. Who It's For</h1>
+<ul>
+<li><strong>Men under 30</strong> when they join.</li>
+<li><strong>Any sentence, including life.</strong> Long sentences are the reason this class exists.</li>
+<li><strong>No GED needed. No clean record needed.</strong> Building one is part of the point.</li>
+<li><strong>Men who choose to apply.</strong> Nobody is sent to it.</li>
+<li><strong>He must live in the FORGE dorm.</strong> The class meets there. Men in every dorm can apply. FORGE mentors and the chief counselor approve applications, and the chief counselor moves an approved man into the FORGE dorm when a bed opens (Section 11).</li>
+</ul>
+<fieldset class="call q" data-q="Age line"><legend><span class="yc">Your call</span>Age line</legend><label class="opt"><input type="checkbox" value="Under 30 when he joins"><span>Under 30 when he joins</span></label><label class="opt"><input type="checkbox" value="Under 25 when he joins"><span>Under 25 when he joins</span></label><label class="opt"><input type="checkbox" value="No age limit, but built for younger men"><span>No age limit, but built for younger men</span></label><label class="opt"><input type="checkbox" value="Other"><span>Other:</span><input type="text" class="other"></label><textarea rows="2" placeholder="Notes"></textarea></fieldset>
+
+<fieldset class="call q" data-q="Group size (depends on how many FORGE dorm beds the class can hold, Section 15)"><legend><span class="yc">Your call</span>Group size (depends on how many FORGE dorm beds the class can hold, Section 15)</legend><label class="opt"><input type="checkbox" value="8 to 10 men"><span>8 to 10 men</span></label><label class="opt"><input type="checkbox" value="10 to 15 men"><span>10 to 15 men</span></label><label class="opt"><input type="checkbox" value="Other"><span>Other:</span><input type="text" class="other"></label><textarea rows="2" placeholder="Notes"></textarea></fieldset>
+
+<h1 class="sec" id="message">4. The Message of Hope: What We Say and What We Never Say</h1>
+<p>This is the most important section of the plan. The young men we want will test every promise we make, and they will ask older men whether it's true. <strong>If one promise turns out to be false, the class loses that man and every man he talks to.</strong></p>
+<h2>What the law says today</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>If the sentence is…</th>
+<th>Parole under today's law</th>
+<th>What growth can still do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Most other crimes</strong> (drugs, burglary, theft, aggravated assault and so on)</td>
+<td>Parole-eligible. The Parole Board sets a Tentative Parole Month that depends on good conduct and sometimes on finishing a program.</td>
+<td>It bears directly on whether that month holds.</td>
+</tr>
+<tr>
+<td><strong>A set number of years for one of the seven serious violent felonies:</strong> murder, armed robbery, kidnapping, rape, aggravated child molestation, aggravated sodomy, aggravated sexual battery</td>
+<td>Served in full. No parole and no earned time. In his last year, he can be considered for a transitional center or work release.</td>
+<td>The transitional center in the last year. Security level, transfers and job assignments. First in line if the law changes.</td>
+</tr>
+<tr>
+<td><strong>Life for one of those seven crimes</strong></td>
+<td>First parole consideration after 30 years.</td>
+<td>The Board will read 30 years of his file.</td>
+</tr>
+<tr>
+<td><strong>Life without parole</strong></td>
+<td>None under today's law.</td>
+<td>Only a change in the law would open a door. If one comes, the file is what will count.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="source">Source: O.C.G.A. § 17-10-6.1; State Board of Pardons and Paroles. Some other sentences carry their own no-parole rules (for example, some repeat-offender sentences). When a man isn't sure where he stands, help him ask his counselor.</p>
+
+<h2>Laws do change</h2>
+<p>Other states have changed their laws to reward exactly what this class builds. California, for example, now gives time credits for education and rehabilitation programs, and gives earlier parole hearings to people who were under 26 when they committed their crime. Nobody can say whether or when Georgia will do something like it. But when laws change, the men who benefit first are the ones whose record shows they grew.</p>
+<h2>What we say</h2>
+<div class="say">Nobody can promise you a law will change. But laws do change. When they do, the men who go first are the ones whose file shows they grew. Start building yours now. And if the law never changes, a GED, college credits and a clean record still make you a different man, inside or out.</div>
+
+<h2>What we never say</h2>
+<ul>
+<li>"FORGE will get you parole" or "This will get you out early."</li>
+<li>"They're about to let people out," or any timeline at all.</li>
+<li>Anything about a particular man's case or his chances. Send those questions to his counselor or a lawyer.</li>
+</ul>
+<h2>What's in a man's file</h2>
+<p>A GED, college credits, work assignments, programs completed, and his disciplinary record all go into his GDC record. <strong>Completions of this class will be entered in SCRIBE,</strong> GDC's record system, the same as FORGE completions. So a man can be told plainly: finishing this class goes in your file, and so do the GED, the college credits and the clean record that come with it.</p>
+<h2>When a man says "I've got life without parole. Why bother?"</h2>
+<ol>
+<li>Laws change, and the men with a record are first in line when they do.</li>
+<li>However long he's here, who he is for those years is his to decide.</li>
+<li>Men serving long sentences become the leaders of a dorm. The younger men watch them.</li>
+</ol>
+<fieldset class="call q" data-q="The message"><legend><span class="yc">Your call</span>The message</legend><label class="opt"><input type="checkbox" value="Use &quot;What we say&quot; as written"><span>Use "What we say" as written</span></label><label class="opt"><input type="checkbox" value="Change it (write your version below)"><span>Change it (write your version below)</span></label><textarea rows="4" placeholder="Notes"></textarea></fieldset>
+
+<h1 class="sec" id="goals">5. Goals: What a Man Leaves With</h1>
+<p>By the end of the 12 weeks, each man has:</p>
+<ol>
+<li><strong>Signed up for GED classes or testing.</strong> If he already has a GED, he has applied to a college or trade program, or is helping another man with his GED.</li>
+<li><strong>A written 10-year plan,</strong> with the next step for this month.</li>
+<li><strong>Twelve weeks of clean conduct.</strong> A goal, not a requirement.</li>
+<li><strong>A FORGE mentor</strong> he can go to.</li>
+<li><strong>One thing he does for someone else</strong> in his dorm.</li>
+</ol>
+<fieldset class="call q" data-q="Goals to add, change or drop"><legend><span class="yc">Your call</span>Goals to add, change or drop</legend><textarea rows="4" placeholder="Write here"></textarea></fieldset>
+
+<h1 class="sec" id="format">6. Format</h1>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Shape</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A. Recommended</strong></td>
+<td>Two 6-week parts, two 1-hour meetings a week</td>
+<td>24 hours</td>
+</tr>
+<tr>
+<td>B</td>
+<td>12 straight weeks, two 1-hour meetings a week</td>
+<td>24 hours</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Two 6-week parts, one 90-minute meeting a week</td>
+<td>18 hours</td>
+</tr>
+<tr>
+<td>D</td>
+<td>12 straight weeks, one 90-minute meeting a week</td>
+<td>18 hours</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Why Option A:</strong></p>
+<ul>
+<li><strong>Part 1 is a small first ask:</strong> six weeks, not twelve. A man can say yes to six weeks.</li>
+<li><strong>A quick win:</strong> a certificate and a GED sign-up at week 6.</li>
+<li><strong>Part 2 is his choice.</strong> The men who come back have chosen to.</li>
+<li><strong>An hour holds a young man better than two.</strong> Twice a week builds a habit, and missing one meeting doesn't lose a whole week.</li>
+<li><strong>The second meeting each week is the working one:</strong> GED study check, goals, time with a mentor.</li>
+<li><strong>A new Part 1 group can start every 6 weeks</strong> while the previous group does Part 2.</li>
+</ul>
+<p><strong>Men arrive one at a time.</strong> A man can start only after he moves into the FORGE dorm, and beds open when other men move out. That happens fairly regularly, but not on a schedule. So the plan has to say how a new man starts.</p>
+<fieldset class="call q" data-q="How a new man starts"><legend><span class="yc">Your call</span>How a new man starts</legend><label class="opt"><input type="checkbox" value="Groups start every 6 weeks (recommended). A man who moves in between starts waits for the next Part 1. Meanwhile he has a welcome talk with a mentor, starts his GED sign-up, and sits in on the working meeting (Meeting 2) each week."><span><strong>Groups start every 6 weeks (recommended).</strong> A man who moves in between starts waits for the next Part 1. Meanwhile he has a welcome talk with a mentor, starts his GED sign-up, and sits in on the working meeting (Meeting 2) each week.</span></label><label class="opt"><input type="checkbox" value="Open entry. Every week stands on its own. A man starts the week after he moves in and finishes when he has done all of the weeks, in whatever order they come."><span><strong>Open entry.</strong> Every week stands on its own. A man starts the week after he moves in and finishes when he has done all of the weeks, in whatever order they come.</span></label><label class="opt"><input type="checkbox" value="Other"><span>Other:</span><input type="text" class="other"></label><textarea rows="2" placeholder="Notes"></textarea></fieldset>
+
+<p><strong>After week 12:</strong> a monthly members' meeting and a FORGE mentor for each graduate (Section 9). A GED and college take years, not 12 weeks. Membership is what carries a man that far.</p>
+<fieldset class="call q" data-q="Format"><legend><span class="yc">Your call</span>Format</legend><label class="opt"><input type="checkbox" value="A. Two 6-week parts, 2 × 1 hour a week"><span>A. Two 6-week parts, 2 × 1 hour a week</span></label><label class="opt"><input type="checkbox" value="B. 12 straight weeks, 2 × 1 hour a week"><span>B. 12 straight weeks, 2 × 1 hour a week</span></label><label class="opt"><input type="checkbox" value="C. Two 6-week parts, 1 × 90 minutes a week"><span>C. Two 6-week parts, 1 × 90 minutes a week</span></label><label class="opt"><input type="checkbox" value="D. 12 straight weeks, 1 × 90 minutes a week"><span>D. 12 straight weeks, 1 × 90 minutes a week</span></label><label class="opt"><input type="checkbox" value="Other"><span>Other:</span><input type="text" class="other"></label><textarea rows="2" placeholder="Notes"></textarea></fieldset>
+
+<fieldset class="call q" data-q="Best days, times and room here"><legend><span class="yc">Your call</span>Best days, times and room here</legend><textarea rows="3" placeholder="Write here"></textarea></fieldset>
+
+<h1 class="sec" id="outline">7. The 12 Weeks: Draft Outline</h1>
+<p>Each week has one topic. Mark each one <strong>Keep</strong>, <strong>Change</strong> or <strong>Drop</strong>, and write in what's missing.</p>
+<h3 class="part">Part 1: Your Time. Who you are and where you are.</h3>
+
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Wk</th>
+<th>Topic</th>
+<th>What it covers</th>
+<th>Keep · Change · Drop</th>
+</tr>
+</thead>
+<tbody>
+<tr class="q" data-q="Week 1: Doing time or using it">
+<td>1</td>
+<td><strong>Doing time or using it</strong></td>
+<td>The math of a long sentence. Hope as something you practice. What this class is and isn't.</td>
+<td><label class="kcd"><input type="radio" name="wk1" value="Keep"> Keep</label><label class="kcd"><input type="radio" name="wk1" value="Change"> Change</label><label class="kcd"><input type="radio" name="wk1" value="Drop"> Drop</label><input type="text" class="wk-note" placeholder="How?"></td>
+</tr>
+<tr class="q" data-q="Week 2: Who I am beyond my case">
+<td>2</td>
+<td><strong>Who I am beyond my case</strong></td>
+<td>Values. The man I want to be at 30, 40 and 50.</td>
+<td><label class="kcd"><input type="radio" name="wk2" value="Keep"> Keep</label><label class="kcd"><input type="radio" name="wk2" value="Change"> Change</label><label class="kcd"><input type="radio" name="wk2" value="Drop"> Drop</label><input type="text" class="wk-note" placeholder="How?"></td>
+</tr>
+<tr class="q" data-q="Week 3: Thinking under pressure">
+<td>3</td>
+<td><strong>Thinking under pressure</strong></td>
+<td>FORGE's thinking tool, simplified: the moment between what happens and what you do.</td>
+<td><label class="kcd"><input type="radio" name="wk3" value="Keep"> Keep</label><label class="kcd"><input type="radio" name="wk3" value="Change"> Change</label><label class="kcd"><input type="radio" name="wk3" value="Drop"> Drop</label><input type="text" class="wk-note" placeholder="How?"></td>
+</tr>
+<tr class="q" data-q="Week 4: Anger, respect and the code">
+<td>4</td>
+<td><strong>Anger, respect and the code</strong></td>
+<td>Earning respect without losing years. Walking away without losing face.</td>
+<td><label class="kcd"><input type="radio" name="wk4" value="Keep"> Keep</label><label class="kcd"><input type="radio" name="wk4" value="Change"> Change</label><label class="kcd"><input type="radio" name="wk4" value="Drop"> Drop</label><input type="text" class="wk-note" placeholder="How?"></td>
+</tr>
+<tr class="q" data-q="Week 5: The people around me">
+<td>5</td>
+<td><strong>The people around me</strong></td>
+<td>Influence, debts, phones and gangs. Your disciplinary record is your résumé.</td>
+<td><label class="kcd"><input type="radio" name="wk5" value="Keep"> Keep</label><label class="kcd"><input type="radio" name="wk5" value="Change"> Change</label><label class="kcd"><input type="radio" name="wk5" value="Drop"> Drop</label><input type="text" class="wk-note" placeholder="How?"></td>
+</tr>
+<tr class="q" data-q="Week 6: Your file">
+<td>6</td>
+<td><strong>Your file</strong></td>
+<td>What's in a man's record, who reads it, what helps it. Part 1 certificate. GED sign-up done.</td>
+<td><label class="kcd"><input type="radio" name="wk6" value="Keep"> Keep</label><label class="kcd"><input type="radio" name="wk6" value="Change"> Change</label><label class="kcd"><input type="radio" name="wk6" value="Drop"> Drop</label><input type="text" class="wk-note" placeholder="How?"></td>
+</tr>
+</tbody>
+</table></div>
+<h3 class="part">Part 2: Your Road. Where you're going.</h3>
+
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Wk</th>
+<th>Topic</th>
+<th>What it covers</th>
+<th>Keep · Change · Drop</th>
+</tr>
+</thead>
+<tbody>
+<tr class="q" data-q="Week 7: &quot;I was never good at school&quot;">
+<td>7</td>
+<td><strong>"I was never good at school"</strong></td>
+<td>How the GED works inside. Study habits. Getting past old shame about school.</td>
+<td><label class="kcd"><input type="radio" name="wk7" value="Keep"> Keep</label><label class="kcd"><input type="radio" name="wk7" value="Change"> Change</label><label class="kcd"><input type="radio" name="wk7" value="Drop"> Drop</label><input type="text" class="wk-note" placeholder="How?"></td>
+</tr>
+<tr class="q" data-q="Week 8: After the GED">
+<td>8</td>
+<td><strong>After the GED</strong></td>
+<td>College inside (Ashland and others), technical certificates, reading on your own.</td>
+<td><label class="kcd"><input type="radio" name="wk8" value="Keep"> Keep</label><label class="kcd"><input type="radio" name="wk8" value="Change"> Change</label><label class="kcd"><input type="radio" name="wk8" value="Drop"> Drop</label><input type="text" class="wk-note" placeholder="How?"></td>
+</tr>
+<tr class="q" data-q="Week 9: The 10-year plan">
+<td>9</td>
+<td><strong>The 10-year plan</strong></td>
+<td>Goals and milestones across a long sentence. The next step this month.</td>
+<td><label class="kcd"><input type="radio" name="wk9" value="Keep"> Keep</label><label class="kcd"><input type="radio" name="wk9" value="Change"> Change</label><label class="kcd"><input type="radio" name="wk9" value="Drop"> Drop</label><input type="text" class="wk-note" placeholder="How?"></td>
+</tr>
+<tr class="q" data-q="Week 10: Money and work">
+<td>10</td>
+<td><strong>Money and work</strong></td>
+<td>Turning a hustle into a business. Getting hired with a record. Handling money.</td>
+<td><label class="kcd"><input type="radio" name="wk10" value="Keep"> Keep</label><label class="kcd"><input type="radio" name="wk10" value="Change"> Change</label><label class="kcd"><input type="radio" name="wk10" value="Drop"> Drop</label><input type="text" class="wk-note" placeholder="How?"></td>
+</tr>
+<tr class="q" data-q="Week 11: Family from inside">
+<td>11</td>
+<td><strong>Family from inside</strong></td>
+<td>Being a son, father or brother from here. Writing the letter you've been putting off.</td>
+<td><label class="kcd"><input type="radio" name="wk11" value="Keep"> Keep</label><label class="kcd"><input type="radio" name="wk11" value="Change"> Change</label><label class="kcd"><input type="radio" name="wk11" value="Drop"> Drop</label><input type="text" class="wk-note" placeholder="How?"></td>
+</tr>
+<tr class="q" data-q="Week 12: Changing the dorm">
+<td>12</td>
+<td><strong>Changing the dorm</strong></td>
+<td>Leading by example. Helping the next man. Graduation: each man presents his plan.</td>
+<td><label class="kcd"><input type="radio" name="wk12" value="Keep"> Keep</label><label class="kcd"><input type="radio" name="wk12" value="Change"> Change</label><label class="kcd"><input type="radio" name="wk12" value="Drop"> Drop</label><input type="text" class="wk-note" placeholder="How?"></td>
+</tr>
+</tbody>
+</table></div>
+<p>The class uses FORGE's own tools and words, so a graduate who later enters mentor training already knows them.</p>
+<fieldset class="call q" data-q="Topics that are missing, or that should move"><legend><span class="yc">Your call</span>Topics that are missing, or that should move</legend><textarea rows="5" placeholder="Write here"></textarea></fieldset>
+
+<h1 class="sec" id="week">8. What a Week Looks Like</h1>
+<div class="two">
+<div class="col">
+<p><strong>Meeting 1: Learn</strong> (60 minutes)</p>
+<ul>
+<li>Opening circle: 10 minutes</li>
+<li>Teach, or a short video: 15 minutes</li>
+<li>Practice in pairs: 25 minutes</li>
+<li>One commitment for the week: 10 minutes</li>
+</ul>
+</div>
+<div class="col">
+<p><strong>Meeting 2: Work</strong> (60 minutes)</p>
+<ul>
+<li>Check-in on last meeting's commitment: 10 minutes</li>
+<li>Working time (GED study check, the 10-year plan, reading): 30 minutes</li>
+<li>Mentor time in pairs: 15 minutes</li>
+<li>Close: 5 minutes</li>
+</ul>
+</div>
+</div>
+<fieldset class="call q" data-q="The weekly shape"><legend><span class="yc">Your call</span>The weekly shape</legend><label class="opt"><input type="checkbox" value="Use as written"><span>Use as written</span></label><label class="opt"><input type="checkbox" value="Change it"><span>Change it:</span><input type="text" class="other"></label><textarea rows="3" placeholder="Notes"></textarea></fieldset>
+
+<h1 class="sec" id="membership">9. Membership</h1>
+<p>Young men join groups. This class should be one worth joining. Membership is what keeps a man connected after week 12.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>How a man gets there</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Member</strong></td>
+<td>Joins a group and signs the member pledge at the first meeting (see Samples, below).</td>
+</tr>
+<tr>
+<td><strong>Part 1 graduate</strong></td>
+<td>Finishes Part 1. Certificate.</td>
+</tr>
+<tr>
+<td><strong>Graduate</strong></td>
+<td>Finishes both parts. Certificate. Paired with a FORGE mentor.</td>
+</tr>
+<tr>
+<td><strong>Peer Leader</strong></td>
+<td>A graduate who helps run a later group: sets up, leads a pair, shares his story.</td>
+</tr>
+<tr>
+<td><strong>Mentor training</strong></td>
+<td>A Peer Leader can apply for FORGE mentor certification.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>After graduation:</strong> a monthly members' meeting, about an hour, covering progress on the GED or college, one man's story, and one problem the group works on together.</p>
+<fieldset class="call q" data-q="Membership"><legend><span class="yc">Your call</span>Membership</legend><label class="opt"><input type="checkbox" value="Use the levels as written"><span>Use the levels as written</span></label><label class="opt"><input type="checkbox" value="Member card"><span>Member card</span></label><label class="opt"><input type="checkbox" value="Member pledge, said together at each meeting"><span>Member pledge, said together at each meeting</span></label><label class="opt"><input type="checkbox" value="Graduation ceremony"><span>Graduation ceremony</span></label><label class="opt"><input type="checkbox" value="Monthly members&#x27; meeting"><span>Monthly members' meeting</span></label><label class="opt"><input type="checkbox" value="Peer Leader requires:  months after graduating, with clean conduct"><span>Peer Leader requires: <input type="text" class="inline"> months after graduating, with clean conduct</span></label><textarea rows="3" placeholder="Notes"></textarea></fieldset>
+
+<h1 class="sec" id="recruit">10. Getting Men to Join</h1>
+<p>This is the hardest part. Ideas, strongest first:</p>
+<ol>
+<li><strong>Flyers in every dorm.</strong> Five samples are below, under Samples. Each one tells a man how to get an application. Replace them when they get torn down.</li>
+<li><strong>The messengers.</strong> Older FORGE men who were 20 once. Their own words go on a flyer (Flyer 5) and in a short letter handed out with the applications. Men in the FORGE dorm tell the young men they know in other dorms: at chow, on the yard, at work and at school.</li>
+<li><strong>Counselors.</strong> Counselors in each dorm can point young men on their caseload to the class.</li>
+<li><strong>Ask first.</strong> Hand out the interest survey (see Samples, below) with the first flyers. Men join what they helped choose.</li>
+<li><strong>A small first ask.</strong> Six weeks, a certificate, a GED sign-up, and a completion entered in his GDC record.</li>
+<li><strong>Membership.</strong> Something to belong to.</li>
+<li><strong>Topics they want.</strong> The money-and-work week will draw men who would skip a class about character.</li>
+<li><strong>Each graduate brings one.</strong></li>
+<li><strong>Things only staff can grant</strong> (Section 15): ask for them, but never promise them until they're granted.</li>
+</ol>
+<fieldset class="call q" data-q="Recruiting"><legend><span class="yc">Your call</span>Recruiting</legend><label class="opt"><input type="checkbox" value="Flyers in every dorm. Which ones? (mark them under Samples, below)"><span>Flyers in every dorm. Which ones? (mark them under Samples, below)</span></label><label class="opt"><input type="checkbox" value="A FORGE mentor&#x27;s letter (Flyer 5, and with the applications)"><span>A FORGE mentor's letter (Flyer 5, and with the applications)</span></label><label class="opt"><input type="checkbox" value="Word of mouth from men in the FORGE dorm"><span>Word of mouth from men in the FORGE dorm</span></label><label class="opt"><input type="checkbox" value="Counselors point young men to it"><span>Counselors point young men to it</span></label><label class="opt"><input type="checkbox" value="Interest survey first"><span>Interest survey first</span></label><label class="opt"><input type="checkbox" value="Each graduate brings one"><span>Each graduate brings one</span></label><label class="opt"><input type="checkbox" value="Other"><span>Other:</span><input type="text" class="other"></label><textarea rows="4" placeholder="Notes"></textarea></fieldset>
+
+<h1 class="sec" id="joining">11. Joining, Step by Step</h1>
+<ol>
+<li>A man sees a flyer in his dorm, or hears about the class.</li>
+<li>He gets an application, fills it out (see Samples, below) and turns it in.</li>
+<li>FORGE mentors read it, and if possible one of them talks with him for about 10 minutes: why he wants in, what he hopes to get, and the commitments.</li>
+<li><strong>FORGE mentors and the chief counselor approve</strong> the application, or turn it down.</li>
+<li><strong>The chief counselor moves him into the FORGE dorm</strong> when a bed opens. Beds open when men move out, which happens fairly regularly.</li>
+<li>He starts with the next group (Section 6) and signs the member pledge at his first meeting.</li>
+</ol>
+<fieldset class="call q" data-q="Applications"><legend><span class="yc">Your call</span>Applications</legend><label class="opt"><input type="checkbox" value="Copies posted with each flyer"><span>Copies posted with each flyer</span></label><label class="opt"><input type="checkbox" value="From his counselor"><span>From his counselor</span></label><label class="opt"><input type="checkbox" value="From a man in the FORGE dorm"><span>From a man in the FORGE dorm</span></label><label class="opt"><input type="checkbox" value="Turned in to"><span>Turned in to:</span><input type="text" class="other"></label><textarea rows="2" placeholder="Notes"></textarea></fieldset>
+
+<fieldset class="call q" data-q="The 10-minute talk with a man in another dorm"><legend><span class="yc">Your call</span>The 10-minute talk with a man in another dorm</legend><label class="opt"><input type="checkbox" value="It can happen before he moves. How"><span>It can happen before he moves. How:</span><input type="text" class="other"></label><label class="opt"><input type="checkbox" value="Decide on the application alone"><span>Decide on the application alone</span></label><label class="opt"><input type="checkbox" value="Hold the talk after he moves in, before his first group"><span>Hold the talk after he moves in, before his first group</span></label><label class="opt"><input type="checkbox" value="Other"><span>Other:</span><input type="text" class="other"></label><textarea rows="2" placeholder="Notes"></textarea></fieldset>
+
+<fieldset class="call q" data-q="When more men are approved than there are beds"><legend><span class="yc">Your call</span>When more men are approved than there are beds</legend><label class="opt"><input type="checkbox" value="Waiting list, in the order approved"><span>Waiting list, in the order approved</span></label><label class="opt"><input type="checkbox" value="FORGE mentors and the chief counselor decide each time a bed opens"><span>FORGE mentors and the chief counselor decide each time a bed opens</span></label><label class="opt"><input type="checkbox" value="Other"><span>Other:</span><input type="text" class="other"></label><textarea rows="2" placeholder="Notes"></textarea></fieldset>
+
+<fieldset class="call q" data-q="Attendance rule"><legend><span class="yc">Your call</span>Attendance rule</legend><label class="opt"><input type="checkbox" value="At least 10 of the 12 meetings in each part (about 85%, like FORGE)"><span>At least 10 of the 12 meetings in each part (about 85%, like FORGE)</span></label><label class="opt"><input type="checkbox" value="Other"><span>Other:</span><input type="text" class="other"></label><label class="opt"><input type="checkbox" value="A man who falls short finishes with the next group"><span>A man who falls short finishes with the next group</span></label><textarea rows="2" placeholder="Notes"></textarea></fieldset>
+
+<fieldset class="call q" data-q="If a man quits the class or is removed from it"><legend><span class="yc">Your call</span>If a man quits the class or is removed from it</legend><label class="opt"><input type="checkbox" value="He moves out of the FORGE dorm"><span>He moves out of the FORGE dorm</span></label><label class="opt"><input type="checkbox" value="He can stay if he keeps the dorm&#x27;s rules"><span>He can stay if he keeps the dorm's rules</span></label><label class="opt"><input type="checkbox" value="Other"><span>Other:</span><input type="text" class="other"></label><textarea rows="2" placeholder="Notes"></textarea></fieldset>
+
+<h1 class="sec" id="teachers">12. Who Teaches It</h1>
+<ul>
+<li><strong>Two FORGE-certified mentors per group.</strong></li>
+<li><strong>Possibly</strong> men in FORGE Phase 3 (Lead and Serve) co-facilitate as part of their practicum.</li>
+<li><strong>Time:</strong> about two hours of meetings a week, plus about an hour to prepare.</li>
+<li><strong>A facilitator guide</strong> will script each meeting, the same way the FORGE guides do.</li>
+</ul>
+<fieldset class="call q" data-q="Facilitators"><legend><span class="yc">Your call</span>Facilitators</legend><label class="opt"><input type="checkbox" value="Two certified mentors per group"><span>Two certified mentors per group</span></label><label class="opt"><input type="checkbox" value="Phase 3 men co-facilitate"><span>Phase 3 men co-facilitate</span></label><label class="opt"><input type="checkbox" value="How many groups at once"><span>How many groups at once: <input type="text" class="inline"></span></label><label class="opt"><input type="checkbox" value="Facilitators who want to teach it (names)"><span>Facilitators who want to teach it (names):</span><input type="text" class="other"></label><textarea rows="3" placeholder="Notes"></textarea></fieldset>
+
+<h1 class="sec" id="materials">13. Materials (Written Only After You Approve the Plan)</h1>
+<p><strong>To be written:</strong></p>
+<ul>
+<li>A facilitator guide, scripted meeting by meeting</li>
+<li>A slim participant workbook</li>
+<li>Final flyers, the application and the interest survey</li>
+<li>Certificates, and a member card if you choose one</li>
+</ul>
+<p><strong>What we may draw from:</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>What it is</th>
+<th>Possible use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FORGE's own tools</strong></td>
+<td>The thinking, emotion and conflict tools from FORGE Phase 1</td>
+<td>Weeks 3 to 5</td>
+</tr>
+<tr>
+<td><strong><em>Skills to Pay the Bills</em></strong></td>
+<td>U.S. Department of Labor, free, written for ages 14 to 21</td>
+<td>Weeks 9 and 10</td>
+</tr>
+<tr>
+<td><strong><em>Money Smart for Young Adults</em></strong></td>
+<td>FDIC, free</td>
+<td>Week 10</td>
+</tr>
+<tr>
+<td><strong><em>Thinking for a Change</em></strong></td>
+<td>National Institute of Corrections, free</td>
+<td>Weeks 3 and 4</td>
+</tr>
+<tr>
+<td><strong>SAMHSA anger management workbook</strong></td>
+<td>Free, already on hand</td>
+<td>Week 4</td>
+</tr>
+<tr>
+<td><strong>Short videos and talks</strong></td>
+<td>For example, Shaka Senghor's TED talk "Why your worst deeds don't define you"</td>
+<td>Most weeks</td>
+</tr>
+<tr>
+<td><strong>Letters from FORGE men</strong></td>
+<td>Letters to "the 20-year-old I was," printed in the workbook</td>
+<td>Every week</td>
+</tr>
+<tr>
+<td><strong>One book (optional)</strong></td>
+<td>For example, <em>Writing My Wrongs</em> (Senghor), <em>The Other Wes Moore</em> (Wes Moore) or <em>Letters to an Incarcerated Brother</em> (Hill Harper)</td>
+<td>Read across the 12 weeks</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Letters wanted.</strong> The letters from older FORGE men may be the most powerful pages in the workbook. If you would write one to the 20-year-old you were, put your name below.</p>
+<fieldset class="call q" data-q="Materials"><legend><span class="yc">Your call</span>Materials</legend><label class="opt"><input type="checkbox" value="Use the sources above"><span>Use the sources above</span></label><label class="opt"><input type="checkbox" value="Add"><span>Add:</span><input type="text" class="other"></label><label class="opt"><input type="checkbox" value="Leave out"><span>Leave out:</span><input type="text" class="other"></label><label class="opt"><input type="checkbox" value="Letter writers (names; first names only would be printed)"><span>Letter writers (names; first names only would be printed):</span><input type="text" class="other"></label><textarea rows="4" placeholder="Notes"></textarea></fieldset>
+
+<h1 class="sec" id="track">14. What We'll Track</h1>
+<ul>
+<li>Who joins and who finishes each part</li>
+<li>GED sign-ups and GED passes</li>
+<li>College and trade-program applications</li>
+<li>Disciplinary reports: the six months before a man joins, compared with during and after</li>
+</ul>
+<p>Only with each man's permission, and only as numbers, never names, in any report. These numbers are what will persuade staff to keep and grow the class. <strong>They're also the only honest basis for ever saying that FORGE helps at parole.</strong></p>
+<fieldset class="call q" data-q="Tracking"><legend><span class="yc">Your call</span>Tracking</legend><label class="opt"><input type="checkbox" value="Track as written"><span>Track as written</span></label><label class="opt"><input type="checkbox" value="Change it"><span>Change it:</span><input type="text" class="other"></label><textarea rows="3" placeholder="Notes"></textarea></fieldset>
+
+<h1 class="sec" id="staff">15. Questions Only Staff Can Answer</h1>
+<p>Before the first group starts, someone needs to ask:</p>
+<ol>
+<li><strong>Beds.</strong> How many FORGE dorm beds can men in this class hold at one time? (Chief counselor.)</li>
+<li><strong>After the class.</strong> Does a graduate stay in the FORGE dorm? Peer Leaders and the monthly members' meeting depend on it.</li>
+<li><strong>The record.</strong> Completions of this class will be entered in SCRIBE, as FORGE completions are. Who enters them, and how soon after a man finishes? Does finishing Part 1 alone get entered, or only the whole class?</li>
+<li><strong>College and GED.</strong> Which college programs (Ashland or others) and GED classes are open to men here now, and how does a man enroll?</li>
+<li><strong>Certificates.</strong> Can a copy go in a man's file?</li>
+<li><strong>Flyers.</strong> Who posts them in each dorm, and who replaces them?</li>
+<li><strong>Graduation.</strong> Can family be invited?</li>
+</ol>
+<fieldset class="call q" data-q="Who asks staff, and what else to ask"><legend><span class="yc">Your call</span>Who asks staff, and what else to ask</legend><textarea rows="4" placeholder="Write here"></textarea></fieldset>
+
+<h1 class="sec" id="timeline">16. Timeline</h1>
+<ol>
+<li>Facilitators review and mark up this plan.</li>
+<li>The plan is revised. Staff questions are asked.</li>
+<li>Materials are written.</li>
+<li>Facilitators review the materials.</li>
+<li>Flyers and the interest survey go up in every dorm. Applications come in, and FORGE mentors and the chief counselor approve them.</li>
+<li>Approved men move into the FORGE dorm as beds open. The first group starts when enough of them are there.</li>
+</ol>
+<fieldset class="call q" data-q="Target month for the first group"><legend><span class="yc">Your call</span>Target month for the first group</legend><textarea rows="2" placeholder="Write here"></textarea></fieldset>
+
+<h1 class="sec" id="review">Final Thoughts</h1>
+<fieldset class="call q" data-q="The biggest concern about this class"><legend>The biggest concern about this class</legend><textarea rows="4" placeholder="Write here"></textarea></fieldset>
+
+<fieldset class="call q" data-q="What&#x27;s missing from this plan"><legend>What&#x27;s missing from this plan</legend><textarea rows="4" placeholder="Write here"></textarea></fieldset>
+<h1 class="sec" id="samples">Samples: What the Young Men Would See</h1>
+<p>Each sample uses the plan's recommended choices and the working name. Tap a page to see it full size. Mark each one, and say what you'd change.</p>
+<div class="samples"><figure class="sample q" data-q="Flyer 1: “Your time is set. What you do with it isn’t.”"><div class="imgs"><a href="images/new-class-review/flyer-1.jpg" target="_blank" rel="noopener"><img src="images/new-class-review/flyer-1.jpg" alt="Flyer 1: “Your time is set. What you do with it isn’t.”" loading="lazy"></a></div><figcaption><b>Flyer 1: “Your time is set. What you do with it isn’t.”</b><div class="kcds"><label class="kcd"><input type="radio" name="s-flyer-1" value="Use it"> Use it</label><label class="kcd"><input type="radio" name="s-flyer-1" value="Change it"> Change it</label><label class="kcd"><input type="radio" name="s-flyer-1" value="Drop it"> Drop it</label></div><textarea rows="2" placeholder="What would you change?"></textarea></figcaption></figure><figure class="sample q" data-q="Flyer 2: “Your file is your résumé.”"><div class="imgs"><a href="images/new-class-review/flyer-2.jpg" target="_blank" rel="noopener"><img src="images/new-class-review/flyer-2.jpg" alt="Flyer 2: “Your file is your résumé.”" loading="lazy"></a></div><figcaption><b>Flyer 2: “Your file is your résumé.”</b><div class="kcds"><label class="kcd"><input type="radio" name="s-flyer-2" value="Use it"> Use it</label><label class="kcd"><input type="radio" name="s-flyer-2" value="Change it"> Change it</label><label class="kcd"><input type="radio" name="s-flyer-2" value="Drop it"> Drop it</label></div><textarea rows="2" placeholder="What would you change?"></textarea></figcaption></figure><figure class="sample q" data-q="Flyer 3: “Never finished school? Start here.”"><div class="imgs"><a href="images/new-class-review/flyer-3.jpg" target="_blank" rel="noopener"><img src="images/new-class-review/flyer-3.jpg" alt="Flyer 3: “Never finished school? Start here.”" loading="lazy"></a></div><figcaption><b>Flyer 3: “Never finished school? Start here.”</b><div class="kcds"><label class="kcd"><input type="radio" name="s-flyer-3" value="Use it"> Use it</label><label class="kcd"><input type="radio" name="s-flyer-3" value="Change it"> Change it</label><label class="kcd"><input type="radio" name="s-flyer-3" value="Drop it"> Drop it</label></div><textarea rows="2" placeholder="What would you change?"></textarea></figcaption></figure><figure class="sample q" data-q="Flyer 4: “Turn your hustle into a plan.”"><div class="imgs"><a href="images/new-class-review/flyer-4.jpg" target="_blank" rel="noopener"><img src="images/new-class-review/flyer-4.jpg" alt="Flyer 4: “Turn your hustle into a plan.”" loading="lazy"></a></div><figcaption><b>Flyer 4: “Turn your hustle into a plan.”</b><div class="kcds"><label class="kcd"><input type="radio" name="s-flyer-4" value="Use it"> Use it</label><label class="kcd"><input type="radio" name="s-flyer-4" value="Change it"> Change it</label><label class="kcd"><input type="radio" name="s-flyer-4" value="Drop it"> Drop it</label></div><textarea rows="2" placeholder="What would you change?"></textarea></figcaption></figure><figure class="sample q" data-q="Flyer 5: “I was 20 once.” (a mentor’s letter)"><div class="imgs"><a href="images/new-class-review/flyer-5.jpg" target="_blank" rel="noopener"><img src="images/new-class-review/flyer-5.jpg" alt="Flyer 5: “I was 20 once.” (a mentor’s letter)" loading="lazy"></a></div><figcaption><b>Flyer 5: “I was 20 once.” (a mentor’s letter)</b><div class="kcds"><label class="kcd"><input type="radio" name="s-flyer-5" value="Use it"> Use it</label><label class="kcd"><input type="radio" name="s-flyer-5" value="Change it"> Change it</label><label class="kcd"><input type="radio" name="s-flyer-5" value="Drop it"> Drop it</label></div><textarea rows="2" placeholder="What would you change?"></textarea></figcaption></figure><figure class="sample q" data-q="One-page overview"><div class="imgs"><a href="images/new-class-review/overview.jpg" target="_blank" rel="noopener"><img src="images/new-class-review/overview.jpg" alt="One-page overview" loading="lazy"></a></div><figcaption><b>One-page overview</b><div class="kcds"><label class="kcd"><input type="radio" name="s-overview" value="Use it"> Use it</label><label class="kcd"><input type="radio" name="s-overview" value="Change it"> Change it</label><label class="kcd"><input type="radio" name="s-overview" value="Drop it"> Drop it</label></div><textarea rows="2" placeholder="What would you change?"></textarea></figcaption></figure><figure class="sample q" data-q="Questions men ask"><div class="imgs"><a href="images/new-class-review/qa.jpg" target="_blank" rel="noopener"><img src="images/new-class-review/qa.jpg" alt="Questions men ask" loading="lazy"></a></div><figcaption><b>Questions men ask</b><div class="kcds"><label class="kcd"><input type="radio" name="s-qa" value="Use it"> Use it</label><label class="kcd"><input type="radio" name="s-qa" value="Change it"> Change it</label><label class="kcd"><input type="radio" name="s-qa" value="Drop it"> Drop it</label></div><textarea rows="2" placeholder="What would you change?"></textarea></figcaption></figure><figure class="sample q" data-q="Interest survey"><div class="imgs"><a href="images/new-class-review/survey.jpg" target="_blank" rel="noopener"><img src="images/new-class-review/survey.jpg" alt="Interest survey" loading="lazy"></a></div><figcaption><b>Interest survey</b><div class="kcds"><label class="kcd"><input type="radio" name="s-survey" value="Use it"> Use it</label><label class="kcd"><input type="radio" name="s-survey" value="Change it"> Change it</label><label class="kcd"><input type="radio" name="s-survey" value="Drop it"> Drop it</label></div><textarea rows="2" placeholder="What would you change?"></textarea></figcaption></figure><figure class="sample q" data-q="Application to join (2 pages)"><div class="imgs"><a href="images/new-class-review/application.jpg" target="_blank" rel="noopener"><img src="images/new-class-review/application.jpg" alt="Application to join (2 pages)" loading="lazy"></a><a href="images/new-class-review/application-2.jpg" target="_blank" rel="noopener"><img src="images/new-class-review/application-2.jpg" alt="Application to join (2 pages)" loading="lazy"></a></div><figcaption><b>Application to join (2 pages)</b><div class="kcds"><label class="kcd"><input type="radio" name="s-application" value="Use it"> Use it</label><label class="kcd"><input type="radio" name="s-application" value="Change it"> Change it</label><label class="kcd"><input type="radio" name="s-application" value="Drop it"> Drop it</label></div><textarea rows="2" placeholder="What would you change?"></textarea></figcaption></figure><figure class="sample q" data-q="Member pledge and member card"><div class="imgs"><a href="images/new-class-review/pledge.jpg" target="_blank" rel="noopener"><img src="images/new-class-review/pledge.jpg" alt="Member pledge and member card" loading="lazy"></a></div><figcaption><b>Member pledge and member card</b><div class="kcds"><label class="kcd"><input type="radio" name="s-pledge" value="Use it"> Use it</label><label class="kcd"><input type="radio" name="s-pledge" value="Change it"> Change it</label><label class="kcd"><input type="radio" name="s-pledge" value="Drop it"> Drop it</label></div><textarea rows="2" placeholder="What would you change?"></textarea></figcaption></figure></div>
+
+<div class="send">
+    <label class="name">Ready?</label>
+    <p style="margin:0 0 12px">Make sure your name is at the top, then press Submit.</p>
+    <div class="hp" aria-hidden="true"><input type="text" id="rv-website" tabindex="-1" autocomplete="off"></div>
+    <button type="button" id="rv-submit">Submit</button>
+    <button type="button" id="rv-copy" class="ghost" hidden>Copy my answers</button>
+    <div id="rv-status" role="status"></div>
+</div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h4>About FORGE</h4>
+                <p>FORGE is a peer-led, evidence-based mentorship program designed to build a safer, more stable dorm culture by training men to lead through service, accountability, and conflict reduction.</p>
+                <p class="footer-tagline">"To turn time served into time that serves others."</p>
+            </div>
+            <div>
+                <h4>Program</h4>
+                <ul class="footer-links">
+                    <li><a href="/program.html">The Program</a></li>
+                    <li><a href="/research.html">Research Foundation</a></li>
+                    <li><a href="/curriculum.html">Curriculum</a></li>
+                    <li><a href="/media.html">Session Media</a></li>
+                    <li><a href="/makeup.html">Make-up Sessions</a></li>
+                    <li><a href="/sponsors.html">Sponsors</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Documents</h4>
+                <ul class="footer-links">
+                    <li><a href="documents/FORGE-Program-Design.pdf">Program Design (PDF)</a></li>
+                    <li><a href="documents/FORGE_Full_Narrative_Pamphlet.pdf">Narrative Pamphlet</a></li>
+                    <li><a href="documents/FORGE_Handbook.pdf">Participant Handbook</a></li>
+                    <li><a href="documents/FORGE-Participant-Workbook-Complete.pdf">Participant Workbook</a></li>
+                    <li><a href="documents/FORGE_One-Page_Flyer.pdf">One-Page Flyer</a></li>
+                    <li><a href="documents/FORGE_Trifold_11x17.pdf">Trifold Brochure</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>FORGE &mdash; Facilitating Opportunities for Reentry, Growth &amp; Empowerment</p>
+            <p style="margin-top: 4px;">Dooly State Prison &bull; Georgia</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function () {
+  var ENDPOINT = "https://forge.16-58-208-66.sslip.io/forge-feedback/submit", FORM = "youth-plan-v1", KEY = "forge-review-" + FORM;
+  var root = document.getElementById("rv");
+  function fields() { return root.querySelectorAll("input, textarea"); }
+  function save() {
+    try {
+      var v = []; fields().forEach(function (f) { v.push(f.type === "checkbox" || f.type === "radio" ? f.checked : f.value); });
+      localStorage.setItem(KEY, JSON.stringify(v));
+    } catch (e) {}
+  }
+  function load() {
+    try {
+      var v = JSON.parse(localStorage.getItem(KEY) || "null"); if (!v) return;
+      var fs = fields(); if (v.length !== fs.length) return;
+      fs.forEach(function (f, i) { if (f.type === "checkbox" || f.type === "radio") f.checked = !!v[i]; else f.value = v[i] || ""; });
+    } catch (e) {}
+  }
+  root.addEventListener("input", function (e) {
+    var t = e.target;
+    if (t.classList.contains("other") || t.classList.contains("inline")) {
+      var box = t.closest("label.opt").querySelector("input[type=checkbox]"); if (t.value.trim()) box.checked = true;
+    }
+    save();
+  });
+  root.addEventListener("change", save);
+  function collect() {
+    var section = "", answers = [];
+    root.querySelectorAll("h1.sec, .q").forEach(function (el) {
+      if (el.matches("h1.sec")) { section = el.textContent.trim(); return; }
+      var choices = [], texts = [];
+      el.querySelectorAll("input[type=checkbox]:checked, input[type=radio]:checked").forEach(function (i) {
+        var extra = i.closest("label") ? Array.prototype.map.call(i.closest("label").querySelectorAll("input[type=text]"), function (x) { return x.value.trim(); }).filter(Boolean).join(", ") : "";
+        choices.push(extra ? i.value + " (" + extra + ")" : i.value);
+      });
+      el.querySelectorAll("textarea, input.wk-note").forEach(function (t) { if (t.value.trim()) texts.push(t.value.trim()); });
+      answers.push({ section: section, question: el.getAttribute("data-q"), choices: choices, texts: texts });
+    });
+    return { form: FORM, name: document.getElementById("rv-name").value.trim(), website: document.getElementById("rv-website").value,
+             answers: answers, page_version: "2026-10-17", client_time: new Date().toISOString() };
+  }
+  function asText(d) {
+    var out = ["Comments on the new class plan from " + (d.name || "(no name)"), ""], sec = "";
+    d.answers.forEach(function (a) {
+      if (!a.choices.length && !a.texts.length) return;
+      if (a.section !== sec) { sec = a.section; out.push("", "== " + sec + " =="); }
+      out.push("* " + a.question + ": " + a.choices.concat(a.texts.map(function (t) { return '"' + t + '"'; })).join(" | "));
+    });
+    return out.join("\n");
+  }
+  var status = document.getElementById("rv-status"), copyBtn = document.getElementById("rv-copy");
+  document.getElementById("rv-submit").addEventListener("click", function () {
+    var d = collect();
+    if (!d.name) { status.className = "err"; status.textContent = "Please type your name at the top of the page first."; document.getElementById("rv-name").focus(); return; }
+    status.className = ""; status.textContent = "Sending\u2026";
+    fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "text/plain" }, body: JSON.stringify(d) })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function () { status.className = "ok"; status.textContent = "Thank you, " + d.name + ". Your answers were sent. You can change anything and send again; your latest answers count."; })
+      .catch(function () { status.className = "err"; status.textContent = "It didn't go through. Try again in a minute, or press \u201cCopy my answers\u201d and send them another way."; copyBtn.hidden = false; });
+  });
+  copyBtn.addEventListener("click", function () {
+    var t = asText(collect());
+    (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () { status.textContent = "Copied. Paste it into a message."; },
+      function () { window.prompt("Copy your answers:", t); });
+  });
+  load();
+})();
+</script>
+</body>
+</html>
