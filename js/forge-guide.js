@@ -39,6 +39,18 @@
         }
     };
 
+    /**
+     * Mic modes (BT 2026-10-24, iPhone): 'close' = mic closed while the guide talks (no clicks, but iOS
+     * then plays through the earpiece: too quiet even at max volume); 'open-raw' = mic stays open all
+     * conversation with echo cancellation / noise suppression / auto gain OFF (keeps the loudspeaker;
+     * the clicks came from the call-audio processing) and nothing is sent while the guide talks;
+     * 'open-aec' = mic open with processing ON (the widget's behaviour). Pick with ?mic=…
+     */
+    var MIC_MODE = (function () {
+        var m = new URLSearchParams(location.search).get('mic');
+        return m === 'open-raw' || m === 'open-aec' || m === 'close' ? m : 'close';
+    })();
+
     var S = {
         lang: 'en', ws: null, actx: null, worklet: null, stream: null, src: null, node: null, sink: null,
         sources: [], tEnd: 0, lastAudio: 0, state: 'idle', outRate: 24000, agentBubble: null, timer: null, micAllowed: false
@@ -140,13 +152,16 @@
     /* ---------------- microphone: open only on your turn ---------------- */
 
     function openMic() {
-        if (S.stream || !S.ws || S.ws.readyState !== 1) { return; }
+        if (S.stream || S.micOpening || !S.ws || S.ws.readyState > 1) { return; }
+        S.micOpening = true;
         audioSession('play-and-record');
         var ac = ctx();
         S.worklet = S.worklet || ac.audioWorklet.addModule(WORKLET);
-        navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true, channelCount: 1 } })
+        var processing = MIC_MODE !== 'open-raw';
+        navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: processing, noiseSuppression: processing, autoGainControl: processing, channelCount: 1 } })
             .then(function (stream) {
-                if (S.state !== 'listening' && S.state !== 'thinking') { stream.getTracks().forEach(function (tr) { tr.stop(); }); return null; }
+                S.micOpening = false;
+                if (MIC_MODE === 'close' && S.state !== 'listening' && S.state !== 'thinking') { stream.getTracks().forEach(function (tr) { tr.stop(); }); return null; }
                 S.stream = stream;
                 return S.worklet.then(function () {
                     if (!S.stream) { return; }
@@ -155,7 +170,8 @@
                     S.sink = ac.createGain();
                     S.sink.gain.value = 0;
                     S.node.port.onmessage = function (e) {
-                        if (S.ws && S.ws.readyState === 1 && S.stream) {
+                        // send only on your turn (the open modes keep the mic running while the guide talks)
+                        if (S.ws && S.ws.readyState === 1 && S.stream && (S.state === 'listening' || S.state === 'thinking')) {
                             S.ws.send(JSON.stringify({ user_audio_chunk: b64(new Uint8Array(e.data.pcm.buffer)) }));
                         }
                         $('fg-ring').style.transform = 'scale(' + (1 + Math.min(e.data.rms * 9, 0.5)).toFixed(3) + ')';
@@ -166,11 +182,17 @@
                 });
             })
             .catch(function (err) {
+                S.micOpening = false;
                 setState('listening', err && err.name === 'NotAllowedError' ? t('micBlocked') : t('micBlocked'));
             });
     }
 
     /** Close the microphone completely (tracks stopped), so the phone leaves call-audio mode. */
+    /** In the open modes the mic stays on until the conversation ends (finish() calls closeMic(true)). */
+    function pauseMic() {
+        if (MIC_MODE === 'close') { closeMic(); }
+    }
+
     function closeMic() {
         try { if (S.src) { S.src.disconnect(); } } catch (e) { /* gone */ }
         try { if (S.node) { S.node.port.onmessage = null; S.node.disconnect(); } } catch (e) { /* gone */ }
@@ -231,7 +253,8 @@
         setState('connecting');
         $('fg-log').hidden = false;
         // ask for the microphone inside the tap, then release it until it is your turn
-        if (!S.micAllowed && navigator.mediaDevices && navigator.mediaDevices.getUserMedia && !firstText) {
+        if (MIC_MODE !== 'close' && !firstText) { S.micAllowed = true; }      // opened when the socket opens
+        else if (!S.micAllowed && navigator.mediaDevices && navigator.mediaDevices.getUserMedia && !firstText) {
             audioSession('play-and-record');
             navigator.mediaDevices.getUserMedia({ audio: true }).then(function (st) {
                 S.micAllowed = true;
@@ -247,6 +270,7 @@
             if (S.lang !== 'en') { init.conversation_config_override = { agent: { language: S.lang } }; }
             ws.send(JSON.stringify(init));
             if (firstText) { ws.send(JSON.stringify({ type: 'user_message', text: firstText })); }
+            if (MIC_MODE !== 'close' && !firstText) { openMic(); }
         };
         ws.onmessage = function (ev) {
             var m;
@@ -259,7 +283,7 @@
             } else if (type === 'audio') {
                 var a = (m.audio_event || {}).audio_base_64;
                 if (a && !S.skipping) {
-                    if (S.state !== 'agent') { closeMic(); setState('agent'); }
+                    if (S.state !== 'agent') { pauseMic(); setState('agent'); }
                     playChunk(a);
                 }
             } else if (type === 'agent_response') {
@@ -304,7 +328,7 @@
         bubble('user', text);
         S.agentBubble = null;
         S.skipping = false;
-        closeMic();
+        pauseMic();
         stopVoice();
         if (S.ws.readyState === 1) { S.ws.send(JSON.stringify({ type: 'user_message', text: text })); }
         setState('thinking');
