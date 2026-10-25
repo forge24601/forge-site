@@ -3,38 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificates &mdash; FORGE</title>
+    <meta name="robots" content="noindex, nofollow">
+    <title>Certificates — FORGE</title>
+    <meta name="description" content="FORGE certificates are now on the Documents page.">
+    <link rel="icon" href="/images/forge-logo.png">
     <link rel="stylesheet" href="/css/style.css">
-    <style>
-        /* Certificates page */
-        .cert-grid { align-items: stretch; gap: 30px; }
-        .cert-card { display: flex; flex-direction: column; }
-        .cert-card h3 { color: var(--maroon); margin-bottom: 10px; }
-        .cert-card p { color: var(--text-secondary); }
-        .cert-code { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.8rem; font-weight: 700;
-            letter-spacing: 1px; color: var(--blue) !important; margin-top: 10px; }
-        .cert-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: auto; padding-top: 24px; }
-        .cert-actions .btn { padding: 12px 22px; }
-        .cert-soon { flex-basis: 100%; color: var(--text-light); font-size: 0.95rem; font-style: italic; }
-        .cert-steps { list-style: none; counter-reset: step; max-width: 760px; margin: 0 auto; }
-        .cert-steps > li { counter-increment: step; position: relative; padding-left: 58px; margin-bottom: 30px;
-            color: var(--text-secondary); }
-        .cert-steps > li:last-child { margin-bottom: 0; }
-        .cert-steps > li::before { content: counter(step); position: absolute; left: 0; top: -4px; width: 40px; height: 40px;
-            border-radius: 50%; background: var(--maroon); color: var(--white); display: flex; align-items: center;
-            justify-content: center; font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 700; }
-        .cert-steps strong { color: var(--text-primary); }
-        .cert-steps ul { list-style: disc; margin: 10px 0 0 22px; }
-        .cert-steps ul li { margin-bottom: 6px; }
-        .cert-steps p + p, .cert-steps ul + p { margin-top: 12px; }
-        .cert-steps a { color: var(--maroon); text-decoration: underline; }
-        .nowrap { white-space: nowrap; }
-        @media (max-width: 600px) {
-            .cert-card { padding: 28px 22px; }
-            .cert-steps > li { padding-left: 48px; }
-            .cert-steps > li::before { width: 34px; height: 34px; top: -2px; }
-        }
-    </style>
+    <meta http-equiv="refresh" content="0; url=/documents.html#certificates">
 </head>
 <body>
 
@@ -45,7 +19,7 @@
             <img src="/images/forge-logo.png" alt="FORGE" class="nav-logo">
             <span class="nav-title">FORGE</span>
         </a>
-        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-links">
@@ -62,113 +36,20 @@
 </nav>
 
 <!-- Hero -->
-<section class="hero hero-small">
+<section class="hero hero-small hero-compact">
     <div class="hero-content container">
         <h1>Certificates</h1>
-        <p class="hero-subtitle">Personalize, print and ship FORGE certificates.</p>
+        <p class="hero-subtitle">The certificates are now on the Documents page</p>
+        <div class="divider"></div>
     </div>
 </section>
 
-<!-- Canva -->
-<section class="section section-alt">
-    <div class="container">
-        <div class="section-header" style="margin-bottom: 0;">
-            <p class="section-label">Start Here</p>
-            <h2>These are Canva templates</h2>
-            <div class="divider"></div>
-            <p class="section-desc" style="margin-bottom: 0;">FORGE certificates are Canva templates. Canva is a free online design tool that works in a web browser or the Canva app, and a free account is all you need. Opening a template link gives you your own copy to edit. The original template never changes.</p>
-        </div>
-    </div>
-</section>
-
-<!-- The four certificates -->
 <section class="section">
     <div class="container">
-        <div class="section-header">
-            <p class="section-label">Templates</p>
-            <h2>The four certificates</h2>
-            <div class="divider"></div>
+        <div class="coming-soon">
+            <h3>This page has moved</h3>
+            <p>The certificate samples and how to personalize, print and ship them are now on the <a href="/documents.html#certificates">Documents page</a>.</p>
         </div>
-        <div class="grid-2 cert-grid">
-            <div class="card cert-card">
-                <div class="card-icon card-icon-maroon">&#128220;</div>
-                <h3>Phase One Certificate</h3>
-                <p>For completing Phase One: Know Yourself (Weeks 1&ndash;12).</p>
-                <p class="cert-code">Numbers start with P1</p>
-                <div class="cert-actions">
-                    <span class="cert-soon">Canva template coming soon</span>
-                    <a href="documents/FORGE-Certificate-Phase-1-SAMPLE.pdf" class="btn btn-outline">Sample PDF</a>
-                </div>
-            </div>
-            <div class="card cert-card">
-                <div class="card-icon card-icon-blue">&#128220;</div>
-                <h3>Phase Two Certificate</h3>
-                <p>For completing Phase Two: Build Others (Weeks 13&ndash;24).</p>
-                <p class="cert-code">Numbers start with P2</p>
-                <div class="cert-actions">
-                    <span class="cert-soon">Canva template coming soon</span>
-                    <a href="documents/FORGE-Certificate-Phase-2-SAMPLE.pdf" class="btn btn-outline">Sample PDF</a>
-                </div>
-            </div>
-            <div class="card cert-card">
-                <div class="card-icon card-icon-maroon">&#127891;</div>
-                <h3>Certificate of Completion</h3>
-                <p>For graduates certified as FORGE Mentors after all three phases.</p>
-                <p class="cert-code">Numbers start with FM</p>
-                <div class="cert-actions">
-                    <span class="cert-soon">Canva template coming soon</span>
-                    <a href="documents/FORGE-Certificate-of-Completion-SAMPLE.pdf" class="btn btn-outline">Sample PDF</a>
-                </div>
-            </div>
-            <div class="card cert-card">
-                <div class="card-icon card-icon-gold">&#127941;</div>
-                <h3>Certificate of Facilitation</h3>
-                <p>For facilitators certified to lead FORGE.</p>
-                <p class="cert-code">Numbers start with FF</p>
-                <div class="cert-actions">
-                    <span class="cert-soon">Canva template coming soon</span>
-                    <a href="documents/FORGE-Certificate-of-Facilitation-SAMPLE.pdf" class="btn btn-outline">Sample PDF</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Step by step -->
-<section class="section section-alt">
-    <div class="container">
-        <div class="section-header">
-            <p class="section-label">How To</p>
-            <h2>Step by step</h2>
-            <div class="divider"></div>
-        </div>
-        <ol class="cert-steps">
-            <li><p><strong>Open the template.</strong> Open the Canva template for the certificate you need (template links are coming soon). Sign in or create a free account, then choose <strong>Use template for new design</strong>. A copy is saved in your own Canva account.</p></li>
-            <li><p><strong>Add the person&rsquo;s details.</strong> Click the sample name and type the person&rsquo;s full name, spelled the way they want it. Change the &ldquo;Awarded&rdquo; date and the certificate number. Leave the rest of the wording as it is.</p></li>
-            <li><p><strong>Number each certificate.</strong> Use the template&rsquo;s format: the two-letter code, the year, then a three-digit number, for example <span class="nowrap">FM-2026-014</span>. Keep a simple list of names and numbers so no number is used twice.</p></li>
-            <li><p><strong>Doing a whole class?</strong> Duplicate the page once per person, then change the name and number on each page. Each page prints as its own certificate.</p></li>
-            <li><p><strong>Check every name.</strong> Read each page carefully before ordering. A mistake means a reprint and another wait.</p></li>
-            <li><p><strong>Download the print file.</strong> Click <strong>Share</strong>, then <strong>Download</strong>, choose <strong>PDF Print</strong>, and download it. If Canva asks you to pay for a Pro element, that is a one-time charge, and no subscription is needed.</p></li>
-            <li>
-                <p><strong>Order printing and shipping.</strong> Canva&rsquo;s own print shop has no certificate product, and its closest Letter-size option comes in batches of 50 per page. So use a print shop that prints your own file, starts at one copy, and ships. <a href="https://www.office.fedex.com/default/certificates.html" target="_blank" rel="noopener">FedEx Office certificate printing</a> does all three, and any print shop that prints on cardstock will also work. When you order, choose:</p>
-                <ul>
-                    <li><strong>Size:</strong> 8.5 &times; 11 in, landscape</li>
-                    <li><strong>Paper:</strong> heavy cardstock with a matte finish (signatures smear on gloss)</li>
-                    <li><strong>Copies:</strong> single-sided, one copy of each page</li>
-                    <li><strong>Delivery:</strong> shipping, not pickup</li>
-                </ul>
-            </li>
-            <li>
-                <p><strong>Ship it to the facility.</strong> Use these shipping details:</p>
-                <ul>
-                    <li><strong>Name:</strong> the staff member who coordinates the FORGE class, and their title</li>
-                    <li><strong>Company:</strong> the facility&rsquo;s name</li>
-                    <li><strong>Address:</strong> the facility&rsquo;s address for packages</li>
-                </ul>
-                <p>Address the package to that staff member, never to an incarcerated person. Check with them first whether packages need approval and which address to use. Order at least two to three weeks before the ceremony, to allow time for the facility&rsquo;s mailroom.</p>
-            </li>
-            <li><p><strong>Sign them.</strong> Certificates arrive with blank signature lines. Sign each one by hand in dark ink before it is presented.</p></li>
-        </ol>
     </div>
 </section>
 
@@ -197,13 +78,7 @@
             <div>
                 <h4>Documents</h4>
                 <ul class="footer-links">
-                    <li><a href="documents/FORGE-Program-Design.pdf">Program Design (PDF)</a></li>
-                    <li><a href="documents/FORGE_Full_Narrative_Pamphlet.pdf">Narrative Pamphlet</a></li>
-                    <li><a href="documents/FORGE_Handbook.pdf">Participant Handbook</a></li>
-                    <li><a href="documents/FORGE-Participant-Workbook-Complete.pdf">Participant Workbook</a></li>
-                    <li><a href="documents/FORGE_One-Page_Flyer.pdf">One-Page Flyer</a></li>
-                    <li><a href="documents/FORGE_Trifold_11x17.pdf">Trifold Brochure</a></li>
-                    <li><a href="/certificates.html">Certificates</a></li>
+                    <li><a href="/documents.html">All FORGE documents</a></li>
                 </ul>
             </div>
         </div>
@@ -213,6 +88,5 @@
         </div>
     </div>
 </footer>
-
 </body>
 </html>

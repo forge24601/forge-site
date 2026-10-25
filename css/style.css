@@ -824,3 +824,61 @@ h4 { font-size: 1.15rem; color: var(--blue); }
 .hero-es { margin-top: 18px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 1rem; }
 .hero-es a { color: var(--gold-light); text-decoration: underline; text-underline-offset: 3px; }
 .hero-es a:hover { color: var(--white); }
+
+/* ===== DOCUMENTS (documents.html, 2026-10-25) ===== */
+.docs-section, [id^="session-plans-phase-"] { scroll-margin-top: 80px; }
+.doc-list { max-width: 720px; margin: 0 auto; }
+.doc-icon-maroon { background: rgba(107, 28, 35, 0.1); color: var(--maroon); }
+.doc-icon-blue { background: rgba(27, 73, 101, 0.1); color: var(--blue); }
+.doc-icon-gold { background: rgba(212, 168, 75, 0.15); color: var(--gold-dark); }
+.doc-icon-gray { background: rgba(0, 0, 0, 0.06); color: #444; }
+.doc-info { min-width: 0; }
+.doc-info .doc-meta, .doc-meta { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.3px; color: var(--blue); margin-top: 6px; }
+.docs-note { max-width: 720px; margin: 24px auto 0; text-align: center; color: var(--text-secondary); font-size: 0.95rem; }
+.docs-note a { text-decoration: underline; text-underline-offset: 3px; }
+.plan-phase + .plan-phase { margin-top: 44px; }
+.plan-phase-title { font-size: 1.25rem; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid currentColor; }
+.plan-phase-title span { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 1px; text-transform: uppercase; color: var(--text-light); margin-left: 8px; white-space: nowrap; }
+h3.plan-maroon { color: var(--maroon); } h3.plan-blue { color: var(--blue); } h3.plan-gold { color: var(--gold-dark); }
+.plan-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.plan-card { display: flex; flex-direction: column; gap: 2px; background: var(--white); border: 1px solid var(--border);
+    border-left: 4px solid var(--maroon); border-radius: 8px; padding: 12px 16px; color: var(--text-primary); transition: all 0.2s; }
+.plan-card.plan-blue { border-left-color: var(--blue); } .plan-card.plan-gold { border-left-color: var(--gold-dark); }
+.plan-card:hover { border-color: var(--maroon); box-shadow: 0 4px 16px var(--shadow); color: var(--text-primary); }
+.plan-week { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--gold-dark); }
+.plan-title { font-weight: 700; line-height: 1.35; }
+.plan-card .doc-meta { margin-top: 4px; }
+@media (max-width: 900px) { .plan-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .plan-grid { grid-template-columns: 1fr; } .doc-card { padding: 16px; gap: 14px; } }
+
+/* ===== CERTIFICATES (moved from certificates.html, 2026-10-25) ===== */
+.cert-grid { align-items: stretch; gap: 30px; }
+.cert-card { display: flex; flex-direction: column; }
+.cert-card h3 { color: var(--maroon); margin-bottom: 10px; }
+.cert-card p { color: var(--text-secondary); }
+.cert-code { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.8rem; font-weight: 700;
+    letter-spacing: 1px; color: var(--blue) !important; margin-top: 10px; }
+.cert-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: auto; padding-top: 24px; }
+.cert-actions .btn { padding: 12px 22px; }
+.cert-soon { flex-basis: 100%; color: var(--text-light); font-size: 0.95rem; font-style: italic; }
+.cert-steps { list-style: none; counter-reset: step; max-width: 760px; margin: 0 auto; }
+.cert-steps > li { counter-increment: step; position: relative; padding-left: 58px; margin-bottom: 30px;
+    color: var(--text-secondary); }
+.cert-steps > li:last-child { margin-bottom: 0; }
+.cert-steps > li::before { content: counter(step); position: absolute; left: 0; top: -4px; width: 40px; height: 40px;
+    border-radius: 50%; background: var(--maroon); color: var(--white); display: flex; align-items: center;
+    justify-content: center; font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 700; }
+.cert-steps strong { color: var(--text-primary); }
+.cert-steps ul { list-style: disc; margin: 10px 0 0 22px; }
+.cert-steps ul li { margin-bottom: 6px; }
+.cert-steps p + p, .cert-steps ul + p { margin-top: 12px; }
+.cert-steps a { color: var(--maroon); text-decoration: underline; }
+.nowrap { white-space: nowrap; }
+@media (max-width: 600px) {
+    .cert-card { padding: 28px 22px; }
+    .cert-steps > li { padding-left: 48px; }
+    .cert-steps > li::before { width: 34px; height: 34px; top: -2px; }
+}
