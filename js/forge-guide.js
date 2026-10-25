@@ -109,6 +109,21 @@
         return gain;
     }
 
+    /**
+     * Rebuild the output after the mic switches ON: on iPhone, sound started before capture began stays
+     * on the quiet route afterwards ("loud until I clicked on the prompt to allow the mic", BT 2026-10-24).
+     * A new <audio> element may start on its own while the page is capturing (WebKit autoplay rule).
+     */
+    function rebuildOutput() {
+        if (S.mediaEl) { try { S.mediaEl.pause(); S.mediaEl.srcObject = null; } catch (e) { /* gone */ } S.mediaEl = null; }
+        if (S.out) { try { S.out.disconnect(); } catch (e) { /* gone */ } S.out = null; }
+        if (S.actx) {
+            var ac = S.actx;
+            ac.suspend().then(function () { return ac.resume(); }).catch(function () { ac.resume().catch(function () {}); });
+        }
+        out();
+    }
+
     /** After the mic closes, make the phone re-pick the loudspeaker (suspend + resume re-routes). */
     function reroute() {
         if (!S.actx) { return; }
@@ -164,6 +179,7 @@
                 S.micOpening = false;
                 if (MIC_MODE === 'close' && S.state !== 'listening' && S.state !== 'thinking') { stream.getTracks().forEach(function (tr) { tr.stop(); }); return null; }
                 S.stream = stream;
+                rebuildOutput();
                 return S.worklet.then(function () {
                     if (!S.stream) { return; }
                     S.src = ac.createMediaStreamSource(stream);
