@@ -67,15 +67,18 @@
      * with ?route=media, out through an <audio> element (a media player's route and volume) instead of
      * straight to the speakers. BT 2026-10-24: "really quiet" on iPhone after the mic had been used.
      */
-    var ROUTE_MEDIA = new URLSearchParams(location.search).get('route') === 'media';
+    // BT 2026-10-24: the media route was louder on iPhone, so it is now the default (?route=direct = old way)
+    var ROUTE_MEDIA = new URLSearchParams(location.search).get('route') !== 'direct';
     function out() {
         var ac = ctx();
         if (S.out) { return S.out; }
+        // speech arrives around -22 dBFS: +12 dB into a limiter brings it to normal media loudness
+        // ("louder, but not loud enough" at +6 dB) without clipping
         var gain = ac.createGain();
-        gain.gain.value = 2.0;
+        gain.gain.value = 4.0;
         var comp = ac.createDynamicsCompressor();
-        comp.threshold.value = -14; comp.knee.value = 6; comp.ratio.value = 6;
-        comp.attack.value = 0.003; comp.release.value = 0.2;
+        comp.threshold.value = -9; comp.knee.value = 2; comp.ratio.value = 20;
+        comp.attack.value = 0.002; comp.release.value = 0.15;
         gain.connect(comp);
         if (ROUTE_MEDIA && ac.createMediaStreamDestination) {
             var dest = ac.createMediaStreamDestination();
