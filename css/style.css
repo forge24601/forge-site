@@ -255,7 +255,7 @@ h4 { font-size: 1.15rem; color: var(--blue); }
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 24px;
 }
 
 .grid-4 {
@@ -268,7 +268,7 @@ h4 { font-size: 1.15rem; color: var(--blue); }
 .card {
     background: var(--white);
     border-radius: 12px;
-    padding: 36px 30px;
+    padding: 24px 24px 22px;   /* was 36px 30px: tighter cards (BT 2026-10-25) */
     box-shadow: 0 2px 12px var(--shadow);
     border: 1px solid var(--border);
     transition: transform 0.2s, box-shadow 0.2s;
@@ -280,21 +280,21 @@ h4 { font-size: 1.15rem; color: var(--blue); }
 }
 
 .card-icon {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    margin-bottom: 18px;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
 }
 
 .card-icon-maroon { background: rgba(107, 28, 35, 0.1); color: var(--maroon); }
 .card-icon-blue { background: rgba(27, 73, 101, 0.1); color: var(--blue); }
 .card-icon-gold { background: rgba(212, 168, 75, 0.15); color: var(--gold-dark); }
 
-.card h3 { margin-bottom: 10px; }
+.card h3 { margin-bottom: 6px; }
 .card p { color: var(--text-secondary); font-size: 0.95rem; }
 
 /* ===== PHASE CARDS ===== */
