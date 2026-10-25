@@ -18,6 +18,15 @@
             box-shadow: 0 4px 16px var(--shadow);
         }
         .ask-card h2 { margin-top: 0; }
+        /* top bar at about half the usual page-hero height (BT 2026-10-25) */
+        .hero-compact { padding: 26px 0 20px; }
+        .hero-compact h1 { font-size: 1.7rem; letter-spacing: 4px; margin-bottom: 4px; }
+        .hero-compact .hero-subtitle { font-size: 1rem; margin-bottom: 0; }
+        .hero-compact .divider { margin: 12px auto 0; }
+        .hero-compact + .section { padding-top: 36px; }
+        /* "How it works" sits under the Start button and the type box (BT 2026-10-25) */
+        .ask-how { margin-top: 24px; border-top: 1px solid var(--border); padding-top: 20px; }
+        .ask-how h2 { font-size: 1.25rem; }
         .ask-steps { margin: 12px 0 0; padding-left: 20px; color: var(--text-secondary); }
         .ask-steps li { margin: 6px 0; }
         .ask-try { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none; }
@@ -28,7 +37,7 @@
         .ask-note { font-size: 14px; color: var(--text-light); margin-top: 20px; }
         .ask-widget { height: 0; }
         /* our own player (forge-guide.js) */
-        .fg-panel { margin-top: 24px; border-top: 1px solid var(--border); padding-top: 20px; }
+        .fg-panel { margin-top: 4px; }
         .fg-log { display: flex; flex-direction: column; gap: 12px; max-height: 50vh; overflow-y: auto; margin-bottom: 16px; }
         .fg-msg { padding: 12px 14px; border-radius: 12px; max-width: 92%; }
         .fg-msg p { margin: 2px 0 0; }
@@ -82,7 +91,7 @@
 </nav>
 
 <!-- Hero -->
-<section class="hero hero-small">
+<section class="hero hero-small hero-compact">
     <div class="hero-content container">
         <h1 data-en="Ask about FORGE" data-es="Pregunta sobre FORGE">Ask about FORGE</h1>
         <p class="hero-subtitle" data-en="Talk with the FORGE guide, out loud or by typing." data-es="Habla con la guía de FORGE, en voz alta o escribiendo.">Talk with the FORGE guide, out loud or by typing.</p>
@@ -98,17 +107,6 @@
         </div>
 
         <div class="ask-card">
-            <h2 data-en="How it works" data-es="Cómo funciona">How it works</h2>
-            <ol class="ask-steps">
-                <li data-en="Press Start talking and allow the microphone, or type your question below. The guide talks, then it's your turn." data-es="Pulsa Empieza a hablar y permite el micrófono, o escribe tu pregunta abajo. La guía habla y luego es tu turno.">Press Start talking and allow the microphone, or type your question below. The guide talks, then it's your turn.</li>
-                <li data-en="Ask anything about FORGE: how the program works, what the men learn, or how to support it." data-es="Pregunta lo que quieras sobre FORGE: cómo funciona el programa, qué aprenden los hombres o cómo apoyarlo.">Ask anything about FORGE: how the program works, what the men learn, or how to support it.</li>
-                <li data-en="You can pick English or Spanish here or in the guide itself. The guide answers from FORGE's published materials on this website." data-es="Puedes elegir inglés o español aquí o en la misma guía. La guía responde con los materiales publicados de FORGE en este sitio.">You can pick English or Spanish here or in the guide itself. The guide answers from FORGE's published materials on this website.</li>
-            </ol>
-            <ul class="ask-try" aria-label="Examples">
-                <li data-en="What is FORGE?" data-es="¿Qué es FORGE?">What is FORGE?</li>
-                <li data-en="What are the three phases?" data-es="¿Cuáles son las tres fases?">What are the three phases?</li>
-                <li data-en="How can I support FORGE?" data-es="¿Cómo puedo apoyar a FORGE?">How can I support FORGE?</li>
-            </ul>
             <div class="ask-widget" id="ask-widget"></div>
             <div class="fg-panel" id="fg-panel">
                 <div class="fg-log" id="fg-log" aria-live="polite" hidden></div>
@@ -119,6 +117,19 @@
                     <button type="button" class="fg-btn" id="fg-end" hidden>End conversation</button>
                 </div>
                 <form class="fg-type" id="fg-type" autocomplete="off"><input id="fg-input" type="text" maxlength="500" placeholder="Or type a question"><button type="submit" id="fg-send">Send</button></form>
+            </div>
+            <div class="ask-how">
+                <h2 data-en="How it works" data-es="Cómo funciona">How it works</h2>
+                <ol class="ask-steps">
+                    <li data-en="Press Start talking and allow the microphone, or type your question. The guide talks, then it's your turn." data-es="Pulsa Empieza a hablar y permite el micrófono, o escribe tu pregunta. La guía habla y luego es tu turno.">Press Start talking and allow the microphone, or type your question below. The guide talks, then it's your turn.</li>
+                    <li data-en="Ask anything about FORGE: how the program works, what the men learn, or how to support it." data-es="Pregunta lo que quieras sobre FORGE: cómo funciona el programa, qué aprenden los hombres o cómo apoyarlo.">Ask anything about FORGE: how the program works, what the men learn, or how to support it.</li>
+                    <li data-en="You can pick English or Spanish here or in the guide itself. The guide answers from FORGE's published materials on this website." data-es="Puedes elegir inglés o español aquí o en la misma guía. La guía responde con los materiales publicados de FORGE en este sitio.">You can pick English or Spanish here or in the guide itself. The guide answers from FORGE's published materials on this website.</li>
+                </ol>
+                <ul class="ask-try" aria-label="Examples">
+                    <li data-en="What is FORGE?" data-es="¿Qué es FORGE?">What is FORGE?</li>
+                    <li data-en="What are the three phases?" data-es="¿Cuáles son las tres fases?">What are the three phases?</li>
+                    <li data-en="How can I support FORGE?" data-es="¿Cómo puedo apoyar a FORGE?">How can I support FORGE?</li>
+                </ul>
             </div>
             <p class="ask-note" data-en="The guide is an automated assistant and can make mistakes. Conversations are kept for 30 days to improve it, and voice recordings are not kept. Please don't share personal details about yourself or anyone inside. The microphone stays on until you press End conversation, but your voice is only sent on your turn." data-es="La guía es un asistente automático y puede equivocarse. Las conversaciones se guardan 30 días para mejorarla y no se guardan grabaciones de voz. Por favor, no compartas datos personales tuyos ni de nadie que esté adentro. El micrófono queda encendido hasta que pulses Terminar conversación, pero tu voz solo se envía en tu turno.">The guide is an automated assistant and can make mistakes. Conversations are kept for 30 days to improve it, and voice recordings are not kept. Please don't share personal details about yourself or anyone inside.</p>
         </div>
