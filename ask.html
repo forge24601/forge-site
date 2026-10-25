@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TEST PAGE (2026-10-24): not linked from any page, not in search engines, until it is approved. -->
+    <meta name="robots" content="noindex, nofollow">
+    <title>Ask about FORGE — FORGE</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .ask-wrap { max-width: 760px; margin: 0 auto; }
+        .ask-lang { display: inline-flex; gap: 0; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; margin: 8px 0 24px; }
+        .ask-lang button {
+            font: 600 15px 'Helvetica Neue', Arial, sans-serif; padding: 9px 18px; border: 0; cursor: pointer;
+            background: var(--white); color: var(--text-secondary);
+        }
+        .ask-lang button[aria-pressed="true"] { background: var(--maroon); color: var(--white); }
+        .ask-card {
+            background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 28px;
+            box-shadow: 0 4px 16px var(--shadow);
+        }
+        .ask-card h2 { margin-top: 0; }
+        .ask-steps { margin: 12px 0 0; padding-left: 20px; color: var(--text-secondary); }
+        .ask-steps li { margin: 6px 0; }
+        .ask-try { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none; }
+        .ask-try li {
+            border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; font-size: 15px;
+            color: var(--text-secondary); background: var(--cream);
+        }
+        .ask-note { font-size: 14px; color: var(--text-light); margin-top: 20px; }
+        .ask-widget { margin-top: 24px; min-height: 120px; }
+        [hidden] { display: none !important; }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+    <div class="container nav-inner">
+        <a href="/" class="nav-brand">
+            <img src="/images/forge-logo.png" alt="FORGE" class="nav-logo">
+            <span class="nav-title">FORGE</span>
+        </a>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/program.html">The Program</a></li>
+            <li><a href="/research.html">Research</a></li>
+            <li><a href="/curriculum.html">Curriculum</a></li>
+            <li><a href="/media.html">Session Media</a></li>
+            <li><a href="/makeup.html">Make-up Sessions</a></li>
+            <li><a href="/sponsors.html">Sponsors</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero hero-small">
+    <div class="hero-content container">
+        <h1 data-en="Ask about FORGE" data-es="Pregunta sobre FORGE">Ask about FORGE</h1>
+        <p class="hero-subtitle" data-en="Talk with the FORGE guide, out loud or by typing." data-es="Habla con la guía de FORGE, en voz alta o escribiendo.">Talk with the FORGE guide, out loud or by typing.</p>
+        <div class="divider"></div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container ask-wrap">
+        <div class="ask-lang" role="group" aria-label="Language / Idioma">
+            <button type="button" data-lang="en" aria-pressed="true">English</button>
+            <button type="button" data-lang="es" aria-pressed="false">Español</button>
+        </div>
+
+        <div class="ask-card">
+            <h2 data-en="How it works" data-es="Cómo funciona">How it works</h2>
+            <ol class="ask-steps">
+                <li data-en="Press the button below and allow the microphone, or switch to typing." data-es="Pulsa el botón de abajo y permite el micrófono, o cambia a escribir.">Press the button below and allow the microphone, or switch to typing.</li>
+                <li data-en="Ask anything about FORGE: how the program works, what the men learn, or how to support it." data-es="Pregunta lo que quieras sobre FORGE: cómo funciona el programa, qué aprenden los hombres o cómo apoyarlo.">Ask anything about FORGE: how the program works, what the men learn, or how to support it.</li>
+                <li data-en="The guide answers from FORGE's published materials on this website." data-es="La guía responde con los materiales publicados de FORGE en este sitio.">The guide answers from FORGE's published materials on this website.</li>
+            </ol>
+            <ul class="ask-try" aria-label="Examples">
+                <li data-en="What is FORGE?" data-es="¿Qué es FORGE?">What is FORGE?</li>
+                <li data-en="What are the three phases?" data-es="¿Cuáles son las tres fases?">What are the three phases?</li>
+                <li data-en="How can I support FORGE?" data-es="¿Cómo puedo apoyar a FORGE?">How can I support FORGE?</li>
+            </ul>
+            <div class="ask-widget" id="ask-widget"></div>
+            <p class="ask-note" data-en="The guide is an automated assistant and can make mistakes. Conversations are kept for 30 days to improve it, and voice recordings are not kept. Please don't share personal details about yourself or anyone inside." data-es="La guía es un asistente automático y puede equivocarse. Las conversaciones se guardan 30 días para mejorarla y no se guardan grabaciones de voz. Por favor, no compartas datos personales tuyos ni de nadie que esté adentro.">The guide is an automated assistant and can make mistakes. Conversations are kept for 30 days to improve it, and voice recordings are not kept. Please don't share personal details about yourself or anyone inside.</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>FORGE &mdash; Facilitating Opportunities for Reentry, Growth &amp; Empowerment</p>
+            <p style="margin-top: 4px;">Georgia</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function () {
+    'use strict';
+    // The FORGE guide: an ElevenLabs agent (agent settings + knowledge pack: forge-build/ask-agent/).
+    var AGENT = 'agent_3101m5ra4phtfs894pc9jkrcdc0h';
+    var LABEL = {
+        en: { action: 'Ask about FORGE', start: 'Start talking' },
+        es: { action: 'Pregunta sobre FORGE', start: 'Empieza a hablar' }
+    };
+
+    function render(lang) {
+        document.documentElement.lang = lang;
+        document.querySelectorAll('[data-' + lang + ']').forEach(function (n) { n.textContent = n.getAttribute('data-' + lang); });
+        document.querySelectorAll('.ask-lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang)); });
+        var box = document.getElementById('ask-widget');
+        box.textContent = '';
+        var w = document.createElement('elevenlabs-convai');
+        w.setAttribute('agent-id', AGENT);
+        w.setAttribute('variant', 'expanded');
+        w.setAttribute('action-text', LABEL[lang].action);
+        w.setAttribute('start-call-text', LABEL[lang].start);
+        if (lang !== 'en') { w.setAttribute('override-language', lang); }
+        box.appendChild(w);
+        try { localStorage.setItem('forge_ask_lang', lang); } catch (e) { /* private mode */ }
+    }
+
+    document.querySelectorAll('.ask-lang button').forEach(function (b) {
+        b.addEventListener('click', function () { render(b.getAttribute('data-lang')); });
+    });
+    var saved = null;
+    try { saved = localStorage.getItem('forge_ask_lang'); } catch (e) { saved = null; }
+    var want = new URLSearchParams(location.search).get('lang') || saved || ((navigator.language || '').slice(0, 2) === 'es' ? 'es' : 'en');
+    render(want === 'es' ? 'es' : 'en');
+})();
+</script>
+<script src="https://unpkg.com/@elevenlabs/convai-widget-embed@0.19.0/dist/index.js" async type="text/javascript"></script>
+</body>
+</html>
