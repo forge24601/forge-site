@@ -48,7 +48,8 @@
      */
     var MIC_MODE = (function () {
         var m = new URLSearchParams(location.search).get('mic');
-        return m === 'open-raw' || m === 'open-aec' || m === 'close' ? m : 'close';
+        // BT 2026-10-24 on iPhone: 'open-aec' was loud AND click-free -> the default
+        return m === 'open-raw' || m === 'open-aec' || m === 'close' ? m : 'open-aec';
     })();
 
     var S = {
@@ -236,10 +237,13 @@
 
     /** When the guide has finished speaking (all audio played, none arriving), it is your turn. */
     function tick() {
+        // the mic stays on through the conversation: end it after 90 s of nobody speaking
+        if (S.state === 'listening' && S.listenSince && Date.now() - S.listenSince > 90000) { finish(); return; }
         if (S.state !== 'agent' || !S.actx) { return; }
         if (S.actx.currentTime >= S.tEnd + 0.2 && Date.now() - S.lastAudio > 500) {
             S.agentBubble = null;
             setState('listening');
+            S.listenSince = Date.now();
             openMic();
         }
     }
