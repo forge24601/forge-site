@@ -112,7 +112,7 @@ Research indicates attrition rates range from **20% (prison-based adult programs
 
 **Sources:**
 - [PEP Official Site](https://www.pep.org/)
-- [What We Do](https://www.pep.org/what-we-do/)
+- [Our Programs](https://www.pep.org/our-programs/)
 - [ICIC Impact Analysis](https://icic.org/blog/innovative-prison-entrepreneurship-program-creating-wealth-reducing-recidivism-among-formerly-incarcerated/)
 - [AEI Report](https://www.aei.org/wp-content/uploads/2016/12/Prison-Entrepreneurship-Program.pdf)
 
@@ -190,7 +190,7 @@ Research indicates attrition rates range from **20% (prison-based adult programs
 
 **Sources:**
 - [Youth Justice Network](https://youthjustice.org/about)
-- [Youth Reentry Network](http://www.friendsny.org/home-grey-revised/youth-reentry-network/)
+- [Youth Reentry Network (archived page, Friends of Island Academy, 2019)](https://web.archive.org/web/20191024143357/http://www.friendsny.org/home-grey-revised/youth-reentry-network/)
 
 ### Credible Messenger Programs -- NYC
 
@@ -214,7 +214,7 @@ While a specific program called "HALT Violence" was not found in searches, NYC o
 **Impact**: 57% decrease in convictions among young people working with credible messenger mentors (Urban Institute evaluation).
 
 **Sources:**
-- [ITM About](http://www.centernyc.org/itm-about)
+- [Institute of Transformative Mentoring (ITM)](https://www.centernyc.org/program-pages/institute-of-transformative-mentoring-itm)
 - [CM3](https://crediblemessenger3.org/)
 - [CJA Credible Messengers](https://www.nycja.org/credible-messengers)
 - [Columbia SIPA - Credible Messenger Recruitment](https://www.sipa.columbia.edu/breaking-cycle-incarceration-roadmap-credible-messenger-recruitment)
