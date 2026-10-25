@@ -27,6 +27,32 @@
         }
         .ask-note { font-size: 14px; color: var(--text-light); margin-top: 20px; }
         .ask-widget { height: 0; }
+        /* our own player (forge-guide.js) */
+        .fg-panel { margin-top: 24px; border-top: 1px solid var(--border); padding-top: 20px; }
+        .fg-log { display: flex; flex-direction: column; gap: 12px; max-height: 50vh; overflow-y: auto; margin-bottom: 16px; }
+        .fg-msg { padding: 12px 14px; border-radius: 12px; max-width: 92%; }
+        .fg-msg p { margin: 2px 0 0; }
+        .fg-who { font: 700 12px 'Helvetica Neue', Arial, sans-serif; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-light); }
+        .fg-user { align-self: flex-end; background: var(--blue-pale); border: 1px solid #cddcea; }
+        .fg-agent { align-self: flex-start; background: var(--cream); border: 1px solid var(--border); }
+        .fg-status { text-align: center; color: var(--text-secondary); font: 15px 'Helvetica Neue', Arial, sans-serif; min-height: 22px; }
+        .fg-controls { display: flex; justify-content: center; align-items: center; gap: 12px; margin: 14px 0; flex-wrap: wrap; }
+        .fg-mic {
+            position: relative; display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px 14px 16px;
+            border: 0; border-radius: 999px; background: var(--maroon); color: var(--white); cursor: pointer;
+            font: 700 17px 'Helvetica Neue', Arial, sans-serif;
+        }
+        .fg-mic:hover { background: var(--maroon-dark); }
+        .fg-mic svg { width: 24px; height: 24px; fill: currentColor; }
+        .fg-ring { position: absolute; left: 6px; top: 50%; width: 40px; height: 40px; margin-top: -20px; border-radius: 50%;
+            border: 2px solid var(--gold); opacity: 0; transition: transform 90ms linear, opacity 150ms; pointer-events: none; }
+        .fg-listening .fg-ring { opacity: 1; }
+        .fg-btn { padding: 10px 18px; border-radius: 999px; border: 1px solid var(--border); background: var(--white);
+            font: 600 15px 'Helvetica Neue', Arial, sans-serif; color: var(--text-primary); cursor: pointer; }
+        .fg-listening .fg-status { color: var(--maroon); font-weight: 700; }
+        .fg-type { display: flex; gap: 8px; }
+        .fg-type input { flex: 1; min-width: 0; height: 44px; padding: 0 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 16px; }
+        .fg-type button { height: 44px; padding: 0 18px; border-radius: 8px; border: 0; background: var(--blue); color: var(--white); font-weight: 700; cursor: pointer; }
         [hidden] { display: none !important; }
     </style>
 </head>
@@ -74,7 +100,7 @@
         <div class="ask-card">
             <h2 data-en="How it works" data-es="Cómo funciona">How it works</h2>
             <ol class="ask-steps">
-                <li data-en="Press the phone button at the bottom of the screen and allow the microphone. To type instead, press the chat bubble next to it." data-es="Pulsa el botón del teléfono abajo en la pantalla y permite el micrófono. Para escribir, pulsa la burbuja de chat que está al lado.">Press the phone button at the bottom of the screen and allow the microphone. To type instead, press the chat bubble next to it.</li>
+                <li data-en="Press Start talking and allow the microphone, or type your question below. The guide talks, then it's your turn." data-es="Pulsa Empieza a hablar y permite el micrófono, o escribe tu pregunta abajo. La guía habla y luego es tu turno.">Press Start talking and allow the microphone, or type your question below. The guide talks, then it's your turn.</li>
                 <li data-en="Ask anything about FORGE: how the program works, what the men learn, or how to support it." data-es="Pregunta lo que quieras sobre FORGE: cómo funciona el programa, qué aprenden los hombres o cómo apoyarlo.">Ask anything about FORGE: how the program works, what the men learn, or how to support it.</li>
                 <li data-en="You can pick English or Spanish here or in the guide itself. The guide answers from FORGE's published materials on this website." data-es="Puedes elegir inglés o español aquí o en la misma guía. La guía responde con los materiales publicados de FORGE en este sitio.">You can pick English or Spanish here or in the guide itself. The guide answers from FORGE's published materials on this website.</li>
             </ol>
@@ -84,6 +110,16 @@
                 <li data-en="How can I support FORGE?" data-es="¿Cómo puedo apoyar a FORGE?">How can I support FORGE?</li>
             </ul>
             <div class="ask-widget" id="ask-widget"></div>
+            <div class="fg-panel" id="fg-panel">
+                <div class="fg-log" id="fg-log" aria-live="polite" hidden></div>
+                <div class="fg-status" id="fg-status" role="status"></div>
+                <div class="fg-controls">
+                    <button type="button" class="fg-mic" id="fg-start"><span class="fg-ring" id="fg-ring" aria-hidden="true"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm6-3a6 6 0 0 1-12 0H4a8 8 0 0 0 7 7.9V22h2v-2.1A8 8 0 0 0 20 12h-2z"/></svg><span id="fg-start-label">Start talking</span></button>
+                    <button type="button" class="fg-btn" id="fg-stop" hidden>Skip</button>
+                    <button type="button" class="fg-btn" id="fg-end" hidden>End conversation</button>
+                </div>
+                <form class="fg-type" id="fg-type" autocomplete="off"><input id="fg-input" type="text" maxlength="500" placeholder="Or type a question"><button type="submit" id="fg-send">Send</button></form>
+            </div>
             <p class="ask-note" data-en="The guide is an automated assistant and can make mistakes. Conversations are kept for 30 days to improve it, and voice recordings are not kept. Please don't share personal details about yourself or anyone inside." data-es="La guía es un asistente automático y puede equivocarse. Las conversaciones se guardan 30 días para mejorarla y no se guardan grabaciones de voz. Por favor, no compartas datos personales tuyos ni de nadie que esté adentro.">The guide is an automated assistant and can make mistakes. Conversations are kept for 30 days to improve it, and voice recordings are not kept. Please don't share personal details about yourself or anyone inside.</p>
         </div>
     </div>
@@ -108,10 +144,17 @@
         es: { action: 'Pregunta sobre FORGE', start: 'Empieza a hablar' }
     };
 
+    var USE_WIDGET = new URLSearchParams(location.search).get('widget') === '1';
     function render(lang) {
         document.documentElement.lang = lang;
         document.querySelectorAll('[data-' + lang + ']').forEach(function (n) { n.textContent = n.getAttribute('data-' + lang); });
         document.querySelectorAll('.ask-lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang)); });
+        try { localStorage.setItem('forge_ask_lang', lang); } catch (e) { /* private mode */ }
+        if (!USE_WIDGET) {
+            if (window.FORGEGuide) { window.FORGEGuide.setLang(lang); } else { window.__forgeLang = lang; }
+            return;
+        }
+        document.getElementById('fg-panel').hidden = true;
         var box = document.getElementById('ask-widget');
         box.textContent = '';
         var w = document.createElement('elevenlabs-convai');
@@ -136,6 +179,15 @@
     render(want === 'es' ? 'es' : 'en');
 })();
 </script>
-<script src="https://unpkg.com/@elevenlabs/convai-widget-embed@0.19.0/dist/index.js" async type="text/javascript"></script>
+<script src="/js/forge-guide.js"></script>
+<script>
+    if (window.__forgeLang && window.FORGEGuide) { window.FORGEGuide.setLang(window.__forgeLang); }
+    if (new URLSearchParams(location.search).get('widget') === '1') {
+        var w = document.createElement('script');
+        w.src = 'https://unpkg.com/@elevenlabs/convai-widget-embed@0.19.0/dist/index.js';
+        w.async = true;
+        document.body.appendChild(w);
+    }
+</script>
 </body>
 </html>
