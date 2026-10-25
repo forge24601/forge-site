@@ -120,6 +120,9 @@
         w.setAttribute('action-text', LABEL[lang].action);
         w.setAttribute('start-call-text', LABEL[lang].start);
         if (lang !== 'en') { w.setAttribute('override-language', lang); }
+        // ?rtc=1: the WebRTC connection (Opus audio, a different player) — testing the clicks BT hears on
+        // iPhone with the default websocket player (the stream itself measured clean, 2026-10-24)
+        if (new URLSearchParams(location.search).get('rtc') === '1') { w.setAttribute('use-rtc', 'true'); }
         box.appendChild(w);
         try { localStorage.setItem('forge_ask_lang', lang); } catch (e) { /* private mode */ }
     }
