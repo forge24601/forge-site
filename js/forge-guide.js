@@ -56,10 +56,49 @@
     }
 
     function ctx() {
-        if (S.actx && S.actx.state === 'closed') { S.actx = null; S.worklet = null; }
+        if (S.actx && S.actx.state === 'closed') { S.actx = null; S.worklet = null; S.out = null; }
         if (!S.actx) { S.actx = new (window.AudioContext || window.webkitAudioContext)(); }
         if (S.actx.state !== 'running') { S.actx.resume().catch(function () {}); }
         return S.actx;
+    }
+
+    /**
+     * The guide's output chain: +6 dB with a limiter (the agent's speech averages about -22 dBFS) and,
+     * with ?route=media, out through an <audio> element (a media player's route and volume) instead of
+     * straight to the speakers. BT 2026-10-24: "really quiet" on iPhone after the mic had been used.
+     */
+    var ROUTE_MEDIA = new URLSearchParams(location.search).get('route') === 'media';
+    function out() {
+        var ac = ctx();
+        if (S.out) { return S.out; }
+        var gain = ac.createGain();
+        gain.gain.value = 2.0;
+        var comp = ac.createDynamicsCompressor();
+        comp.threshold.value = -14; comp.knee.value = 6; comp.ratio.value = 6;
+        comp.attack.value = 0.003; comp.release.value = 0.2;
+        gain.connect(comp);
+        if (ROUTE_MEDIA && ac.createMediaStreamDestination) {
+            var dest = ac.createMediaStreamDestination();
+            comp.connect(dest);
+            var el = new Audio();
+            el.autoplay = true;
+            el.setAttribute('playsinline', '');
+            el.srcObject = dest.stream;
+            el.play().catch(function () {});
+            S.mediaEl = el;
+        } else {
+            comp.connect(ac.destination);
+        }
+        S.out = gain;
+        return gain;
+    }
+
+    /** After the mic closes, make the phone re-pick the loudspeaker (suspend + resume re-routes). */
+    function reroute() {
+        if (!S.actx) { return; }
+        var ac = S.actx;
+        ac.suspend().then(function () { return ac.resume(); }).catch(function () { ac.resume().catch(function () {}); });
+        if (S.mediaEl) { S.mediaEl.play().catch(function () {}); }
     }
 
     function setState(s, msg) {
@@ -137,7 +176,7 @@
         S.stream = S.src = S.node = S.sink = null;
         $('fg-ring').style.transform = '';
         audioSession('playback');
-        if (S.actx && S.actx.state !== 'running') { S.actx.resume().catch(function () {}); }
+        reroute();
     }
 
     /* ---------------- the guide's voice ---------------- */
@@ -156,7 +195,7 @@
         var at = Math.max(ac.currentTime + 0.08, S.tEnd);
         var src = ac.createBufferSource();
         src.buffer = buf;
-        src.connect(ac.destination);
+        src.connect(out());
         src.start(at);
         S.sources.push(src);
         src.onended = function () { S.sources = S.sources.filter(function (x) { return x !== src; }); };
@@ -185,6 +224,7 @@
     function start(firstText) {
         audioSession('playback');
         ctx();
+        out();                                   // build the output chain (and start the media element) inside the tap
         setState('connecting');
         $('fg-log').hidden = false;
         // ask for the microphone inside the tap, then release it until it is your turn
@@ -194,7 +234,7 @@
                 S.micAllowed = true;
                 st.getTracks().forEach(function (tr) { tr.stop(); });
                 audioSession('playback');
-                if (S.actx && S.actx.state !== 'running') { S.actx.resume().catch(function () {}); }
+                reroute();
             }).catch(function () { audioSession('playback'); /* typed questions still work */ });
         }
         var ws = new WebSocket(WS_URL);
