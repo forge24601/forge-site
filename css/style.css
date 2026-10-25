@@ -1135,12 +1135,6 @@ h3.plan-maroon { color: var(--maroon); } h3.plan-blue { color: var(--blue); } h3
     box-shadow: 0 4px 16px var(--shadow);
 }
 .ask-card h2 { margin-top: 0; }
-/* top bar at about half the usual page-hero height (BT 2026-10-25) */
-.hero-compact { padding: 26px 0 20px; }
-.hero-compact h1 { font-size: 1.7rem; letter-spacing: 4px; margin-bottom: 4px; }
-.hero-compact .hero-subtitle { font-size: 1rem; margin-bottom: 0; }
-.hero-compact .divider { margin: 12px auto 0; }
-.hero-compact + .section { padding-top: 36px; }
 /* "How it works" sits under the Start button and the type box (BT 2026-10-25) */
 .ask-how { margin-top: 24px; border-top: 1px solid var(--border); padding-top: 20px; }
 .ask-how h2 { font-size: 1.25rem; }
@@ -1229,3 +1223,56 @@ h3.plan-maroon { color: var(--maroon); } h3.plan-blue { color: var(--blue); } h3
 .review #rv-status.err { color: #9B1C1C; }
 .review .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 @media (max-width: 600px) { .review { padding: 20px 16px 48px; } .review h1.sec { font-size: 1.35rem; } }
+
+/* ===== COMPACT BANNER: every inner page (forge-build/site/partials/hero.html). It started on the Ask page, at
+   about half the old page-hero height (BT 2026-10-25); Home keeps its big hero. ===== */
+.hero-compact { padding: 26px 0 20px; }
+.hero-compact h1 { font-size: 1.7rem; letter-spacing: 4px; margin-bottom: 4px; }
+.hero-compact .hero-subtitle { font-size: 1rem; margin-bottom: 0; }
+.hero-compact .divider { margin: 12px auto 0; }
+.hero-compact .btn-group { margin-top: 16px; }
+.hero-compact .btn { padding: 10px 22px; }
+.hero-compact + .section { padding-top: 36px; }
+@media (max-width: 600px) {
+    .hero.hero-compact { padding: 22px 0 18px; }
+    .hero-compact h1 { font-size: 1.45rem; letter-spacing: 3px; }
+    .hero-compact .hero-subtitle { font-size: 0.95rem; }
+}
+
+/* ===== SESSIONS: "Before class | Make-up" tabs on media.html and makeup.html (BT 2026-10-25) ===== */
+.tabbar { background: var(--white); border-bottom: 1px solid var(--border); }
+.tabs { display: flex; justify-content: center; gap: 6px; }
+.tab { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.3px;
+    color: var(--text-secondary); padding: 14px 22px 11px; border-bottom: 3px solid transparent; }
+.tab:hover { color: var(--maroon); }
+.tab.active { color: var(--maroon); border-bottom-color: var(--gold); }
+
+/* ===== CURRICULUM: phase -> week -> its three sessions (2026-10-25) ===== */
+.week-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.week-card { display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--border);
+    border-top: 4px solid var(--maroon); border-radius: 12px; padding: 20px 22px; box-shadow: 0 2px 12px var(--shadow);
+    scroll-margin-top: 80px; }
+.week-card.plan-blue { border-top-color: var(--blue); }
+.week-card.plan-gold { border-top-color: var(--gold-dark); }
+.week-num { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--gold-dark); }
+.week-card h3 { font-size: 1.2rem; margin: 2px 0 10px; }
+.week-sessions { list-style: none; margin: 0 0 16px; }
+.week-sessions li { padding: 7px 0; border-bottom: 1px solid var(--cream-dark); color: var(--text-secondary);
+    font-size: 0.95rem; line-height: 1.45; }
+.week-sessions li:last-child { border-bottom: none; }
+.session-n { display: block; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase; color: var(--text-light); }
+.week-links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px; }
+.week-link { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--maroon);
+    background: var(--cream); border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; line-height: 1.3; }
+.week-link span { font-weight: 400; color: var(--text-light); }
+.week-link:hover { border-color: var(--maroon); color: var(--maroon); }
+.card-link { display: block; color: var(--text-primary); }
+.card-link h3 { color: var(--maroon); }
+.card-link:hover { color: var(--text-primary); }
+.section-desc a, .docs-note a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 900px) { .week-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .week-grid { grid-template-columns: 1fr; } .tab { padding: 12px 16px 9px; } }
+.stats-row-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 600px) { .stats-row-3 { grid-template-columns: 1fr; } .stats-row-3 .stat-item { padding: 18px 16px; } }
