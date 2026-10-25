@@ -4,48 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>New Class Plan Review &mdash; FORGE</title>
+    <title>New Class Plan Review — FORGE</title>
+    <meta name="description" content="A draft plan for a new FORGE class, for the FORGE facilitators to review.">
+    <link rel="icon" href="/images/forge-logo.png">
     <link rel="stylesheet" href="/css/style.css">
-    <style>
-.review { max-width: 860px; margin: 0 auto; padding: 32px 16px 64px; }
-.review h1.sec { font-family: Georgia, serif; color: var(--maroon); font-size: 1.6rem; border-bottom: 2px solid var(--maroon);
-  padding-bottom: 6px; margin: 44px 0 14px; }
-.review h2 { font-size: 1.2rem; margin: 22px 0 8px; } .review h3 { margin: 18px 0 8px; }
-.review h3.part { color: var(--maroon); }
-.review p, .review li { line-height: 1.6; } .review p { margin: 0 0 12px; } .review ul, .review ol { padding-left: 24px; margin: 0 0 12px; }
-.review table { width: 100%; border-collapse: collapse; margin: 10px 0 16px; font-size: 0.95rem; }
-.review th, .review td { border: 1px solid var(--border); padding: 7px 9px; text-align: left; vertical-align: top; }
-.review th { background: var(--cream-dark); }
-.table-wrap { overflow-x: auto; }
-.review .source { font-size: 0.85rem; color: var(--text-light); }
-.review .say { background: var(--cream); border-left: 6px solid var(--maroon); padding: 12px 18px; font-size: 1.1rem; margin: 10px 0 16px; }
-.review .two { display: flex; gap: 16px; flex-wrap: wrap; } .review .two .col { flex: 1 1 260px; border: 1px solid var(--border); padding: 10px 14px; }
-.start, .send { background: var(--cream); border: 2px solid var(--maroon); border-radius: 8px; padding: 18px 20px; margin: 10px 0 20px; }
-.start label.name, .send label.name { display: block; font-weight: bold; margin-bottom: 6px; }
-.start input#rv-name { width: 100%; max-width: 420px; font-size: 1.1rem; padding: 8px 10px; border: 1px solid #999; border-radius: 4px; }
-fieldset.call { border: 1.5px solid var(--maroon); border-left-width: 6px; border-radius: 4px; background: #FBF6F4; padding: 10px 14px 12px; margin: 14px 0 18px; }
-fieldset.call legend { font-weight: bold; padding: 0 6px; }
-.yc { display: inline-block; background: var(--maroon); color: #fff; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
-  padding: 2px 7px; margin-right: 8px; border-radius: 3px; vertical-align: 2px; }
-label.opt { display: flex; align-items: flex-start; gap: 9px; margin: 7px 0; cursor: pointer; line-height: 1.45; flex-wrap: wrap; }
-label.opt input[type=checkbox] { width: 19px; height: 19px; margin-top: 2px; flex: none; accent-color: var(--maroon); }
-label.opt span { flex: 1 1 200px; }
-input.other { flex: 1 1 100%; margin-left: 28px; }
-input.inline { width: 70px; }
-.review input[type=text], .review textarea { font: inherit; font-size: 1rem; padding: 6px 8px; border: 1px solid #aaa; border-radius: 4px; background: #fff; box-sizing: border-box; }
-fieldset.call textarea, figure.sample textarea { width: 100%; margin-top: 8px; }
-label.kcd { white-space: nowrap; margin-right: 10px; cursor: pointer; } label.kcd input { accent-color: var(--maroon); width: 17px; height: 17px; vertical-align: -3px; }
-input.wk-note { width: 100%; margin-top: 6px; font-size: 0.9rem; }
-.samples { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px; }
-figure.sample { margin: 0; border: 1px solid var(--border); border-radius: 6px; padding: 10px; background: #fff; }
-figure.sample .imgs { display: flex; gap: 6px; } figure.sample img { width: 100%; border: 1px solid #ddd; display: block; }
-figure.sample figcaption { margin-top: 8px; font-size: 0.95rem; } .kcds { margin-top: 6px; }
-.send button { background: var(--maroon); color: #fff; border: 0; border-radius: 6px; font-size: 1.1rem; padding: 12px 28px; cursor: pointer; }
-.send button.ghost { background: transparent; color: var(--maroon); border: 1.5px solid var(--maroon); font-size: 0.95rem; padding: 8px 16px; margin-left: 10px; }
-#rv-status { margin-top: 12px; font-weight: bold; } #rv-status.ok { color: #2D6A4F; } #rv-status.err { color: #9B1C1C; }
-.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-@media (max-width: 600px) { .review { padding: 20px 16px 48px; } .review h1.sec { font-size: 1.35rem; } }
-</style>
 </head>
 <body>
 
@@ -56,7 +18,7 @@ figure.sample figcaption { margin-top: 8px; font-size: 0.95rem; } .kcds { margin
             <img src="/images/forge-logo.png" alt="FORGE" class="nav-logo">
             <span class="nav-title">FORGE</span>
         </a>
-        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-links">
@@ -561,6 +523,7 @@ figure.sample figcaption { margin-top: 8px; font-size: 0.95rem; } .kcds { margin
 </div>
 </main>
 
+<!-- Footer -->
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">

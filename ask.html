@@ -4,66 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ask about FORGE — FORGE</title>
+    <meta name="description" content="Ask the FORGE guide about the program, out loud or by typing, in English or Spanish.">
+    <link rel="canonical" href="https://forgementors.org/ask.html">
+    <link rel="icon" href="/images/forge-logo.png">
     <link rel="stylesheet" href="/css/style.css">
-    <style>
-        .ask-wrap { max-width: 760px; margin: 0 auto; }
-        .ask-lang { display: inline-flex; gap: 0; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; margin: 8px 0 24px; }
-        .ask-lang button {
-            font: 600 15px 'Helvetica Neue', Arial, sans-serif; padding: 9px 18px; border: 0; cursor: pointer;
-            background: var(--white); color: var(--text-secondary);
-        }
-        .ask-lang button[aria-pressed="true"] { background: var(--maroon); color: var(--white); }
-        .ask-card {
-            background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 28px;
-            box-shadow: 0 4px 16px var(--shadow);
-        }
-        .ask-card h2 { margin-top: 0; }
-        /* top bar at about half the usual page-hero height (BT 2026-10-25) */
-        .hero-compact { padding: 26px 0 20px; }
-        .hero-compact h1 { font-size: 1.7rem; letter-spacing: 4px; margin-bottom: 4px; }
-        .hero-compact .hero-subtitle { font-size: 1rem; margin-bottom: 0; }
-        .hero-compact .divider { margin: 12px auto 0; }
-        .hero-compact + .section { padding-top: 36px; }
-        /* "How it works" sits under the Start button and the type box (BT 2026-10-25) */
-        .ask-how { margin-top: 24px; border-top: 1px solid var(--border); padding-top: 20px; }
-        .ask-how h2 { font-size: 1.25rem; }
-        .ask-steps { margin: 12px 0 0; padding-left: 20px; color: var(--text-secondary); }
-        .ask-steps li { margin: 6px 0; }
-        .ask-try { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none; }
-        .ask-try li {
-            border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; font-size: 15px;
-            color: var(--text-secondary); background: var(--cream);
-        }
-        .ask-note { font-size: 14px; color: var(--text-light); margin-top: 20px; }
-        .ask-widget { height: 0; }
-        /* our own player (forge-guide.js) */
-        .fg-panel { margin-top: 4px; }
-        .fg-log { display: flex; flex-direction: column; gap: 12px; max-height: 50vh; overflow-y: auto; margin-bottom: 16px; }
-        .fg-msg { padding: 12px 14px; border-radius: 12px; max-width: 92%; }
-        .fg-msg p { margin: 2px 0 0; }
-        .fg-who { font: 700 12px 'Helvetica Neue', Arial, sans-serif; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-light); }
-        .fg-user { align-self: flex-end; background: var(--blue-pale); border: 1px solid #cddcea; }
-        .fg-agent { align-self: flex-start; background: var(--cream); border: 1px solid var(--border); }
-        .fg-status { text-align: center; color: var(--text-secondary); font: 15px 'Helvetica Neue', Arial, sans-serif; min-height: 22px; }
-        .fg-controls { display: flex; justify-content: center; align-items: center; gap: 12px; margin: 14px 0; flex-wrap: wrap; }
-        .fg-mic {
-            position: relative; display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px 14px 16px;
-            border: 0; border-radius: 999px; background: var(--maroon); color: var(--white); cursor: pointer;
-            font: 700 17px 'Helvetica Neue', Arial, sans-serif;
-        }
-        .fg-mic:hover { background: var(--maroon-dark); }
-        .fg-mic svg { width: 24px; height: 24px; fill: currentColor; }
-        .fg-ring { position: absolute; left: 6px; top: 50%; width: 40px; height: 40px; margin-top: -20px; border-radius: 50%;
-            border: 2px solid var(--gold); opacity: 0; transition: transform 90ms linear, opacity 150ms; pointer-events: none; }
-        .fg-listening .fg-ring { opacity: 1; }
-        .fg-btn { padding: 10px 18px; border-radius: 999px; border: 1px solid var(--border); background: var(--white);
-            font: 600 15px 'Helvetica Neue', Arial, sans-serif; color: var(--text-primary); cursor: pointer; }
-        .fg-listening .fg-status { color: var(--maroon); font-weight: 700; }
-        .fg-type { display: flex; gap: 8px; }
-        .fg-type input { flex: 1; min-width: 0; height: 44px; padding: 0 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 16px; }
-        .fg-type button { height: 44px; padding: 0 18px; border-radius: 8px; border: 0; background: var(--blue); color: var(--white); font-weight: 700; cursor: pointer; }
-        [hidden] { display: none !important; }
-    </style>
 </head>
 <body>
 
@@ -74,7 +18,7 @@
             <img src="/images/forge-logo.png" alt="FORGE" class="nav-logo">
             <span class="nav-title">FORGE</span>
         </a>
-        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-links">
@@ -136,8 +80,35 @@
     </div>
 </section>
 
+<!-- Footer -->
 <footer class="footer">
     <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h4>About FORGE</h4>
+                <p>FORGE is a peer-led, evidence-based mentorship program designed to build a safer, more stable dorm culture by training men to lead through service, accountability, and conflict reduction.</p>
+                <p class="footer-tagline">"To turn time served into time that serves others."</p>
+            </div>
+            <div>
+                <h4>Program</h4>
+                <ul class="footer-links">
+                    <li><a href="/program.html">The Program</a></li>
+                    <li><a href="/research.html">Research Foundation</a></li>
+                    <li><a href="/curriculum.html">Curriculum</a></li>
+                    <li><a href="/media.html">Session Media</a></li>
+                    <li><a href="/makeup.html">Make-up Sessions</a></li>
+                    <li><a href="/sponsors.html">Sponsors</a></li>
+                    <li><a href="/ask.html">Ask about FORGE</a></li>
+                    <li><a href="/ask.html?lang=es" lang="es">Pregunta sobre FORGE (en español)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Documents</h4>
+                <ul class="footer-links">
+                    <li><a href="/documents.html">All FORGE documents</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="footer-bottom">
             <p>FORGE &mdash; Facilitating Opportunities for Reentry, Growth &amp; Empowerment</p>
             <p style="margin-top: 4px;">Georgia</p>
