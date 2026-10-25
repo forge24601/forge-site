@@ -46,6 +46,15 @@
     var $ = function (id) { return document.getElementById(id); };
     var t = function (k) { return (T[S.lang] || T.en)[k]; };
 
+    /**
+     * iPhone: with the microphone closed, Safari puts web audio in the "ambient" category, which the
+     * silent switch mutes — the guide went silent (BT 2026-10-24, phone on silent). Declare "playback"
+     * while the guide talks and "play-and-record" only while the mic is open (Safari 16.4+ Audio Session API).
+     */
+    function audioSession(type) {
+        try { if (navigator.audioSession && navigator.audioSession.type !== type) { navigator.audioSession.type = type; } } catch (e) { /* older browsers */ }
+    }
+
     function ctx() {
         if (S.actx && S.actx.state === 'closed') { S.actx = null; S.worklet = null; }
         if (!S.actx) { S.actx = new (window.AudioContext || window.webkitAudioContext)(); }
@@ -90,6 +99,7 @@
 
     function openMic() {
         if (S.stream || !S.ws || S.ws.readyState !== 1) { return; }
+        audioSession('play-and-record');
         var ac = ctx();
         S.worklet = S.worklet || ac.audioWorklet.addModule(WORKLET);
         navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true, channelCount: 1 } })
@@ -126,6 +136,8 @@
         if (S.stream) { S.stream.getTracks().forEach(function (tr) { tr.stop(); }); }
         S.stream = S.src = S.node = S.sink = null;
         $('fg-ring').style.transform = '';
+        audioSession('playback');
+        if (S.actx && S.actx.state !== 'running') { S.actx.resume().catch(function () {}); }
     }
 
     /* ---------------- the guide's voice ---------------- */
@@ -171,15 +183,19 @@
     /* ---------------- the conversation ---------------- */
 
     function start(firstText) {
+        audioSession('playback');
         ctx();
         setState('connecting');
         $('fg-log').hidden = false;
         // ask for the microphone inside the tap, then release it until it is your turn
         if (!S.micAllowed && navigator.mediaDevices && navigator.mediaDevices.getUserMedia && !firstText) {
+            audioSession('play-and-record');
             navigator.mediaDevices.getUserMedia({ audio: true }).then(function (st) {
                 S.micAllowed = true;
                 st.getTracks().forEach(function (tr) { tr.stop(); });
-            }).catch(function () { /* typed questions still work */ });
+                audioSession('playback');
+                if (S.actx && S.actx.state !== 'running') { S.actx.resume().catch(function () {}); }
+            }).catch(function () { audioSession('playback'); /* typed questions still work */ });
         }
         var ws = new WebSocket(WS_URL);
         S.ws = ws;
@@ -284,6 +300,7 @@
             if (!v) { return; }
             ctx();
             $('fg-input').value = '';
+            audioSession('playback');
             askTyped(v);
         });
         document.addEventListener('visibilitychange', function () { if (document.hidden && S.ws) { finish(); } });
