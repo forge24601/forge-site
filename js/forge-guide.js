@@ -117,10 +117,10 @@
     function rebuildOutput() {
         if (S.mediaEl) { try { S.mediaEl.pause(); S.mediaEl.srcObject = null; } catch (e) { /* gone */ } S.mediaEl = null; }
         if (S.out) { try { S.out.disconnect(); } catch (e) { /* gone */ } S.out = null; }
-        if (S.actx) {
-            var ac = S.actx;
-            ac.suspend().then(function () { return ac.resume(); }).catch(function () { ac.resume().catch(function () {}); });
-        }
+        // no suspend/resume here: outside a tap iPhone may refuse the resume and leave the page's audio
+        // paused — the guide then never "finishes" and the mic never gets its turn (BT 2026-10-24,
+        // "I hear the Spanish but it doesn't hear me")
+        if (S.actx && S.actx.state !== 'running') { S.actx.resume().catch(function () {}); }
         out();
     }
 
@@ -243,12 +243,14 @@
         src.onended = function () { S.sources = S.sources.filter(function (x) { return x !== src; }); };
         S.tEnd = at + buf.duration;
         S.lastAudio = Date.now();
+        S.wallEnd = Math.max(S.wallEnd || 0, Date.now() + (at - ac.currentTime + buf.duration) * 1000);
     }
 
     function stopVoice() {
         S.sources.forEach(function (s) { try { s.stop(); } catch (e) { /* ended */ } });
         S.sources = [];
         S.tEnd = 0;
+        S.wallEnd = 0;
     }
 
     /** When the guide has finished speaking (all audio played, none arriving), it is your turn. */
@@ -256,10 +258,14 @@
         // the mic stays on through the conversation: end it after 90 s of nobody speaking
         if (S.state === 'listening' && S.listenSince && Date.now() - S.listenSince > 90000) { finish(); return; }
         if (S.state !== 'agent' || !S.actx) { return; }
-        if (S.actx.currentTime >= S.tEnd + 0.2 && Date.now() - S.lastAudio > 500) {
+        if (S.actx.state !== 'running') { S.actx.resume().catch(function () {}); }
+        var audioDone = S.actx.currentTime >= S.tEnd + 0.2;
+        var wallDone = Date.now() > (S.wallEnd || 0) + 400;      // if the audio clock is stuck
+        if ((audioDone || wallDone) && Date.now() - S.lastAudio > 500) {
             S.agentBubble = null;
             setState('listening');
             S.listenSince = Date.now();
+            if (S.actx.state !== 'running') { S.actx.resume().catch(function () {}); }
             openMic();
         }
     }
