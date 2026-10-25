@@ -819,3 +819,8 @@ h4 { font-size: 1.15rem; color: var(--blue); }
         box-shadow: 0 4px 12px var(--shadow);
     }
 }
+
+/* Spanish entry to the FORGE guide (2026-10-24) */
+.hero-es { margin-top: 18px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 1rem; }
+.hero-es a { color: var(--gold-light); text-decoration: underline; text-underline-offset: 3px; }
+.hero-es a:hover { color: var(--white); }
