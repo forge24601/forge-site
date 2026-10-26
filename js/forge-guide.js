@@ -109,6 +109,15 @@
         return gain;
     }
 
+    /** Let go of the sound output entirely (tab hidden or page left); out() rebuilds it on next use. */
+    function releaseOutput() {
+        stopVoice();
+        if (S.mediaEl) { try { S.mediaEl.pause(); S.mediaEl.srcObject = null; } catch (e) { /* gone */ } S.mediaEl = null; }
+        if (S.out) { try { S.out.disconnect(); } catch (e) { /* gone */ } S.out = null; }
+        if (S.actx && S.actx.state === 'running') { S.actx.suspend().catch(function () {}); }
+        audioSession('auto');
+    }
+
     /**
      * Rebuild the output after the mic switches ON: on iPhone, sound started before capture began stays
      * on the quiet route afterwards ("loud until I clicked on the prompt to allow the mic", BT 2026-10-24).
@@ -396,7 +405,11 @@
             audioSession('playback');
             askTyped(v);
         });
-        document.addEventListener('visibilitychange', function () { if (document.hidden && S.ws) { finish(); } });
+        // leaving the tab or the page ends the conversation AND lets go of the sound output: a hidden tab that
+        // keeps its <audio> media route playing can take the iPhone's audio away from a video in another tab
+        // (BT 2026-10-25: Session Media video jumped from AirPods to the phone speaker)
+        document.addEventListener('visibilitychange', function () { if (document.hidden) { if (S.ws) { finish(); } releaseOutput(); } });
+        window.addEventListener('pagehide', function () { if (S.ws) { finish(); } releaseOutput(); });
         labels();
         setState('idle');
     }
