@@ -1372,3 +1372,21 @@ a.class-card:hover { color: inherit; }
 .card-note { margin-top: 12px; font-size: 0.92rem; color: var(--text-secondary); }
 .overview-grid + .speech-card { margin-top: 28px; }
 .class-card-maroon h3 { color: var(--maroon); }
+
+/* ===== HOME: research evidence as one compact card (BT 2026-11-15: "it takes a lot of space") ===== */
+.evidence-band { padding: 0 0 8px; }
+.evidence-card { background: var(--blue); border-radius: 14px; padding: 24px 30px; display: grid;
+    grid-template-columns: 1fr 1.9fr; gap: 26px; align-items: center; box-shadow: 0 2px 12px var(--shadow); }
+.evidence-intro .section-label { color: var(--gold-light); margin-bottom: 4px; }
+.evidence-intro h2 { color: var(--gold-light); font-size: 1.45rem; margin: 0 0 6px; }
+.evidence-intro p { color: rgba(255,255,255,0.85); font-size: 0.92rem; margin: 0; line-height: 1.5; }
+.evidence-intro p.evidence-sources { font-size: 0.74rem; color: rgba(255,255,255,0.55); margin-top: 8px; }
+.evidence-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.evidence-stats div { text-align: center; }
+.evidence-stats .n { display: block; font-size: 1.9rem; font-weight: 700; color: var(--gold); line-height: 1.05; }
+.evidence-stats .l { display: block; margin-top: 5px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.68rem;
+    letter-spacing: 0.5px; text-transform: uppercase; color: rgba(255,255,255,0.75); line-height: 1.35; }
+@media (max-width: 860px) {
+    .evidence-card { grid-template-columns: 1fr; gap: 18px; padding: 22px 20px; }
+    .evidence-stats { grid-template-columns: repeat(2, 1fr); gap: 16px 12px; }
+}
