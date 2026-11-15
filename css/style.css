@@ -821,9 +821,6 @@ h4 { font-size: 1.15rem; color: var(--blue); }
 }
 
 /* Spanish entry to the FORGE guide (2026-10-24) */
-.hero-es { margin-top: 18px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 1rem; }
-.hero-es a { color: var(--gold-light); text-decoration: underline; text-underline-offset: 3px; }
-.hero-es a:hover { color: var(--white); }
 
 /* ===== DOCUMENTS (documents.html, 2026-10-25) ===== */
 .docs-section, [id^="session-plans-phase-"] { scroll-margin-top: 80px; }
@@ -1389,4 +1386,21 @@ a.class-card:hover { color: inherit; }
 @media (max-width: 860px) {
     .evidence-card { grid-template-columns: 1fr; gap: 18px; padding: 22px 20px; }
     .evidence-stats { grid-template-columns: repeat(2, 1fr); gap: 16px 12px; }
+}
+
+/* ===== HOME HERO: the FORGE Guide card (BT 2026-11-15: the button should say what's behind it) ===== */
+.hero-ask { display: flex; align-items: center; gap: 18px; max-width: 680px; margin: 28px auto 0; padding: 18px 22px;
+    background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(240, 217, 144, 0.45); border-radius: 14px;
+    color: var(--white); text-align: left; transition: background 0.2s, transform 0.2s; }
+.hero-ask:hover { background: rgba(255, 255, 255, 0.16); color: var(--white); transform: translateY(-2px); }
+.hero-ask-icon { flex: none; width: 52px; height: 52px; border-radius: 50%; background: var(--gold); display: grid; place-items: center; }
+.hero-ask-icon svg { width: 26px; height: 26px; fill: none; stroke: var(--maroon-dark); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.hero-ask-text { flex: 1; min-width: 0; }
+.hero-ask-text strong { display: block; font-size: 1.12rem; color: var(--gold-light); margin-bottom: 3px; }
+.hero-ask-text span { display: block; font-size: 0.93rem; line-height: 1.5; color: rgba(255, 255, 255, 0.88); }
+.hero-ask-go { flex: none; font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 0.9rem;
+    background: var(--gold); color: var(--maroon-dark); padding: 10px 16px; border-radius: 999px; white-space: nowrap; }
+@media (max-width: 700px) {
+    .hero-ask { flex-direction: column; text-align: center; gap: 12px; padding: 18px; }
+    .hero-ask-go { white-space: normal; }
 }
