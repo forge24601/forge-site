@@ -1340,3 +1340,35 @@ a.class-card:hover { color: inherit; }
 .status-pill-required { background: var(--maroon); color: var(--white); }
 .doc-subhead { font-size: 1.15rem; color: var(--maroon); max-width: 720px; margin: 28px auto 10px; }
 .doc-subhead span { font-size: 0.85rem; font-weight: 400; color: var(--text-secondary); margin-left: 8px; }
+
+/* ===== AFTER RELEASE: FORGE Successful Reentry (successful-reentry.html, forge-your-success.html; 2026-11-15) =====
+   The part of FORGE outside the fence, run by POD Society at its Reentry Home. Accent: green (POD Society's FYS colour). */
+:root { --green: #2D6A4F; --green-pale: #EAF3EE; }
+.reentry-strip { background: var(--green); color: var(--white); padding: 12px 0; font-size: 0.92rem; }
+.reentry-strip .container { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: center; justify-content: center; text-align: center; }
+.reentry-strip strong { letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; }
+.reentry-strip a { color: var(--white); text-decoration: underline; text-underline-offset: 2px; }
+.reentry-strip a:hover { color: var(--gold-light); }
+.timeline-green::before { background: var(--green); }
+.timeline-dot-green { background: var(--green); box-shadow: 0 0 0 2px var(--green); }
+.card-icon-green { background: rgba(45, 106, 79, 0.12); color: var(--green); }
+.status-pill-green { background: var(--green-pale); color: var(--green); }
+.class-card-green h3 { color: var(--green); }
+.compare-card-green { border-top: 4px solid var(--green); }
+.green-list { list-style: none; padding: 0; margin: 10px 0 0; }
+.green-list li { position: relative; padding: 6px 0 6px 22px; border-bottom: 1px solid var(--border); font-size: 0.95rem; color: var(--text-secondary); }
+.green-list li:last-child { border-bottom: 0; }
+.green-list li::before { content: "\2713"; position: absolute; left: 0; top: 6px; color: var(--green); font-weight: 700; }
+.green-list strong { color: var(--text-primary); }
+.stage-card { border-top: 4px solid var(--green); }
+.stage-card .stage-num { font-size: 2.4rem; font-weight: 700; color: var(--green); line-height: 1; }
+.stage-card .stage-when { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-dark); font-weight: 700; margin: 4px 0 8px; }
+.area-card h3 { font-size: 1.05rem; color: var(--green); margin-bottom: 4px; }
+.area-card p { font-size: 0.9rem; }
+.shape-list-green .mins { color: var(--green); width: 130px; }
+.speech-card { border-left: 5px solid var(--green); background: var(--green-pale); }
+.speech-card blockquote { margin: 0; font-style: italic; font-size: 1.05rem; line-height: 1.6; color: var(--text-primary); }
+.reentry-note { max-width: 760px; margin: 24px auto 0; text-align: center; color: var(--text-secondary); font-size: 0.95rem; }
+.card-note { margin-top: 12px; font-size: 0.92rem; color: var(--text-secondary); }
+.overview-grid + .speech-card { margin-top: 28px; }
+.class-card-maroon h3 { color: var(--maroon); }
