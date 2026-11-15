@@ -196,14 +196,6 @@ h4 { font-size: 1.15rem; color: var(--blue); }
     margin-bottom: 10px;
 }
 
-.hero-location {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.6);
-    margin-top: 30px;
-}
 
 .hero-small {
     padding: 60px 0 50px;
