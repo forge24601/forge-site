@@ -1336,3 +1336,7 @@ a.class-card:hover { color: inherit; }
 .shape-list .mins { flex: none; width: 52px; font-weight: 700; color: var(--plum); }
 .class-back { margin-top: 28px; text-align: center; }
 .card-stack > .card + .card { margin-top: 24px; }
+.timeline-maroon::before { background: var(--maroon); }
+.status-pill-required { background: var(--maroon); color: var(--white); }
+.doc-subhead { font-size: 1.15rem; color: var(--maroon); max-width: 720px; margin: 28px auto 10px; }
+.doc-subhead span { font-size: 0.85rem; font-weight: 400; color: var(--text-secondary); margin-left: 8px; }
